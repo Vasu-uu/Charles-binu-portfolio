@@ -953,6 +953,22 @@ h1,h2,h3{
   transition:background 0.2s, transform 0.2s;
 }
 .form-submit:hover{ background:#9AA3F5; color:var(--ink); transform:translateY(-2px); }
+.form-submit:disabled{ opacity:0.65; cursor:default; transform:none; }
+
+.form-status{
+  margin-top:4px;
+  font-family:var(--mono);
+  font-size:12.5px;
+  line-height:1.5;
+  color:#9D9892;
+  min-height:0;
+  opacity:0;
+  transform:translateY(-4px);
+  transition:opacity 0.3s, transform 0.3s;
+}
+.form-status.show{ opacity:1; transform:translateY(0); }
+.form-status.success{ color:#8FD6A8; }
+.form-status.error{ color:#E59A9A; }
 
 .footer-bottom{
   margin-top:90px;
@@ -1363,20 +1379,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
           </a>
         </div>
 
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/vasudev20057d@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New project inquiry — portfolio site">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="f-group">
             <label for="f-name">Name</label>
-            <input type="text" id="f-name" placeholder="Your name" required>
+            <input type="text" id="f-name" name="name" placeholder="Your name" required>
           </div>
           <div class="f-group">
             <label for="f-email">Email</label>
-            <input type="email" id="f-email" placeholder="you@email.com" required>
+            <input type="email" id="f-email" name="email" placeholder="you@email.com" required>
           </div>
           <div class="f-group">
             <label for="f-msg">Message</label>
-            <textarea id="f-msg" rows="3" placeholder="Tell me about the project..." required></textarea>
+            <textarea id="f-msg" name="message" rows="3" placeholder="Tell me about the project..." required></textarea>
           </div>
           <button type="submit" class="form-submit">Send message →</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
 
@@ -1541,14 +1561,62 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* ===== Contact form (demo only, no backend) ===== */
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+/* ===== Contact form — sends via FormSubmit (no backend required) ===== */
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/vasudev20057d@gmail.com';
+
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  const original = btn.textContent;
-  btn.textContent = 'Message sent ✓';
-  e.target.reset();
-  setTimeout(() => { btn.textContent = original; }, 2400);
+
+  const btn = contactForm.querySelector('.form-submit');
+  const original = 'Send message →';
+  const nameVal = document.getElementById('f-name').value.trim();
+  const emailVal = document.getElementById('f-email').value.trim();
+  const msgVal = document.getElementById('f-msg').value.trim();
+
+  if(!nameVal || !emailVal || !msgVal){
+    formStatus.textContent = 'Please fill out every field before sending.';
+    formStatus.className = 'form-status error show';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  formStatus.className = 'form-status show';
+  formStatus.textContent = '';
+
+  try{
+    const res = await fetch(FORM_ENDPOINT, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+      body: JSON.stringify({
+        name: nameVal,
+        email: emailVal,
+        message: msgVal,
+        _subject: `New project inquiry from ${nameVal}`,
+        _captcha: 'false'
+      })
+    });
+
+    if(!res.ok) throw new Error('Request failed');
+
+    btn.textContent = 'Message sent ✓';
+    formStatus.textContent = "Thanks — I'll get back to you soon.";
+    formStatus.className = 'form-status success show';
+    contactForm.reset();
+  } catch(err){
+    btn.textContent = original;
+    btn.disabled = false;
+    formStatus.textContent = `Something went wrong — please email me directly instead.`;
+    formStatus.className = 'form-status error show';
+    return;
+  }
+
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.textContent = original;
+  }, 3200);
 });
 </script>
 
