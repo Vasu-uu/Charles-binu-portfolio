@@ -114,24 +114,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 }
 body{ padding-top:var(--ruler-size); }
 
-/* Crosshair cursor-follow marker on hero (subtle, design-tool reference) */
-.coord-tag{
-  position:fixed;
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--grey);
-  background:var(--paper);
-  padding:2px 6px;
-  border:1px solid var(--grey-line);
-  border-radius:2px;
-  pointer-events:none;
-  z-index:95;
-  opacity:0;
-  transition:opacity 0.2s;
-  display:none;
-}
-@media(min-width:900px){ .coord-tag{display:block;} }
-
 /* ============ NAV ============ */
 .nav{
   position:fixed;
@@ -401,6 +383,7 @@ h1,h2,h3{
 }
 .hero-cta-group{
   display:flex;
+  align-items:center;
   gap:14px;
   flex-wrap:wrap;
 }
@@ -425,6 +408,28 @@ h1,h2,h3{
   color:var(--ink);
 }
 .btn-outline:hover{ border-color:var(--ink); transform:translateY(-2px); }
+
+.hero-socials{
+  display:flex;
+  gap:8px;
+}
+.hero-socials a{
+  width:44px; height:44px;
+  border-radius:50%;
+  border:1px solid var(--grey-line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--ink-soft);
+  transition:border-color 0.2s, color 0.2s, transform 0.2s, background 0.2s;
+}
+.hero-socials a svg{ width:18px; height:18px; }
+.hero-socials a:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:var(--accent-soft);
+  transform:translateY(-2px);
+}
 
 .hero-meta-list{
   display:flex;
@@ -519,58 +524,10 @@ h1,h2,h3{
 .crop-br::before{bottom:0;right:0;width:2px;height:100%;}
 .crop-br::after{bottom:0;right:0;width:100%;height:2px;}
 
-.portrait-placeholder{
-  width:100%;height:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
-  color:var(--grey);
-  cursor:pointer;
-  position:relative;
-  background:
-    repeating-linear-gradient(45deg, transparent, transparent 11px, var(--grey-line) 11px, var(--grey-line) 12px);
-}
-.portrait-placeholder input[type=file]{
-  position:absolute; inset:0; opacity:0; cursor:pointer;
-}
-.portrait-placeholder .icon-box{
-  width:56px;height:56px;
-  border:1.5px dashed var(--grey);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--paper);
-  transition:border-color 0.2s, transform 0.2s;
-}
-.portrait-placeholder:hover .icon-box{ border-color:var(--accent); transform:scale(1.05); }
-.portrait-placeholder .label{
-  font-family:var(--mono);
-  font-size:12px;
-  text-align:center;
-  line-height:1.6;
-}
-.portrait-placeholder .label b{ color:var(--ink); display:block; font-family:var(--body); font-weight:600; font-size:13px;}
 .portrait-frame img.uploaded{
   width:100%;height:100%;object-fit:cover;
   position:absolute; inset:0; z-index:1;
 }
-
-.portrait-tag{
-  position:absolute;
-  bottom:-1px; left:-1px;
-  background:var(--ink);
-  color:var(--paper);
-  font-family:var(--mono);
-  font-size:11px;
-  padding:6px 12px;
-  z-index:4;
-  border:none;
-  transition:background 0.2s;
-}
-.portrait-tag:hover{ background:var(--accent); }
 
 .about-copy{ padding-top:8px; }
 .about-copy .role-line{
@@ -1152,7 +1109,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 <div class="corner-block"></div>
 <div class="ruler-h"><div class="ticks"></div></div>
 <div class="ruler-v"><div class="ticks"></div></div>
-<div class="coord-tag" id="coordTag">X:0 Y:0</div>
 
 <div class="page-shell">
 
@@ -1196,6 +1152,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
         <div class="hero-cta-group">
           <a href="#work" class="btn btn-primary">View the work →</a>
           <a href="#contact" class="btn btn-outline">Get in touch</a>
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/charles-bt-a80b62292/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/charles_exists/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            </a>
+          </div>
         </div>
         <div class="hero-meta-list">
           <div><span>Based in</span><span class="m-val">Kerala, IN</span></div>
@@ -1241,14 +1205,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <div class="crop crop-bl"></div>
             <div class="crop crop-br"></div>
             <img src="assets/portrait.jpg" alt="Charles Binu portrait" class="uploaded" id="portraitImg">
-            <label class="portrait-placeholder" id="portraitLabel" style="display:none;">
-              <input type="file" accept="image/*" id="portraitInput">
-              <span class="icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-              </span>
-              <span class="label"><b>Replace portrait</b>Click to upload<br>Recommended 4:5</span>
-            </label>
-            <button class="portrait-tag" id="portraitReplaceBtn" type="button" style="cursor:pointer;">assets/portrait.jpg · click to replace</button>
           </div>
         </div>
 
@@ -1421,9 +1377,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
       <div class="footer-bottom">
         <span>© 2026 Charles Binu. All rights reserved.</span>
         <div class="footer-socials">
-          <a href="#">LinkedIn</a>
-          <a href="#">Behance</a>
-          <a href="#">Instagram</a>
+          <a href="https://www.linkedin.com/in/charles-bt-a80b62292/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/charles_exists/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
     </div>
@@ -1493,35 +1448,6 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 revealEls.forEach(el => io.observe(el));
-
-/* ===== Coordinate tag follows cursor (subtle design-tool reference) ===== */
-const coordTag = document.getElementById('coordTag');
-let coordTimeout;
-document.addEventListener('mousemove', (e) => {
-  if(window.innerWidth < 900) return;
-  coordTag.style.opacity = '1';
-  coordTag.style.left = (e.clientX + 16) + 'px';
-  coordTag.style.top = (e.clientY + 16) + 'px';
-  coordTag.textContent = `X:${e.clientX} Y:${e.clientY}`;
-  clearTimeout(coordTimeout);
-  coordTimeout = setTimeout(() => { coordTag.style.opacity = '0'; }, 1200);
-});
-
-/* ===== Portrait upload (replaces assets/portrait.svg in-browser) ===== */
-const portraitInput = document.getElementById('portraitInput');
-const portraitImg = document.getElementById('portraitImg');
-const portraitReplaceBtn = document.getElementById('portraitReplaceBtn');
-portraitReplaceBtn.addEventListener('click', () => portraitInput.click());
-portraitInput.addEventListener('change', (e) => {
-  const file = e.target.files[0];
-  if(!file) return;
-  const reader = new FileReader();
-  reader.onload = (ev) => {
-    portraitImg.src = ev.target.result;
-    portraitReplaceBtn.textContent = 'preview only · save as assets/portrait.jpg';
-  };
-  reader.readAsDataURL(file);
-});
 
 /* ===== Portfolio data + render ===== */
 const portfolioItems = [
