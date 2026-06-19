@@ -453,11 +453,11 @@ h1,h2,h3{
 
 /* ============ MARQUEE STRIP ============ */
 .marquee-strip{
-  border-top:1px solid var(--grey-line);
-  border-bottom:1px solid var(--grey-line);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
   overflow:hidden;
-  background:var(--paper-dim);
-  padding:18px 0;
+  background:var(--ink);
+  padding:22px 0;
 }
 .marquee-track{
   display:flex;
@@ -470,9 +470,12 @@ h1,h2,h3{
   to{transform:translateX(-50%);}
 }
 .marquee-item{
-  font-family:var(--mono);
-  font-size:13px;
-  color:var(--grey);
+  font-family:var(--display);
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+  color:var(--paper);
   padding:0 28px;
   white-space:nowrap;
   display:flex;
