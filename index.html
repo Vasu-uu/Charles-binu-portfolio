@@ -3,11 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charles Binu — Graphic Designer</title>
+<title>Charles Binu — Graphic Designer | Branding, UI &amp; Print Design</title>
+<meta name="description" content="Charles Binu is a graphic designer based in Kottayam, Kerala, working across branding, packaging, UI design, and social/print advertising. View selected work and get in touch for freelance or full-time projects.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FAFAF8">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Charles Binu — Graphic Designer">
+<meta property="og:title" content="Charles Binu — Graphic Designer">
+<meta property="og:description" content="Branding, packaging, UI, and advertising design — a selected work archive by Charles Binu, based in Kottayam, Kerala.">
+<meta property="og:image" content="assets/portrait.jpg">
+<!-- TODO: replace with your live domain, and ideally a dedicated 1200x630 social-card image -->
+<meta property="og:url" content="https://your-domain-here.com/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Charles Binu — Graphic Designer">
+<meta name="twitter:description" content="Branding, packaging, UI, and advertising design — a selected work archive by Charles Binu.">
+<meta name="twitter:image" content="assets/portrait.jpg">
+
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Charles Binu",
+  "jobTitle": "Graphic Designer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kottayam",
+    "addressRegion": "Kerala",
+    "addressCountry": "IN"
+  },
+  "email": "mailto:charlesthottil@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/charles-bt-a80b62292/",
+    "https://www.instagram.com/charles_exists/",
+    "https://www.behance.net/charlesthottil"
+  ]
+}
+</script>
+
 <style>
 
 /* ============ TOKENS ============ */
@@ -329,9 +370,40 @@ h1,h2,h3{
     padding-bottom:56px;
   }
 }
+#heroCanvas{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  pointer-events:none;
+  display:block;
+}
 .hero-frame{
   position:relative;
+  z-index:1;
 }
+.scroll-cue{
+  position:absolute;
+  left:0; bottom:-56px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--grey);
+}
+.scroll-cue svg{
+  width:14px; height:14px;
+  animation:scroll-cue-bob 1.8s ease-in-out infinite;
+}
+@keyframes scroll-cue-bob{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(4px); }
+}
+@media(max-width:700px){ .scroll-cue{ display:none; } }
 .hero-tag-row{
   display:flex;
   align-items:center;
@@ -605,12 +677,22 @@ h1,h2,h3{
 }
 @media(max-width:520px){ .skill-cell{ padding:28px 22px; } }
 .skill-cell:hover{ background:var(--accent-soft); }
+.skill-cell .sk-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:24px;
+}
+.skill-cell .sk-icon{
+  width:26px; height:26px;
+  stroke:var(--accent);
+  fill:none;
+  stroke-width:1.4;
+}
 .skill-cell .sk-index{
   font-family:var(--mono);
   font-size:11px;
   color:var(--grey);
-  margin-bottom:24px;
-  display:block;
 }
 .skill-cell h3{
   font-size:18px;
@@ -656,34 +738,137 @@ h1,h2,h3{
 @media(max-width:700px){
   .filter-row{ margin-bottom:36px; gap:8px; }
 }
-.filter-btn{
-  font-family:var(--mono);
-  font-size:12px;
-  padding:9px 16px;
-  border:1px solid var(--grey-line);
-  border-radius:2px;
-  color:var(--grey);
-  transition:all 0.2s;
+/* Category Grid */
+.cat-grid{
+  column-count: 3;
+  column-gap: 2px;
+  margin-bottom:0;
 }
-@media(max-width:700px){
-  .filter-btn{ padding:10px 14px; font-size:11.5px; }
-}
-.filter-btn:hover{ border-color:var(--ink); color:var(--ink); }
-.filter-btn.active{
+@media(max-width:860px){ .cat-grid{ column-count: 2; } }
+@media(max-width:500px){ .cat-grid{ column-count: 1; } }
+
+.cat-card{
+  break-inside: avoid;
+  margin-bottom: 2px;
+  position:relative;
   background:var(--ink);
-  color:var(--paper);
-  border-color:var(--ink);
+  overflow:hidden;
+  cursor:pointer;
+  display:block;
+  min-height:240px;
+  transition:transform 0.35s cubic-bezier(.16,1,.3,1);
+}
+.cat-card:focus-visible{ outline:2px solid var(--accent); outline-offset:-2px; }
+.cat-card:hover{ transform:scale(0.975); }
+.cat-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(22,21,19,0.82) 0%, rgba(22,21,19,0.1) 60%, transparent 100%);
+  z-index:1;
+  transition:opacity 0.3s;
+}
+.cat-card:hover::before{ opacity:0.7; }
+.cat-card-bg{
+  display:block;
+  width:100%; height:auto;
+  opacity:0.55;
+  transition:transform 0.6s cubic-bezier(.16,1,.3,1), opacity 0.3s;
+}
+.cat-card:hover .cat-card-bg{ transform:scale(1.05); opacity:0.7; }
+.cat-card-body{
+  position:absolute;
+  bottom:24px; left:24px;
+  z-index:2;
+}
+.cat-num{
+  font-family:var(--mono);
+  font-size:10px;
+  color:rgba(255,255,255,0.75);
+  letter-spacing:0.12em;
+  margin-bottom:6px;
+}
+.cat-name{
+  font-family:var(--display);
+  font-size:20px;
+  font-weight:600;
+  color:#fff;
+  line-height:1.15;
+}
+.cat-count{
+  font-family:var(--mono);
+  font-size:11px;
+  color:rgba(255,255,255,0.7);
+  margin-top:8px;
+  display:block;
+}
+.cat-arrow{
+  position:absolute;
+  top:20px; right:20px;
+  z-index:2;
+  font-size:18px;
+  color:rgba(255,255,255,0.65);
+  transition:color 0.2s, transform 0.2s;
+}
+.cat-card:hover .cat-arrow{ color:#fff; transform:translate(3px,-3px); }
+
+/* Popup Modal */
+.work-detail-modal {
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  z-index: 150;
+  padding: 60px 40px;
+  overflow-y: auto;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.work-detail-modal.open {
+  display: block;
+  opacity: 1;
+}
+.work-detail-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.work-detail-close {
+  position: fixed;
+  top: 24px; right: 32px;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 160;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+.work-detail-close:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+}
+.work-cat-title{
+  font-family:var(--display);
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:32px;
+  text-align: center;
 }
 
+/* Artboard Grid */
 .artboard-grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:28px;
+  column-count: 3;
+  column-gap: 28px;
 }
-@media(max-width:900px){ .artboard-grid{grid-template-columns:repeat(2,1fr);} }
-@media(max-width:600px){ .artboard-grid{grid-template-columns:1fr;} }
+@media(max-width:900px){ .artboard-grid{column-count: 2;} }
+@media(max-width:600px){ .artboard-grid{column-count: 1;} }
 
 .artboard{
+  break-inside: avoid;
+  margin-bottom: 28px;
   position:relative;
   border:1px solid var(--grey-line);
   background:var(--paper);
@@ -699,13 +884,12 @@ h1,h2,h3{
   outline:2px solid var(--accent);
   outline-offset:3px;
 }
-.artboard.hidden{ display:none; }
 
 .artboard-canvas{
-  aspect-ratio:4/3;
   position:relative;
   overflow:hidden;
   background:var(--paper-dim);
+  min-height:160px;
 }
 .artboard-canvas .crop{
   position:absolute;
@@ -734,8 +918,27 @@ h1,h2,h3{
 .artboard-canvas .crop-br::after{bottom:0;right:0;width:100%;height:2px;}
 
 .artboard-canvas img.uploaded{
-  width:100%; height:100%; object-fit:cover;
-  position:absolute; inset:0; z-index:1;
+  width:100%; height:auto; object-fit:contain;
+  position:relative; z-index:1; display:block;
+}
+.ab-folder-placeholder, .ab-pdf-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:160px;
+  font-family:var(--mono);
+  font-size:13px;
+  color:var(--grey);
+  background:var(--paper-dim);
+}
+.ab-pdf-placeholder a{
+  color:var(--accent);
+  text-decoration:underline;
+}
+.ab-pdf-placeholder svg{
+  width:18px; height:18px;
+  flex-shrink:0;
 }
 .view-hint{
   position:absolute; inset:0;
@@ -767,11 +970,14 @@ h1,h2,h3{
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
+  gap:10px;
   margin-bottom:6px;
 }
 .artboard-info h3{
   font-size:16px;
   font-weight:600;
+  min-width:0;
+  word-break:break-word;
 }
 .artboard-info .ab-tag{
   font-family:var(--mono);
@@ -783,7 +989,9 @@ h1,h2,h3{
   white-space:nowrap;
 }
 .artboard-info p{
-  font-size:13px;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.04em;
   color:var(--grey);
   line-height:1.5;
 }
@@ -853,6 +1061,20 @@ h1,h2,h3{
   background:var(--ink);
   color:var(--paper);
   position:relative;
+  overflow:hidden;
+}
+#contactCanvas{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  pointer-events:none;
+  display:block;
+}
+.contact > .wrap{
+  position:relative;
+  z-index:1;
 }
 .contact .eyebrow{ color:#9AA3F5; }
 .contact .eyebrow::before{ background:#9AA3F5; }
@@ -1143,7 +1365,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
       <a href="#contact">Contact</a>
     </div>
     <a href="#contact" class="nav-cta">Hire me →</a>
-    <button class="nav-burger" id="burger" aria-label="Toggle menu"><span class="burger-icon"><span></span><span></span><span></span></span></button>
+    <button class="nav-burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"><span class="burger-icon"><span></span><span></span><span></span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about">About</a>
@@ -1155,6 +1377,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   <!-- HERO -->
   <section class="hero" id="top">
+    <canvas id="heroCanvas"></canvas>
     <div class="wrap hero-frame">
       <div class="hero-tag-row">
         <span class="pip"></span>
@@ -1193,6 +1416,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
           <div><span>Status</span><span class="m-val">Open to work</span></div>
         </div>
       </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to learn more">
+        Scroll
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+      </a>
     </div>
   </section>
 
@@ -1230,7 +1457,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
             <div class="crop crop-tr"></div>
             <div class="crop crop-bl"></div>
             <div class="crop crop-br"></div>
-            <img src="assets/portrait.jpg" alt="Charles Binu portrait" class="uploaded" id="portraitImg">
+            <img src="assets/portrait.jpg" alt="Charles Binu portrait" class="uploaded" id="portraitImg" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -1275,22 +1502,34 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     <div class="wrap">
       <div class="skills-grid reveal">
         <div class="skill-cell">
-          <span class="sk-index">01</span>
+          <div class="sk-top">
+            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg>
+            <span class="sk-index">01</span>
+          </div>
           <h3>Branding</h3>
           <p>Identity systems built to hold up across packaging, print, and screen — not just a logo file.</p>
         </div>
         <div class="skill-cell">
-          <span class="sk-index">02</span>
+          <div class="sk-top">
+            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 7.5 12 3 3 7.5 12 12l9-4.5z"/><path d="M3 7.5v9L12 21l9-4.5v-9"/><path d="M12 12v9"/></svg>
+            <span class="sk-index">02</span>
+          </div>
           <h3>Package Design</h3>
           <p>Retail-ready structural and surface design, refined through real agency briefs.</p>
         </div>
         <div class="skill-cell">
-          <span class="sk-index">03</span>
+          <div class="sk-top">
+            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 9h18"/><path d="M9 9v12"/></svg>
+            <span class="sk-index">03</span>
+          </div>
           <h3>UI Design</h3>
           <p>Interfaces that prioritise clarity and hierarchy over trend-chasing visual noise.</p>
         </div>
         <div class="skill-cell">
-          <span class="sk-index">04</span>
+          <div class="sk-top">
+            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10v4a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16.5 8.5a4 4 0 0 1 0 7"/><path d="M19.5 6a8 8 0 0 1 0 12"/></svg>
+            <span class="sk-index">04</span>
+          </div>
           <h3>Social &amp; Static Ads</h3>
           <p>Scroll-stopping creative for paid and organic feeds, sized and paced for every platform.</p>
         </div>
@@ -1305,29 +1544,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   </section>
 
   <!-- PORTFOLIO -->
-  <section class="portfolio" id="work">
+    <section class="portfolio" id="work">
     <div class="wrap">
       <div class="section-head reveal">
         <h2>Selected<br>work.</h2>
-        <p class="sub">A working archive across branding, UI, and advertising. Filter by category — artboards are placeholders, ready for final assets.</p>
+        <p class="sub">A working archive across branding, UI, and advertising. Choose a category below.</p>
       </div>
 
-      <div class="filter-row reveal" id="filterRow">
-        <button class="filter-btn active" data-filter="all">All work</button>
-        <button class="filter-btn" data-filter="branding">Branding</button>
-        <button class="filter-btn" data-filter="ui">UI Designing</button>
-        <button class="filter-btn" data-filter="social">Social Ads</button>
-        <button class="filter-btn" data-filter="print">Print Ads</button>
-        <button class="filter-btn" data-filter="photo">Photography</button>
-        <button class="filter-btn" data-filter="manip">Photo Manipulation</button>
-        <button class="filter-btn" data-filter="logo">Logo Works</button>
-      </div>
-
-      <div class="artboard-grid reveal" id="artboardGrid">
-        <!-- Cards injected by JS for consistency, see script -->
-      </div>
+      <!-- CATEGORY VIEW -->
+      <div class="cat-grid reveal" id="catGrid"></div>
     </div>
   </section>
+
+  <!-- POPUP MODAL FOR CATEGORY IMAGES -->
+  <div class="work-detail-modal" id="workDetail">
+    <button class="work-detail-close" id="workBack" aria-label="Close">×</button>
+    <div class="work-detail-content">
+      <div class="work-cat-title" id="workCatTitle"></div>
+      <div class="artboard-grid" id="artboardGrid"></div>
+    </div>
+  </div>
 
   <!-- EXPERIENCE -->
   <section class="timeline" id="experience">
@@ -1363,6 +1599,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
+    <canvas id="contactCanvas"></canvas>
     <div class="wrap">
       <span class="eyebrow">// Get in touch</span>
       <h2>Have a project in mind? Let's put it on the grid.</h2>
@@ -1423,7 +1660,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
   <div class="lightbox-card">
     <div class="lightbox-img-wrap">
-      <img src="" alt="" id="lightboxImg">
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" id="lightboxImg">
     </div>
     <div class="lightbox-details">
       <span class="lightbox-tag" id="lightboxTag"></span>
@@ -1459,14 +1696,24 @@ toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}
 /* ===== Mobile menu ===== */
 const burger = document.getElementById('burger');
 const mobileMenu = document.getElementById('mobileMenu');
+burger.setAttribute('aria-expanded', 'false');
 burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
+  const isOpen = burger.classList.toggle('open');
   mobileMenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', String(isOpen));
 });
 mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   burger.classList.remove('open');
   mobileMenu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
 }));
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape' && mobileMenu.classList.contains('open')){
+    burger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+});
 
 /* ===== Reveal on scroll ===== */
 const revealEls = document.querySelectorAll('.reveal');
@@ -1482,118 +1729,1049 @@ revealEls.forEach(el => io.observe(el));
 
 /* ===== Portfolio data + render ===== */
 const portfolioItems = [
-  {cat:'branding', tag:'Branding', title:'Brand Identity System', desc:'Logo, palette, and usage guidelines for a retail brand refresh.', img:'branding-01.png'},
-  {cat:'branding', tag:'Branding', title:'Package Branding Set', desc:'Cohesive packaging identity across a product line.', img:'branding-02.png'},
-  {cat:'ui', tag:'UI Designing', title:'Mobile App Concept', desc:'Clean interface system for an early-stage product.', img:'ui-01.jpg'},
-  {cat:'ui', tag:'UI Designing', title:'Dashboard UI Kit', desc:'Component-driven layout for a internal analytics tool.', img:'ui-02.png'},
-  {cat:'social', tag:'Social Ads', title:'Static Ad Campaign', desc:'Scroll-stopping creative set for paid social.', img:'social-01.png'},
-  {cat:'print', tag:'Print Ads', title:'Magazine Spread', desc:'Full-bleed print advertisement for a lifestyle brand.', img:'print-01.png'},
-  {cat:'print', tag:'Print Ads', title:'Outdoor Hoarding', desc:'High-impact billboard concept for urban placement.', img:'print-02.jpeg'},
-  {cat:'photo', tag:'Photography', title:'Photography', desc:'Studio-lit product set for an e-commerce catalogue.', img:'photo-01.jpg'},
-  {cat:'manip', tag:'Photo Manipulation', title:'Photo Manipulation', desc:'Surreal composite blending multiple source images.', img:'manip-01.png'},
-  {cat:'logo', tag:'Logo Works', title:'Mark Exploration', desc:'Logomark studies and final selection for a startup.', img:'logo-01.png'},
-  {cat:'branding', tag:'Branding', title:'Stationery Suite', desc:'Business card, letterhead, and envelope system.', img:'branding-03.png'}
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "Letterhead designed",
+    "desc": "Letterhead designed",
+    "img": "Portfolio Works/Branding Work/letterhead/Letterhead designed.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "letterhead mockup",
+    "desc": "letterhead mockup",
+    "img": "Portfolio Works/Branding Work/letterhead/letterhead mockup.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "logo",
+    "desc": "logo",
+    "img": "Portfolio Works/Branding Work/logo.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "package design mockup",
+    "desc": "package design mockup",
+    "img": "Portfolio Works/Branding Work/package/package design mockup.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "price tage mockup",
+    "desc": "price tage mockup",
+    "img": "Portfolio Works/Branding Work/price tag/price tage mockup.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "WhatsApp Image 2026-04-18 at 6.49.45 PM (1)",
+    "desc": "WhatsApp Image 2026-04-18 at 6.49.45 PM (1)",
+    "img": "Portfolio Works/Branding Work/signboard/WhatsApp Image 2026-04-18 at 6.49.45 PM (1).jpeg"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 1",
+    "desc": "gasania social media poster 1",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 1.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 10",
+    "desc": "gasania social media poster 10",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 10.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 2",
+    "desc": "gasania social media poster 2",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 2.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 3",
+    "desc": "gasania social media poster 3",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 3.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 4",
+    "desc": "gasania social media poster 4",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 4.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 5",
+    "desc": "gasania social media poster 5",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 5.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 6",
+    "desc": "gasania social media poster 6",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 6.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 7",
+    "desc": "gasania social media poster 7",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 7.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 8",
+    "desc": "gasania social media poster 8",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 8.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "gasania social media poster 9",
+    "desc": "gasania social media poster 9",
+    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 9.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "UI Designing of intsagram Page",
+    "desc": "UI Designing of intsagram Page",
+    "img": "Portfolio Works/Branding Work/UI Design/UI Designing of intsagram Page.jpg"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "bck",
+    "desc": "bck",
+    "img": "Portfolio Works/Branding Work/visiting card/1/bck.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "frnt",
+    "desc": "frnt",
+    "img": "Portfolio Works/Branding Work/visiting card/1/frnt.png"
+  },
+  {
+    "cat": "branding",
+    "tag": "Branding",
+    "title": "ChatGPT Image May 7, 2026, 12_03_52 PM",
+    "desc": "ChatGPT Image May 7, 2026, 12_03_52 PM",
+    "img": "Portfolio Works/Branding Work/visiting card/ChatGPT Image May 7, 2026, 12_03_52 PM.png"
+  },
+  {
+    "cat": "newsletter",
+    "tag": "Newsletter",
+    "title": "Email Newsletter Design 1",
+    "desc": "Email Newsletter Design 1",
+    "img": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 1.jpg"
+  },
+  {
+    "cat": "newsletter",
+    "tag": "Newsletter",
+    "title": "Email Newsletter Design 2",
+    "desc": "Email Newsletter Design 2",
+    "img": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 2.jpg"
+  },
+  {
+    "cat": "logo",
+    "tag": "Logo Works",
+    "title": "Gasania Couture",
+    "desc": "Gasania Couture",
+    "img": "Portfolio Works/Logo Works/Gasania Couture.png"
+  },
+  {
+    "cat": "logo",
+    "tag": "Logo Works",
+    "title": "Jhanvi logo 1",
+    "desc": "Jhanvi logo 1",
+    "img": "Portfolio Works/Logo Works/Jhanvi logo 1.png"
+  },
+  {
+    "cat": "logo",
+    "tag": "Logo Works",
+    "title": "Logoooo",
+    "desc": "Logoooo",
+    "img": "Portfolio Works/Logo Works/Logoooo.png"
+  },
+  {
+    "cat": "logo",
+    "tag": "Logo Works",
+    "title": "moogliux",
+    "desc": "moogliux",
+    "img": "Portfolio Works/Logo Works/moogliux.png"
+  },
+  {
+    "cat": "package",
+    "tag": "Packaging",
+    "title": "DAEWOO - Brand Package Design",
+    "desc": "DAEWOO - Brand Package Design",
+    "img": "Portfolio Works/Package Designing/DAEWOO - Brand Package Design.png"
+  },
+  {
+    "cat": "package",
+    "tag": "Packaging",
+    "title": "Gasania Couture - Package Design Mockup",
+    "desc": "Gasania Couture - Package Design Mockup",
+    "img": "Portfolio Works/Package Designing/Gasania Couture - Package Design Mockup.png"
+  },
+  {
+    "cat": "package",
+    "tag": "Packaging",
+    "title": "Luxe.co - Box Design Mockup",
+    "desc": "Luxe.co - Box Design Mockup",
+    "img": "Portfolio Works/Package Designing/Luxe.co - Box Design Mockup.png"
+  },
+  {
+    "cat": "package",
+    "tag": "Packaging",
+    "title": "Luxe.co - Cup Sticker Design Mockup",
+    "desc": "Luxe.co - Cup Sticker Design Mockup",
+    "img": "Portfolio Works/Package Designing/Luxe.co - Cup Sticker Design Mockup.png"
+  },
+  {
+    "cat": "edit",
+    "tag": "Photo Editing",
+    "title": "1",
+    "desc": "1",
+    "img": "Portfolio Works/Photo Editing/1.jpg"
+  },
+  {
+    "cat": "edit",
+    "tag": "Photo Editing",
+    "title": "2",
+    "desc": "2",
+    "img": "Portfolio Works/Photo Editing/2.jpg"
+  },
+  {
+    "cat": "edit",
+    "tag": "Photo Editing",
+    "title": "3",
+    "desc": "3",
+    "img": "Portfolio Works/Photo Editing/3.jpeg"
+  },
+  {
+    "cat": "edit",
+    "tag": "Photo Editing",
+    "title": "4",
+    "desc": "4",
+    "img": "Portfolio Works/Photo Editing/4.jpeg"
+  },
+  {
+    "cat": "edit",
+    "tag": "Photo Editing",
+    "title": "6",
+    "desc": "6",
+    "img": "Portfolio Works/Photo Editing/6.jpg"
+  },
+  {
+    "cat": "edit",
+    "tag": "Photo Editing",
+    "title": "7",
+    "desc": "7",
+    "img": "Portfolio Works/Photo Editing/7.png"
+  },
+  {
+    "cat": "edit",
+    "tag": "Photo Editing",
+    "title": "8",
+    "desc": "8",
+    "img": "Portfolio Works/Photo Editing/8.JPG"
+  },
+  {
+    "cat": "manip",
+    "tag": "Photo Manipulation",
+    "title": "2",
+    "desc": "2",
+    "img": "Portfolio Works/Photo Manipulation/2.jpeg"
+  },
+  {
+    "cat": "manip",
+    "tag": "Photo Manipulation",
+    "title": "BMW M3",
+    "desc": "BMW M3",
+    "img": "Portfolio Works/Photo Manipulation/BMW M3.png"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Animal",
+    "desc": "Animal",
+    "img": "Portfolio Works/Photography/Animal.JPG"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Fauna",
+    "desc": "Fauna",
+    "img": "Portfolio Works/Photography/Fauna.JPG"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Flower",
+    "desc": "Flower",
+    "img": "Portfolio Works/Photography/Flower.JPG"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "food",
+    "desc": "food",
+    "img": "Portfolio Works/Photography/food.JPG"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Landscape",
+    "desc": "Landscape",
+    "img": "Portfolio Works/Photography/Landscape.jpg"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Portrait",
+    "desc": "Portrait",
+    "img": "Portfolio Works/Photography/Portrait.jpg"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "product image",
+    "desc": "product image",
+    "img": "Portfolio Works/Photography/product image.jpg"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Protrait 2",
+    "desc": "Protrait 2",
+    "img": "Portfolio Works/Photography/Protrait 2.JPG"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Protrait Back light",
+    "desc": "Protrait Back light",
+    "img": "Portfolio Works/Photography/Protrait Back light.JPG"
+  },
+  {
+    "cat": "photo",
+    "tag": "Photography",
+    "title": "Street",
+    "desc": "Street",
+    "img": "Portfolio Works/Photography/Street.jpeg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "1",
+    "desc": "1",
+    "img": "Portfolio Works/Print Advertisement/1.jpg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "10",
+    "desc": "10",
+    "img": "Portfolio Works/Print Advertisement/10.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "11",
+    "desc": "11",
+    "img": "Portfolio Works/Print Advertisement/11.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "12",
+    "desc": "12",
+    "img": "Portfolio Works/Print Advertisement/12.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "2",
+    "desc": "2",
+    "img": "Portfolio Works/Print Advertisement/2.jpeg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "3",
+    "desc": "3",
+    "img": "Portfolio Works/Print Advertisement/3.jpeg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "3",
+    "desc": "3",
+    "img": "Portfolio Works/Print Advertisement/3.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "4",
+    "desc": "4",
+    "img": "Portfolio Works/Print Advertisement/4.jpeg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "5",
+    "desc": "5",
+    "img": "Portfolio Works/Print Advertisement/5.jpeg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "5",
+    "desc": "5",
+    "img": "Portfolio Works/Print Advertisement/5.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "6",
+    "desc": "6",
+    "img": "Portfolio Works/Print Advertisement/6.jpeg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "7",
+    "desc": "7",
+    "img": "Portfolio Works/Print Advertisement/7.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "8",
+    "desc": "8",
+    "img": "Portfolio Works/Print Advertisement/8.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "9",
+    "desc": "9",
+    "img": "Portfolio Works/Print Advertisement/9.png"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "Al - Surairat Poster 1",
+    "desc": "Al - Surairat Poster 1",
+    "img": "Portfolio Works/Print Advertisement/Al - Surairat Poster 1.jpg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "Al - Surairat Poster 2",
+    "desc": "Al - Surairat Poster 2",
+    "img": "Portfolio Works/Print Advertisement/Al - Surairat Poster 2.jpg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "bck",
+    "desc": "bck",
+    "img": "Portfolio Works/Print Advertisement/bifold/bck.jpg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "frnt",
+    "desc": "frnt",
+    "img": "Portfolio Works/Print Advertisement/bifold/frnt.jpg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "Newspaper Tabloid",
+    "desc": "Newspaper Tabloid",
+    "img": "Portfolio Works/Print Advertisement/Newspaper Tabloid.pdf"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "back",
+    "desc": "back",
+    "img": "Portfolio Works/Print Advertisement/trifold/back.jpg"
+  },
+  {
+    "cat": "print",
+    "tag": "Print Ads",
+    "title": "frnt",
+    "desc": "frnt",
+    "img": "Portfolio Works/Print Advertisement/trifold/frnt.jpg"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "@wachsen 1",
+    "desc": "@wachsen 1",
+    "img": "Portfolio Works/Social Media Advertisement/@wachsen 1.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "@wachsen 2",
+    "desc": "@wachsen 2",
+    "img": "Portfolio Works/Social Media Advertisement/@wachsen 2.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "@wachsen 3",
+    "desc": "@wachsen 3",
+    "img": "Portfolio Works/Social Media Advertisement/@wachsen 3.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "@wachsen 4",
+    "desc": "@wachsen 4",
+    "img": "Portfolio Works/Social Media Advertisement/@wachsen 4.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "@wachsen 5",
+    "desc": "@wachsen 5",
+    "img": "Portfolio Works/Social Media Advertisement/@wachsen 5.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "@wachsen 6",
+    "desc": "@wachsen 6",
+    "img": "Portfolio Works/Social Media Advertisement/@wachsen 6.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "Gasania Couture 1",
+    "desc": "Gasania Couture 1",
+    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 1.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "Gasania Couture 2",
+    "desc": "Gasania Couture 2",
+    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 2.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "Gasania Couture 3",
+    "desc": "Gasania Couture 3",
+    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 3.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "Gasania Couture 4",
+    "desc": "Gasania Couture 4",
+    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 4.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "HighRange Social Media ad",
+    "desc": "HighRange Social Media ad",
+    "img": "Portfolio Works/Social Media Advertisement/HighRange Social Media ad.png"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "Vikings Tattoo 2",
+    "desc": "Vikings Tattoo 2",
+    "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo 2.jpg"
+  },
+  {
+    "cat": "social",
+    "tag": "Social Ads",
+    "title": "Vikings Tattoo poster 1",
+    "desc": "Vikings Tattoo poster 1",
+    "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo poster 1.png"
+  },
+  {
+    "cat": "ui",
+    "tag": "UI Designing",
+    "title": "Curren Watch Website",
+    "desc": "Curren Watch Website",
+    "img": "Portfolio Works/UI Designing/Curren Watch Website.jpg"
+  },
+  {
+    "cat": "ui",
+    "tag": "UI Designing",
+    "title": "Food delivery app",
+    "desc": "Food delivery app",
+    "img": "Portfolio Works/UI Designing/Food delivery app.jpg"
+  },
+  {
+    "cat": "ui",
+    "tag": "UI Designing",
+    "title": "gasania Intsagram  UI interface",
+    "desc": "gasania Intsagram  UI interface",
+    "img": "Portfolio Works/UI Designing/gasania Intsagram  UI interface.png"
+  },
+  {
+    "cat": "ui",
+    "tag": "UI Designing",
+    "title": "Login Page design",
+    "desc": "Login Page design",
+    "img": "Portfolio Works/UI Designing/Login Page design.jpg"
+  },
+  {
+    "cat": "ui",
+    "tag": "UI Designing",
+    "title": "Registration Form 2",
+    "desc": "Registration Form 2",
+    "img": "Portfolio Works/UI Designing/Registration Form 2.jpg"
+  },
+  {
+    "cat": "ui",
+    "tag": "UI Designing",
+    "title": "Registration Form",
+    "desc": "Registration Form",
+    "img": "Portfolio Works/UI Designing/Registration Form.png"
+  },
+  {
+    "cat": "ui",
+    "tag": "UI Designing",
+    "title": "website design",
+    "desc": "website design",
+    "img": "Portfolio Works/UI Designing/website design.jpg"
+  }
 ];
 
-const grid = document.getElementById('artboardGrid');
-grid.innerHTML = portfolioItems.map((item, i) => `
-  <div class="artboard" data-cat="${item.cat}" data-index="${i}" tabindex="0" role="button" aria-label="View ${item.title} details">
-    <div class="artboard-canvas">
-      <div class="crop crop-tl"></div>
-      <div class="crop crop-tr"></div>
-      <div class="crop crop-bl"></div>
-      <div class="crop crop-br"></div>
-      <img src="assets/${item.img}" alt="${item.title}" class="uploaded ab-img">
-      <div class="view-hint">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
-        <span>View</span>
-      </div>
-    </div>
-    <div class="artboard-info">
-      <div class="ab-top">
-        <h3>${item.title}</h3>
-        <span class="ab-tag">${item.tag}</span>
-      </div>
-      <p>${item.desc}</p>
-    </div>
-  </div>
-`).join('');
+const categories = [
+  {
+    "key": "branding",
+    "label": "Branding",
+    "cover": "Portfolio Works/Branding Work/letterhead/Letterhead designed.png"
+  },
+  {
+    "key": "newsletter",
+    "label": "Newsletter",
+    "cover": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 1.jpg"
+  },
+  {
+    "key": "logo",
+    "label": "Logo Works",
+    "cover": "Portfolio Works/Logo Works/Gasania Couture.png"
+  },
+  {
+    "key": "package",
+    "label": "Packaging",
+    "cover": "Portfolio Works/Package Designing/DAEWOO - Brand Package Design.png"
+  },
+  {
+    "key": "edit",
+    "label": "Photo Editing",
+    "cover": "Portfolio Works/Photo Editing/1.jpg"
+  },
+  {
+    "key": "manip",
+    "label": "Photo Manipulation",
+    "cover": "Portfolio Works/Photo Manipulation/2.jpeg"
+  },
+  {
+    "key": "photo",
+    "label": "Photography",
+    "cover": "Portfolio Works/Photography/Animal.JPG"
+  },
+  {
+    "key": "print",
+    "label": "Print Ads",
+    "cover": "Portfolio Works/Print Advertisement/1.jpg"
+  },
+  {
+    "key": "social",
+    "label": "Social Ads",
+    "cover": "Portfolio Works/Social Media Advertisement/@wachsen 1.png"
+  },
+  {
+    "key": "ui",
+    "label": "UI Designing",
+    "cover": "Portfolio Works/UI Designing/Curren Watch Website.jpg"
+  }
+];
 
-/* ===== Detail modal: shows image + title + tag + description ===== */
+/* ===== Render category cards ===== */
+const catGrid = document.getElementById('catGrid');
+const workDetail = document.getElementById('workDetail');
+const workBack = document.getElementById('workBack');
+const workCatTitle = document.getElementById('workCatTitle');
+const artboardGrid = document.getElementById('artboardGrid');
+
+/* ===== Display helpers ===== */
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function isPdf(path) { return /\.pdf$/i.test(path); }
+function titleCaseWords(s) {
+  return s.replace(/[-_]+/g, ' ').trim().replace(/\s+/g, ' ')
+    .replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase());
+}
+function getNamedSubfolder(imgPath) {
+  const parts = imgPath.split('/');
+  const inner = parts.slice(2, -1).filter(p => !/^\d+$/.test(p));
+  return inner.length ? inner[inner.length - 1] : null;
+}
+// Many filenames are just numbers or "frnt"/"bck" — turn those into something
+// readable (e.g. "Bifold — Front") using the folder they came from, instead
+// of showing a bare "3" or "frnt" as the title / alt text.
+function humanizeTitle(item, posInCategory) {
+  const raw = item.title.trim();
+  const lower = raw.toLowerCase();
+  const sideMap = { bck: 'Back', back: 'Back', frnt: 'Front', front: 'Front' };
+  const isGenericNumber = /^\d+$/.test(raw);
+  const isSide = sideMap.hasOwnProperty(lower);
+  if (!isGenericNumber && !isSide) return raw;
+  const sub = getNamedSubfolder(item.img);
+  if (isSide) return sub ? `${titleCaseWords(sub)} — ${sideMap[lower]}` : `${item.tag} — ${sideMap[lower]}`;
+  return sub ? `${titleCaseWords(sub)} ${String(posInCategory).padStart(2, '0')}` : `${item.tag} ${String(posInCategory).padStart(2, '0')}`;
+}
+
+function renderCategoryCards() {
+  catGrid.innerHTML = categories.map((cat, i) => {
+    const count = portfolioItems.filter(p => p.cat === cat.key).length;
+    return `
+    <div class="cat-card" data-cat="${cat.key}" tabindex="0" role="button" aria-label="View ${escapeHtml(cat.label)} category, ${count} ${count === 1 ? 'piece' : 'pieces'}">
+      <img class="cat-card-bg" src="assets/${cat.cover}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      <span class="cat-arrow">↗</span>
+      <div class="cat-card-body">
+        <div class="cat-num">0${i + 1}</div>
+        <div class="cat-name">${escapeHtml(cat.label)}</div>
+        <span class="cat-count">${count} ${count === 1 ? 'piece' : 'pieces'}</span>
+      </div>
+    </div>
+  `;
+  }).join('');
+
+  catGrid.querySelectorAll('.cat-card').forEach(card => {
+    const go = () => openCategory(card.dataset.cat, card);
+    card.addEventListener('click', go);
+    card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+}
+
+let modalReturnFocus = null;
+
+function openCategory(catKey, triggerEl) {
+  const cat = categories.find(c => c.key === catKey);
+  const items = portfolioItems.filter(p => p.cat === catKey);
+  modalReturnFocus = triggerEl || null;
+
+  artboardGrid.innerHTML = items.map((item, i) => {
+    const label = humanizeTitle(item, i + 1);
+    const folder = item.img.endsWith('/');
+    const pdf = isPdf(item.img);
+    let mediaHtml;
+    if (folder) {
+      mediaHtml = '<div class="ab-folder-placeholder"><span>↗ Folder</span></div>';
+    } else if (pdf) {
+      mediaHtml = `<div class="ab-pdf-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        <a href="assets/${item.img}" target="_blank" rel="noopener">Open PDF</a>
+      </div>`;
+    } else {
+      mediaHtml = `<img src="assets/${item.img}" alt="${escapeHtml(cat.label)} — ${escapeHtml(label)}" class="uploaded ab-img" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
+    }
+    return `
+    <div class="artboard" data-index="${portfolioItems.indexOf(item)}" ${pdf || folder ? '' : `tabindex="0" role="button" aria-label="View ${escapeHtml(label)}"`}>
+      <div class="artboard-canvas">
+        <div class="crop crop-tl"></div><div class="crop crop-tr"></div>
+        <div class="crop crop-bl"></div><div class="crop crop-br"></div>
+        ${mediaHtml}
+        ${!pdf && !folder ? `<div class="view-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>View</span>
+        </div>` : ''}
+      </div>
+      <div class="artboard-info">
+        <div class="ab-top">
+          <h3>${escapeHtml(label)}</h3>
+          <span class="ab-tag">${escapeHtml(cat.label)}</span>
+        </div>
+        <p>${String(i + 1).padStart(2, '0')} / ${String(items.length).padStart(2, '0')}</p>
+      </div>
+    </div>
+  `;
+  }).join('');
+
+  // attach lightbox clicks (PDFs and folder placeholders open via their own link, not the lightbox)
+  artboardGrid.querySelectorAll('.artboard[role="button"]').forEach(card => {
+    const idx = parseInt(card.dataset.index, 10);
+    const item = portfolioItems[idx];
+    const itemLabel = humanizeTitle(item, idx + 1);
+    const open = () => openLightbox(item, 'assets/' + item.img, itemLabel, card);
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+
+  workCatTitle.textContent = cat.label;
+
+  // OPEN POPUP MODAL
+  workDetail.classList.add('open');
+  document.body.style.overflow = 'hidden'; // prevent background scrolling
+  workBack.focus();
+}
+
+// CLOSE POPUP MODAL
+function closeWorkDetail(){
+  workDetail.classList.remove('open');
+  document.body.style.overflow = '';
+  if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') modalReturnFocus.focus();
+}
+workBack.addEventListener('click', closeWorkDetail);
+
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxTag = document.getElementById('lightboxTag');
 const lightboxTitle = document.getElementById('lightboxTitle');
 const lightboxDesc = document.getElementById('lightboxDesc');
+const lightboxClose = document.getElementById('lightboxClose');
 
-function openLightbox(item, imgSrc){
-  lightboxImg.src = imgSrc;
-  lightboxImg.alt = item.title;
+let lightboxReturnFocus = null;
+
+function openLightbox(item, src, label, triggerEl){
+  if(!src) return;
+  const displayLabel = label || item.title;
+  lightboxReturnFocus = triggerEl || null;
+  lightboxImg.src = src;
+  lightboxImg.alt = `${item.tag} — ${displayLabel}`;
   lightboxTag.textContent = item.tag;
-  lightboxTitle.textContent = item.title;
-  lightboxDesc.textContent = item.desc;
+  lightboxTitle.textContent = displayLabel;
+  lightboxDesc.textContent = (item.desc && item.desc !== item.title) ? item.desc : `From the ${item.tag} collection.`;
   lightbox.classList.add('open');
+  lightboxClose.focus();
 }
-function closeLightbox(){ lightbox.classList.remove('open'); }
 
-document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  setTimeout(()=>{ lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='; }, 250);
+  if (lightboxReturnFocus && typeof lightboxReturnFocus.focus === 'function') lightboxReturnFocus.focus();
+}
 
-grid.querySelectorAll('.artboard').forEach(card => {
-  const idx = parseInt(card.dataset.index, 10);
-  const item = portfolioItems[idx];
-  const img = card.querySelector('.ab-img');
-
-  const open = () => openLightbox(item, img.src);
-  card.addEventListener('click', open);
-  card.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(); } });
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => { if(e.target === lightbox || e.target.classList.contains('lightbox-card')) closeLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if(e.key !== 'Escape') return;
+  if(lightbox.classList.contains('open')) closeLightbox();
+  else if(workDetail.classList.contains('open')) closeWorkDetail();
 });
 
-/* ===== Filter ===== */
-const filterBtns = document.querySelectorAll('.filter-btn');
-const artboards = document.querySelectorAll('.artboard');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    artboards.forEach(card => {
-      if(f === 'all' || card.dataset.cat === f){ card.classList.remove('hidden'); }
-      else { card.classList.add('hidden'); }
+renderCategoryCards();
+
+/* ===== Canvas background animations ===== */
+(function(){
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  ['contactCanvas', 'heroCanvas'].forEach(id => {
+    const canvas = document.getElementById(id);
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, nodes, lines, rafId = null, running = false;
+
+    function resize(){
+      const rect = canvas.parentElement.getBoundingClientRect();
+      W = canvas.width  = rect.width;
+      H = canvas.height = rect.height;
+    }
+
+    function initNodes(){
+      nodes = [];
+      // capped so very large/ultra-wide screens don't blow up the O(n²) connection check below
+      const count = Math.min(90, Math.floor((W * H) / 14000));
+      for(let i=0;i<count;i++){
+        nodes.push({
+          x: Math.random()*W,
+          y: Math.random()*H,
+          vx: (Math.random()-0.5)*0.35,
+          vy: (Math.random()-0.5)*0.35,
+          r: Math.random()*1.8+0.6,
+          pulse: Math.random()*Math.PI*2
+        });
+      }
+      lines = [];
+      const cols = 8, rows = 5;
+      for(let c=1;c<cols;c++){
+        lines.push({x1:W*c/cols, y1:0, x2:W*c/cols, y2:H, speed:(Math.random()-0.5)*0.2, offset:Math.random()*H});
+      }
+      for(let r=1;r<rows;r++){
+        lines.push({x1:0, y1:H*r/rows, x2:W, y2:H*r/rows, speed:(Math.random()-0.5)*0.15, offset:Math.random()*W, horiz:true});
+      }
+    }
+
+    const CONN_DIST = 130;
+    const ACCENT = '154,163,245';
+    const DARK_ACCENT = '61,79,224'; // var(--accent)
+
+    function draw(t){
+      ctx.clearRect(0,0,W,H);
+
+      ctx.save();
+      lines.forEach(l=>{
+        ctx.beginPath();
+        ctx.strokeStyle = id === 'heroCanvas' ? 'rgba(22,21,19,0.05)' : 'rgba(255,255,255,0.04)';
+        ctx.lineWidth = 0.8;
+        if(l.horiz){
+          const shift = ((l.offset + t*l.speed*0.03)%W);
+          ctx.moveTo(shift, l.y1); ctx.lineTo(W+shift, l.y1);
+        } else {
+          const shift = ((l.offset + t*l.speed*0.03)%H);
+          ctx.moveTo(l.x1, shift); ctx.lineTo(l.x1, H+shift);
+        }
+        ctx.stroke();
+      });
+      ctx.restore();
+
+      for(let i=0;i<nodes.length;i++){
+        for(let j=i+1;j<nodes.length;j++){
+          const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
+          const dist=Math.sqrt(dx*dx+dy*dy);
+          if(dist<CONN_DIST){
+            const alpha=(1-dist/CONN_DIST)*0.22;
+            ctx.beginPath();
+            ctx.strokeStyle=`rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${alpha})`;
+            ctx.lineWidth=0.8;
+            ctx.moveTo(nodes[i].x,nodes[i].y);
+            ctx.lineTo(nodes[j].x,nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      nodes.forEach(n=>{
+        n.pulse += 0.018;
+        const glow = 0.5 + 0.5*Math.sin(n.pulse);
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r + glow*0.8, 0, Math.PI*2);
+        ctx.fillStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.5 + glow*0.4})`;
+        ctx.fill();
+
+        n.x += n.vx; n.y += n.vy;
+        if(n.x<0||n.x>W) n.vx*=-1;
+        if(n.y<0||n.y>H) n.vy*=-1;
+      });
+
+      [
+        {cx:W*0.88, cy:H*0.18, rr:60},
+        {cx:W*0.05, cy:H*0.82, rr:40},
+        {cx:W*0.5,  cy:H*0.95, rr:28}
+      ].forEach(({cx,cy,rr},i)=>{
+        const pulse = 0.5+0.5*Math.sin(t*0.0008 + i*2.1);
+        ctx.beginPath();
+        ctx.arc(cx, cy, rr+pulse*8, 0, Math.PI*2);
+        ctx.strokeStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.07+pulse*0.06})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(cx, cy, (rr+pulse*8)*0.55, 0, Math.PI*2);
+        ctx.strokeStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.04})`;
+        ctx.stroke();
+      });
+    }
+
+    function loop(t){
+      draw(t);
+      if(running) rafId = requestAnimationFrame(loop);
+    }
+    function start(){
+      if(running || reduceMotion) return;
+      running = true;
+      rafId = requestAnimationFrame(loop);
+    }
+    function stop(){
+      running = false;
+      if(rafId) cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+
+    resize();
+    initNodes();
+    draw(0); // static first frame — also the final state if motion is reduced
+
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { resize(); initNodes(); draw(0); }, 150);
     });
-  });
-});
 
-/* ===== Contact form — sends via FormSubmit (no backend required) ===== */
+    if(!reduceMotion){
+      // Only spend CPU/battery animating this canvas while it's actually visible
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { entry.isIntersecting ? start() : stop(); });
+      }, { threshold: 0 });
+      io.observe(canvas);
+
+      document.addEventListener('visibilitychange', () => {
+        if(document.hidden) stop();
+        else {
+          const r = canvas.getBoundingClientRect();
+          if(r.bottom > 0 && r.top < window.innerHeight) start();
+        }
+      });
+    }
+  });
+})();
+
+
+/* ===== Contact form → Formsubmit ===== */
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/charlesthottil@gmail.com';
 
 contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.form-submit');
+  const original = btn.textContent;
 
-  const btn = contactForm.querySelector('.form-submit');
-  const original = 'Send message →';
-  const nameVal = document.getElementById('f-name').value.trim();
-  const emailVal = document.getElementById('f-email').value.trim();
-  const msgVal = document.getElementById('f-msg').value.trim();
+  const nameVal = form.querySelector('#f-name').value.trim();
+  const emailVal = form.querySelector('#f-email').value.trim();
+  const msgVal = form.querySelector('#f-msg').value.trim();
+  const honeyVal = form.querySelector('[name="_honey"]')?.value.trim();
+  const actionUrl = form.getAttribute('action');
 
-  if(!nameVal || !emailVal || !msgVal){
-    formStatus.textContent = 'Please fill out every field before sending.';
-    formStatus.className = 'form-status error show';
+  // Honeypot: real visitors never fill this hidden field — bots usually do.
+  // Pretend it worked so the bot doesn't try again, without actually sending anything.
+  if (honeyVal) {
+    btn.textContent = 'Message sent ✓';
+    formStatus.textContent = "Thanks — I'll get back to you soon.";
+    formStatus.className = 'form-status success show';
+    contactForm.reset();
+    setTimeout(() => { btn.textContent = original; }, 3200);
     return;
   }
 
-  btn.disabled = true;
   btn.textContent = 'Sending…';
-  formStatus.className = 'form-status show';
-  formStatus.textContent = '';
+  btn.disabled = true;
 
-  try{
-    const res = await fetch(FORM_ENDPOINT, {
-      method:'POST',
-      headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+  try {
+    const res = await fetch(actionUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify({
         name: nameVal,
         email: emailVal,
@@ -1622,6 +2800,7 @@ contactForm.addEventListener('submit', async (e) => {
     btn.textContent = original;
   }, 3200);
 });
+
 </script>
 
 </body>

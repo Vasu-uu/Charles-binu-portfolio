@@ -7,22 +7,93 @@ This is a single-page portfolio site for Charles Binu, a graphic designer workin
 ## 2. Project structure
 
 ```
-index.html        — all markup, styles, and scripts for the site
-assets/            — portfolio images referenced from index.html
-  branding-01.png
-  branding-02.png
-  branding-03.png
-  ui-01.jpg
-  ui-02.png
-  social-01.png
-  print-01.png
-  print-02.jpeg
-  photo-01.jpg
-  manip-01.png
-  logo-01.png
+index.html                              — all markup, styles, and scripts for the site
+assets/                                 — all images and media referenced from index.html
+  │
+  ├── favicon/                          — browser / PWA icons
+  │     ├── favicon.ico
+  │     ├── favicon-16x16.png
+  │     ├── favicon-32x32.png
+  │     ├── apple-touch-icon.png
+  │     ├── android-chrome-192x192.png
+  │     └── android-chrome-512x512.png
+  │
+  ├── Branding Work/                    — brand identity project files
+  │     └── gasania COUTURE.pdf
+  │
+  ├── Internship/                       — internship documentation
+  │     └── Final Internship Report.pdf
+  │
+  ├── Logo Works/                       — logo design assets
+  │     ├── Gasania Couture.png
+  │     ├── Jhanvi logo 1.png
+  │     ├── Logoooo.png
+  │     └── moogliux.png
+  │
+  ├── Photo Editing/                    — photo retouching & editing work
+  │     ├── 1.jpg
+  │     ├── 2.jpg
+  │     ├── 3.jpeg
+  │     ├── 4.jpeg
+  │     ├── 6.jpg
+  │     ├── 7.png
+  │     └── 8.JPG
+  │
+  ├── Photo Manipulation/               — composite / manipulation work
+  │     ├── 2.jpeg
+  │     └── BMW M3.png
+  │
+  ├── Photography/                      — original photography
+  │     ├── Animal.JPG
+  │     ├── Fauna.JPG
+  │     ├── Flower.JPG
+  │     ├── Landscape.jpg
+  │     ├── Portrait.jpg
+  │     ├── Protrait 2.JPG
+  │     ├── Protrait Back light.JPG
+  │     ├── Street.jpeg
+  │     ├── food.JPG
+  │     └── product image.jpg
+  │
+  ├── Print Advertisement/              — print ad layouts and collateral
+  │     ├── Al - Surairat Poster 1.jpg
+  │     ├── Al - Surairat Poster 2.jpg
+  │     ├── Newspaper Tabloid.pdf
+  │     ├── 1.jpg – 12.png  (numbered series)
+  │     ├── bifold/
+  │     └── trifold/
+  │
+  ├── Social Media Advertisement (Static Ads)/   — social media creatives
+  │     ├── @wachsen 1.png – @wachsen 6.png
+  │     ├── Gasania Couture 1.png – Gasania Couture 4.png
+  │     ├── HighRange Social Media ad.png
+  │     ├── Vikings Tattoo poster 1.png
+  │     └── Vikings Tattoo 2.jpg
+  │
+  ├── UI Designing/                     — UI/UX mockups and screen designs
+  │     ├── Curren Watch Website.jpg
+  │     ├── Food delivery app.jpg
+  │     ├── Login Page design.jpg
+  │     ├── Registration Form.png
+  │     ├── Registration Form 2.jpg
+  │     ├── gasania Intsagram  UI interface.png
+  │     └── website design.jpg
+  │
+  ├── portrait.jpg                      — about-section profile photo
+  ├── branding-01.png                   — portfolio grid thumbnail
+  ├── branding-02.png
+  ├── branding-03.png
+  ├── logo-01.png
+  ├── manip-01.png
+  ├── photo-01.jpg
+  ├── print-01.png
+  ├── print-02.jpeg
+  ├── social-01.png
+  ├── ui-01.jpg
+  └── ui-02.png
 ```
 
-The `assets` folder must sit next to `index.html` with these exact filenames. The portfolio grid is generated from a JavaScript array that points to `assets/<filename>` for each project.
+The `assets` folder must sit next to `index.html`. Root-level image files (e.g. `branding-01.png`, `ui-01.jpg`) are the thumbnails used by the portfolio grid; the named subfolders hold the full-resolution source files for each discipline. The portfolio grid is generated from a JavaScript `portfolioItems` array that points to `assets/<filename>` for each card.
 
 ## 3. Architecture
 
