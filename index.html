@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charles Binu — Graphic Designer | Branding, UI &amp; Print Design</title>
-<meta name="description" content="Charles Binu is a graphic designer based in Kottayam, Kerala, working across branding, packaging, UI design, and social/print advertising. View selected work and get in touch for freelance or full-time projects.">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#FAFAF8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charles Binu — Graphic Designer | Branding, UI &amp; Print Design</title>
+  <meta name="description"
+    content="Charles Binu is a graphic designer based in Kottayam, Kerala, working across branding, packaging, UI design, and social/print advertising. View selected work and get in touch for freelance or full-time projects.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#FAFAF8">
 
-<!-- Open Graph / social sharing -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Charles Binu — Graphic Designer">
-<meta property="og:title" content="Charles Binu — Graphic Designer">
-<meta property="og:description" content="Branding, packaging, UI, and advertising design — a selected work archive by Charles Binu, based in Kottayam, Kerala.">
-<meta property="og:image" content="assets/portrait.jpg">
-<!-- TODO: replace with your live domain, and ideally a dedicated 1200x630 social-card image -->
-<meta property="og:url" content="https://your-domain-here.com/">
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Charles Binu — Graphic Designer">
+  <meta property="og:title" content="Charles Binu — Graphic Designer">
+  <meta property="og:description"
+    content="Branding, packaging, UI, and advertising design — a selected work archive by Charles Binu, based in Kottayam, Kerala.">
+  <meta property="og:image" content="assets/portrait.jpg">
+  <!-- TODO: replace with your live domain, and ideally a dedicated 1200x630 social-card image -->
+  <meta property="og:url" content="https://your-domain-here.com/">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Charles Binu — Graphic Designer">
-<meta name="twitter:description" content="Branding, packaging, UI, and advertising design — a selected work archive by Charles Binu.">
-<meta name="twitter:image" content="assets/portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Charles Binu — Graphic Designer">
+  <meta name="twitter:description"
+    content="Branding, packaging, UI, and advertising design — a selected work archive by Charles Binu.">
+  <meta name="twitter:image" content="assets/portrait.jpg">
 
-<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-<link rel="shortcut icon" href="./assets/favicon/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -51,2411 +57,2679 @@
 }
 </script>
 
-<style>
+  <style>
+    /* ============ TOKENS ============ */
+    :root {
+      --paper: #FAFAF8;
+      --paper-dim: #F2F0EB;
+      --ink: #161513;
+      --ink-soft: #3A3733;
+      --grey: #8C8780;
+      --grey-line: #DEDAD2;
+      --accent: #3D4FE0;
+      --accent-soft: #E8EAFB;
 
-/* ============ TOKENS ============ */
-:root{
-  --paper:#FAFAF8;
-  --paper-dim:#F2F0EB;
-  --ink:#161513;
-  --ink-soft:#3A3733;
-  --grey:#8C8780;
-  --grey-line:#DEDAD2;
-  --accent:#3D4FE0;
-  --accent-soft:#E8EAFB;
+      --display: 'Space Grotesk', sans-serif;
+      --body: 'Space Grotesk', sans-serif;
+      --mono: 'DM Mono', monospace;
 
-  --display:'Space Grotesk', sans-serif;
-  --body:'Space Grotesk', sans-serif;
-  --mono:'DM Mono', monospace;
+      --ruler-size: 28px;
+      --maxw: 1180px;
+    }
 
-  --ruler-size:28px;
-  --maxw:1180px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--body);
-  font-size:16px;
-  line-height:1.5;
-  overflow-x:hidden;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-a{color:inherit;text-decoration:none;}
-ul{list-style:none;}
-img{max-width:100%;display:block;}
-button{font-family:inherit;cursor:pointer;border:none;background:none;}
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
 
-::selection{background:var(--accent);color:var(--paper);}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-@media (prefers-reduced-motion: reduce){
-  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
-}
+    ul {
+      list-style: none;
+    }
 
-/* ============ RULER GUIDES (signature element) ============ */
-.ruler-h{
-  position:fixed;
-  top:0; left:0; right:0;
-  height:var(--ruler-size);
-  background:var(--paper);
-  border-bottom:1px solid var(--grey-line);
-  z-index:90;
-  display:flex;
-  align-items:flex-end;
-  pointer-events:none;
-}
-.ruler-h .ticks{
-  width:100%;
-  height:100%;
-  background-image:
-    repeating-linear-gradient(to right, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 80px),
-    repeating-linear-gradient(to right, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 16px);
-  background-size:80px 14px, 16px 6px;
-  background-position:left top, left bottom;
-  background-repeat:repeat-x;
-  opacity:0.7;
-}
-.ruler-v{
-  position:fixed;
-  top:0; bottom:0; left:0;
-  width:var(--ruler-size);
-  background:var(--paper);
-  border-right:1px solid var(--grey-line);
-  z-index:90;
-  display:none;
-}
-@media(min-width:900px){ .ruler-v{display:block;} }
-.ruler-v .ticks{
-  width:100%;
-  height:100%;
-  background-image:
-    repeating-linear-gradient(to bottom, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 80px),
-    repeating-linear-gradient(to bottom, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 16px);
-  background-size:14px 80px, 6px 16px;
-  background-position:left top, right top;
-  background-repeat:repeat-y;
-  opacity:0.7;
-}
-.corner-block{
-  position:fixed; top:0; left:0;
-  width:var(--ruler-size); height:var(--ruler-size);
-  background:var(--paper);
-  border-right:1px solid var(--grey-line);
-  border-bottom:1px solid var(--grey-line);
-  z-index:91;
-  display:none;
-}
-@media(min-width:900px){ .corner-block{display:block;} }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.page-shell{
-  margin-left:0;
-}
-@media(min-width:900px){
-  .page-shell{ margin-left:var(--ruler-size); }
-  .ruler-h{ left:var(--ruler-size); }
-}
-body{ padding-top:var(--ruler-size); }
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
 
-/* ============ NAV ============ */
-.nav{
-  position:fixed;
-  top:var(--ruler-size);
-  left:0; right:0;
-  z-index:80;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  padding:18px 32px;
-  background:rgba(250,249,248,0.85);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid transparent;
-  transition:border-color 0.3s, background 0.3s;
-}
-@media(min-width:900px){ .nav{ left:var(--ruler-size); } }
-@media(max-width:480px){ .nav{ padding:14px 18px; } }
-.nav.scrolled{ border-bottom-color:var(--grey-line); }
+    ::selection {
+      background: var(--accent);
+      color: var(--paper);
+    }
 
-.nav-mark{
-  font-family:var(--display);
-  font-weight:600;
-  font-size:18px;
-  letter-spacing:-0.02em;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  white-space:nowrap;
-}
-@media(max-width:480px){ .nav-mark{ font-size:16px; } }
-.nav-mark .dot{
-  width:8px;height:8px;background:var(--accent);border-radius:50%;
-  display:inline-block;
-}
-.nav-links{
-  display:none;
-  gap:32px;
-  font-size:14px;
-  font-weight:500;
-  color:var(--ink-soft);
-}
-@media(min-width:760px){ .nav-links{display:flex;} }
-.nav-links a{
-  position:relative;
-  padding:4px 0;
-  transition:color 0.2s;
-}
-.nav-links a:hover{ color:var(--accent); }
-.nav-links a::after{
-  content:'';
-  position:absolute;
-  bottom:0; left:0;
-  width:0; height:1px;
-  background:var(--accent);
-  transition:width 0.25s ease;
-}
-.nav-links a:hover::after{ width:100%; }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
 
-.nav-cta{
-  font-family:var(--mono);
-  font-size:12px;
-  font-weight:500;
-  padding:9px 16px;
-  border:1px solid var(--ink);
-  border-radius:2px;
-  transition:background 0.2s, color 0.2s;
-  white-space:nowrap;
-}
-.nav-cta:hover{ background:var(--ink); color:var(--paper); }
-@media(max-width:400px){ .nav-cta{ display:none; } }
+    /* ============ RULER GUIDES (signature element) ============ */
+    .ruler-h {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--ruler-size);
+      background: var(--paper);
+      border-bottom: 1px solid var(--grey-line);
+      z-index: 90;
+      display: flex;
+      align-items: flex-end;
+      pointer-events: none;
+    }
 
-.nav-burger{
-  display:flex;
-  width:32px;height:32px;
-  align-items:center;justify-content:center;
-}
-@media(min-width:760px){ .nav-burger{display:none;} }
-.nav-burger span, .nav-burger::before, .nav-burger::after{display:none;}
-.burger-icon{
-  width:20px;height:14px;position:relative;
-}
-.burger-icon span{
-  position:absolute;left:0;width:100%;height:1.5px;background:var(--ink);
-  transition:transform 0.3s, opacity 0.3s;
-}
-.burger-icon span:nth-child(1){top:0;}
-.burger-icon span:nth-child(2){top:6px;}
-.burger-icon span:nth-child(3){top:12px;}
-.nav-burger.open .burger-icon span:nth-child(1){transform:translateY(6px) rotate(45deg);}
-.nav-burger.open .burger-icon span:nth-child(2){opacity:0;}
-.nav-burger.open .burger-icon span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+    .ruler-h .ticks {
+      width: 100%;
+      height: 100%;
+      background-image:
+        repeating-linear-gradient(to right, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 80px),
+        repeating-linear-gradient(to right, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 16px);
+      background-size: 80px 14px, 16px 6px;
+      background-position: left top, left bottom;
+      background-repeat: repeat-x;
+      opacity: 0.7;
+    }
 
-.mobile-menu{
-  position:fixed;
-  top:calc(var(--ruler-size) + 64px);
-  left:0; right:0;
-  background:var(--paper);
-  border-bottom:1px solid var(--grey-line);
-  z-index:75;
-  padding:8px 32px 28px;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  transform:translateY(-12px);
-  opacity:0;
-  pointer-events:none;
-  transition:transform 0.25s ease, opacity 0.25s ease;
-  max-height:calc(100vh - var(--ruler-size) - 64px);
-  overflow-y:auto;
-}
-@media(max-width:480px){
-  .mobile-menu{ top:calc(var(--ruler-size) + 56px); padding:8px 18px 24px; gap:14px; }
-}
-.mobile-menu.open{
-  transform:translateY(0);
-  opacity:1;
-  pointer-events:auto;
-}
-.mobile-menu a{
-  font-family:var(--display);
-  font-size:22px;
-  font-weight:500;
-}
-@media(max-width:480px){ .mobile-menu a{ font-size:19px; } }
+    .ruler-v {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: var(--ruler-size);
+      background: var(--paper);
+      border-right: 1px solid var(--grey-line);
+      z-index: 90;
+      display: none;
+    }
 
-/* ============ LAYOUT HELPERS ============ */
-.wrap{
-  max-width:var(--maxw);
-  margin:0 auto;
-  padding:0 32px;
-}
-@media(max-width:600px){ .wrap{padding:0 20px;} }
+    @media(min-width:900px) {
+      .ruler-v {
+        display: block;
+      }
+    }
 
-section{
-  position:relative;
-  padding:120px 0;
-}
-@media(max-width:700px){ section{padding:80px 0;} }
+    .ruler-v .ticks {
+      width: 100%;
+      height: 100%;
+      background-image:
+        repeating-linear-gradient(to bottom, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 80px),
+        repeating-linear-gradient(to bottom, var(--grey-line) 0, var(--grey-line) 1px, transparent 1px, transparent 16px);
+      background-size: 14px 80px, 6px 16px;
+      background-position: left top, right top;
+      background-repeat: repeat-y;
+      opacity: 0.7;
+    }
 
-.eyebrow{
-  font-family:var(--mono);
-  font-size:12px;
-  letter-spacing:0.06em;
-  text-transform:uppercase;
-  color:var(--accent);
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:18px;
-}
-.eyebrow::before{
-  content:'';
-  width:18px;height:1px;
-  background:var(--accent);
-}
+    .corner-block {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: var(--ruler-size);
+      height: var(--ruler-size);
+      background: var(--paper);
+      border-right: 1px solid var(--grey-line);
+      border-bottom: 1px solid var(--grey-line);
+      z-index: 91;
+      display: none;
+    }
 
-h1,h2,h3{
-  font-family:var(--display);
-  letter-spacing:-0.02em;
-  font-weight:600;
-  color:var(--ink);
-}
+    @media(min-width:900px) {
+      .corner-block {
+        display: block;
+      }
+    }
 
-.section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:24px;
-  margin-bottom:64px;
-  flex-wrap:wrap;
-}
-.section-head h2{
-  font-size:42px;
-  line-height:1.1;
-}
-.section-head .sub{
-  max-width:320px;
-  color:var(--grey);
-  font-size:15px;
-  line-height:1.6;
-}
-@media(max-width:700px){
-  .section-head h2{font-size:32px;}
-}
+    .page-shell {
+      margin-left: 0;
+    }
 
-/* reveal-on-scroll */
-.reveal{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1);
-}
-.reveal.in{
-  opacity:1;
-  transform:translateY(0);
-}
+    @media(min-width:900px) {
+      .page-shell {
+        margin-left: var(--ruler-size);
+      }
 
-/* ============ HERO ============ */
-.hero{
-  min-height:88vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding-top:160px;
-  padding-bottom:80px;
-  position:relative;
-}
-@media(max-width:700px){
-  .hero{
-    min-height:auto;
-    padding-top:128px;
-    padding-bottom:56px;
-  }
-}
-#heroCanvas{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:0;
-  pointer-events:none;
-  display:block;
-}
-.hero-frame{
-  position:relative;
-  z-index:1;
-}
-.scroll-cue{
-  position:absolute;
-  left:0; bottom:-56px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  color:var(--grey);
-}
-.scroll-cue svg{
-  width:14px; height:14px;
-  animation:scroll-cue-bob 1.8s ease-in-out infinite;
-}
-@keyframes scroll-cue-bob{
-  0%,100%{ transform:translateY(0); }
-  50%{ transform:translateY(4px); }
-}
-@media(max-width:700px){ .scroll-cue{ display:none; } }
-.hero-tag-row{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin-bottom:28px;
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--grey);
-}
-.hero-tag-row .pip{
-  width:7px;height:7px;border-radius:50%;
-  background:#4CAF6D;
-  box-shadow:0 0 0 3px rgba(76,175,109,0.18);
-  animation:pulse 2.4s infinite;
-}
-@keyframes pulse{
-  0%,100%{box-shadow:0 0 0 3px rgba(76,175,109,0.18);}
-  50%{box-shadow:0 0 0 5px rgba(76,175,109,0.1);}
-}
+      .ruler-h {
+        left: var(--ruler-size);
+      }
+    }
 
-.hero h1{
-  font-size:clamp(44px, 8vw, 96px);
-  line-height:0.98;
-  font-weight:700;
-}
-.hero h1 .line{ display:block; overflow:hidden; }
-.hero h1 .line span{ display:inline-block; }
-.hero h1 .accent-word{
-  color:var(--accent);
-  font-style:normal;
-}
+    body {
+      padding-top: var(--ruler-size);
+    }
 
-.hero-sub{
-  margin-top:32px;
-  max-width:540px;
-  font-size:18px;
-  color:var(--ink-soft);
-  line-height:1.6;
-}
+    /* ============ NAV ============ */
+    .nav {
+      position: fixed;
+      top: var(--ruler-size);
+      left: 0;
+      right: 0;
+      z-index: 80;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px 32px;
+      background: rgba(250, 249, 248, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
 
-.hero-bottom-row{
-  margin-top:64px;
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  flex-wrap:wrap;
-  gap:32px;
-  border-top:1px solid var(--grey-line);
-  padding-top:28px;
-}
-.hero-cta-group{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
-.btn{
-  font-family:var(--mono);
-  font-size:13px;
-  font-weight:500;
-  padding:14px 26px;
-  border-radius:2px;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  transition:transform 0.2s ease, background 0.2s, color 0.2s, border-color 0.2s;
-}
-.btn-primary{
-  background:var(--ink);
-  color:var(--paper);
-}
-.btn-primary:hover{ background:var(--accent); transform:translateY(-2px); }
-.btn-outline{
-  border:1px solid var(--grey-line);
-  color:var(--ink);
-}
-.btn-outline:hover{ border-color:var(--ink); transform:translateY(-2px); }
+    @media(min-width:900px) {
+      .nav {
+        left: var(--ruler-size);
+      }
+    }
 
-.hero-socials{
-  display:flex;
-  gap:8px;
-}
-.hero-socials a{
-  width:44px; height:44px;
-  border-radius:50%;
-  border:1px solid var(--grey-line);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--ink-soft);
-  transition:border-color 0.2s, color 0.2s, transform 0.2s, background 0.2s;
-}
-.hero-socials a svg{ width:18px; height:18px; }
-.hero-socials a:hover{
-  border-color:var(--accent);
-  color:var(--accent);
-  background:var(--accent-soft);
-  transform:translateY(-2px);
-}
+    @media(max-width:480px) {
+      .nav {
+        padding: 14px 18px;
+      }
+    }
 
-.hero-meta-list{
-  display:flex;
-  gap:40px;
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--grey);
-}
-.hero-meta-list .m-val{
-  display:block;
-  color:var(--ink);
-  font-family:var(--body);
-  font-size:14px;
-  font-weight:600;
-  margin-top:4px;
-}
-@media(max-width:700px){
-  .hero-meta-list{display:none;}
-}
+    .nav.scrolled {
+      border-bottom-color: var(--grey-line);
+    }
 
-/* ============ MARQUEE STRIP ============ */
-.marquee-strip{
-  border-top:1px solid var(--ink);
-  border-bottom:1px solid var(--ink);
-  overflow:hidden;
-  background:var(--ink);
-  padding:22px 0;
-}
-.marquee-track{
-  display:flex;
-  width:max-content;
-  animation:scroll-left 32s linear infinite;
-  gap:0;
-}
-@keyframes scroll-left{
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
-}
-.marquee-item{
-  font-family:var(--display);
-  font-size:18px;
-  font-weight:600;
-  letter-spacing:-0.01em;
-  text-transform:uppercase;
-  color:var(--paper);
-  padding:0 28px;
-  white-space:nowrap;
-  display:flex;
-  align-items:center;
-  gap:28px;
-}
-.marquee-item .sep{ color:var(--accent); }
+    .nav-mark {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
 
-/* ============ ABOUT ============ */
-.about{
-  background:var(--paper);
-}
-.about-grid{
-  display:grid;
-  grid-template-columns:0.85fr 1.15fr;
-  gap:80px;
-  align-items:start;
-}
-@media(max-width:860px){
-  .about-grid{grid-template-columns:1fr; gap:48px;}
-}
+    @media(max-width:480px) {
+      .nav-mark {
+        font-size: 16px;
+      }
+    }
 
-.portrait-frame{
-  position:relative;
-  aspect-ratio:4/5;
-  background:var(--paper-dim);
-  border:1px solid var(--grey-line);
-  overflow:hidden;
-}
-.portrait-frame .crop{
-  position:absolute;
-  width:18px;height:18px;
-  z-index:3;
-}
-.portrait-frame .crop::before, .portrait-frame .crop::after{
-  content:'';
-  position:absolute;
-  background:var(--ink);
-}
-.crop-tl{top:10px;left:10px;}
-.crop-tr{top:10px;right:10px;}
-.crop-bl{bottom:10px;left:10px;}
-.crop-br{bottom:10px;right:10px;}
-.crop-tl::before{top:0;left:0;width:2px;height:100%;}
-.crop-tl::after{top:0;left:0;width:100%;height:2px;}
-.crop-tr::before{top:0;right:0;width:2px;height:100%;}
-.crop-tr::after{top:0;right:0;width:100%;height:2px;}
-.crop-bl::before{bottom:0;left:0;width:2px;height:100%;}
-.crop-bl::after{bottom:0;left:0;width:100%;height:2px;}
-.crop-br::before{bottom:0;right:0;width:2px;height:100%;}
-.crop-br::after{bottom:0;right:0;width:100%;height:2px;}
+    .nav-mark .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
 
-.portrait-frame img.uploaded{
-  width:100%;height:100%;object-fit:cover;
-  position:absolute; inset:0; z-index:1;
-}
+    .nav-links {
+      display: none;
+      gap: 32px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
 
-.about-copy{ padding-top:8px; }
-.about-copy .role-line{
-  font-family:var(--mono);
-  font-size:13px;
-  color:var(--accent);
-  margin-bottom:18px;
-  display:block;
-}
-.about-copy h2{
-  font-size:36px;
-  margin-bottom:24px;
-  line-height:1.2;
-}
-.about-copy p{
-  color:var(--ink-soft);
-  font-size:16px;
-  line-height:1.75;
-  margin-bottom:18px;
-  max-width:520px;
-}
-.about-copy p:last-of-type{ margin-bottom:0; }
+    @media(min-width:760px) {
+      .nav-links {
+        display: flex;
+      }
+    }
 
-.lang-row{
-  margin-top:40px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.lang-pill{
-  font-family:var(--mono);
-  font-size:12px;
-  padding:7px 14px;
-  border:1px solid var(--grey-line);
-  border-radius:20px;
-  color:var(--ink-soft);
-}
+    .nav-links a {
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.2s;
+    }
 
-.edu-block{
-  margin-top:40px;
-  border-top:1px solid var(--grey-line);
-  padding-top:28px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-}
-@media(max-width:500px){ .edu-block{grid-template-columns:1fr;} }
-.edu-item .yr{ font-family:var(--mono); font-size:12px; color:var(--grey); }
-.edu-item .deg{ font-weight:600; margin-top:6px; font-size:15px; }
-.edu-item .inst{ color:var(--grey); font-size:13px; margin-top:3px; }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
-/* ============ SKILLS ============ */
-.skills{
-  background:var(--paper-dim);
-  border-top:1px solid var(--grey-line);
-  border-bottom:1px solid var(--grey-line);
-}
-.skills-grid{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:1px;
-  background:var(--grey-line);
-  border:1px solid var(--grey-line);
-}
-@media(max-width:860px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
-@media(max-width:520px){ .skills-grid{grid-template-columns:1fr;} }
-.skill-cell{
-  background:var(--paper);
-  padding:36px 28px;
-  transition:background 0.3s;
-}
-@media(max-width:520px){ .skill-cell{ padding:28px 22px; } }
-.skill-cell:hover{ background:var(--accent-soft); }
-.skill-cell .sk-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:24px;
-}
-.skill-cell .sk-icon{
-  width:26px; height:26px;
-  stroke:var(--accent);
-  fill:none;
-  stroke-width:1.4;
-}
-.skill-cell .sk-index{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--grey);
-}
-.skill-cell h3{
-  font-size:18px;
-  margin-bottom:10px;
-  font-weight:600;
-}
-.skill-cell p{
-  font-size:13.5px;
-  color:var(--grey);
-  line-height:1.6;
-}
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
 
-.tools-row{
-  margin-top:56px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
-.tool-chip{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-family:var(--mono);
-  font-size:13px;
-  padding:10px 18px 10px 14px;
-  background:var(--paper);
-  border:1px solid var(--grey-line);
-}
-.tool-chip .bar{
-  width:3px;height:14px;
-  background:var(--accent);
-}
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
-/* ============ PORTFOLIO ============ */
-.portfolio{ background:var(--paper); }
+    .nav-cta {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 9px 16px;
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
 
-.filter-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-bottom:56px;
-}
-@media(max-width:700px){
-  .filter-row{ margin-bottom:36px; gap:8px; }
-}
-/* Category Grid */
-.cat-grid{
-  column-count: 3;
-  column-gap: 2px;
-  margin-bottom:0;
-}
-@media(max-width:860px){ .cat-grid{ column-count: 2; } }
-@media(max-width:500px){ .cat-grid{ column-count: 1; } }
+    .nav-cta:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
 
-.cat-card{
-  break-inside: avoid;
-  margin-bottom: 2px;
-  position:relative;
-  background:var(--ink);
-  overflow:hidden;
-  cursor:pointer;
-  display:block;
-  min-height:240px;
-  transition:transform 0.35s cubic-bezier(.16,1,.3,1);
-}
-.cat-card:focus-visible{ outline:2px solid var(--accent); outline-offset:-2px; }
-.cat-card:hover{ transform:scale(0.975); }
-.cat-card::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(22,21,19,0.82) 0%, rgba(22,21,19,0.1) 60%, transparent 100%);
-  z-index:1;
-  transition:opacity 0.3s;
-}
-.cat-card:hover::before{ opacity:0.7; }
-.cat-card-bg{
-  display:block;
-  width:100%; height:auto;
-  opacity:0.55;
-  transition:transform 0.6s cubic-bezier(.16,1,.3,1), opacity 0.3s;
-}
-.cat-card:hover .cat-card-bg{ transform:scale(1.05); opacity:0.7; }
-.cat-card-body{
-  position:absolute;
-  bottom:24px; left:24px;
-  z-index:2;
-}
-.cat-num{
-  font-family:var(--mono);
-  font-size:10px;
-  color:rgba(255,255,255,0.75);
-  letter-spacing:0.12em;
-  margin-bottom:6px;
-}
-.cat-name{
-  font-family:var(--display);
-  font-size:20px;
-  font-weight:600;
-  color:#fff;
-  line-height:1.15;
-}
-.cat-count{
-  font-family:var(--mono);
-  font-size:11px;
-  color:rgba(255,255,255,0.7);
-  margin-top:8px;
-  display:block;
-}
-.cat-arrow{
-  position:absolute;
-  top:20px; right:20px;
-  z-index:2;
-  font-size:18px;
-  color:rgba(255,255,255,0.65);
-  transition:color 0.2s, transform 0.2s;
-}
-.cat-card:hover .cat-arrow{ color:#fff; transform:translate(3px,-3px); }
+    @media(max-width:400px) {
+      .nav-cta {
+        display: none;
+      }
+    }
 
-/* Popup Modal */
-.work-detail-modal {
-  position: fixed;
-  inset: 0;
-  background: var(--paper);
-  z-index: 150;
-  padding: 60px 40px;
-  overflow-y: auto;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.work-detail-modal.open {
-  display: block;
-  opacity: 1;
-}
-.work-detail-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.work-detail-close {
-  position: fixed;
-  top: 24px; right: 32px;
-  background: var(--ink);
-  color: var(--paper);
-  border: none;
-  border-radius: 50%;
-  width: 44px; height: 44px;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 160;
-  display: flex; align-items: center; justify-content: center;
-  transition: transform 0.2s, background 0.2s;
-}
-.work-detail-close:hover {
-  transform: scale(1.1);
-  background: var(--accent);
-}
-.work-cat-title{
-  font-family:var(--display);
-  font-size:42px;
-  font-weight:700;
-  margin-bottom:32px;
-  text-align: center;
-}
+    .nav-burger {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+    }
 
-/* Artboard Grid */
-.artboard-grid{
-  column-count: 3;
-  column-gap: 28px;
-}
-@media(max-width:900px){ .artboard-grid{column-count: 2;} }
-@media(max-width:600px){ .artboard-grid{column-count: 1;} }
+    @media(min-width:760px) {
+      .nav-burger {
+        display: none;
+      }
+    }
 
-.artboard{
-  break-inside: avoid;
-  margin-bottom: 28px;
-  position:relative;
-  border:1px solid var(--grey-line);
-  background:var(--paper);
-  transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  cursor:pointer;
-}
-.artboard:hover{
-  border-color:var(--ink);
-  transform:translateY(-4px);
-  box-shadow:0 18px 36px -20px rgba(22,21,19,0.25);
-}
-.artboard:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:3px;
-}
+    .nav-burger span,
+    .nav-burger::before,
+    .nav-burger::after {
+      display: none;
+    }
 
-.artboard-canvas{
-  position:relative;
-  overflow:hidden;
-  background:var(--paper-dim);
-  min-height:160px;
-}
-.artboard-canvas .crop{
-  position:absolute;
-  width:14px;height:14px;
-  z-index:3;
-  opacity:0;
-  transition:opacity 0.3s;
-}
-.artboard:hover .artboard-canvas .crop{ opacity:1; }
-.artboard-canvas .crop::before, .artboard-canvas .crop::after{
-  content:'';
-  position:absolute;
-  background:var(--accent);
-}
-.artboard-canvas .crop-tl{top:8px;left:8px;}
-.artboard-canvas .crop-tr{top:8px;right:8px;}
-.artboard-canvas .crop-bl{bottom:8px;left:8px;}
-.artboard-canvas .crop-br{bottom:8px;right:8px;}
-.artboard-canvas .crop-tl::before{top:0;left:0;width:2px;height:100%;}
-.artboard-canvas .crop-tl::after{top:0;left:0;width:100%;height:2px;}
-.artboard-canvas .crop-tr::before{top:0;right:0;width:2px;height:100%;}
-.artboard-canvas .crop-tr::after{top:0;right:0;width:100%;height:2px;}
-.artboard-canvas .crop-bl::before{bottom:0;left:0;width:2px;height:100%;}
-.artboard-canvas .crop-bl::after{bottom:0;left:0;width:100%;height:2px;}
-.artboard-canvas .crop-br::before{bottom:0;right:0;width:2px;height:100%;}
-.artboard-canvas .crop-br::after{bottom:0;right:0;width:100%;height:2px;}
+    .burger-icon {
+      width: 20px;
+      height: 14px;
+      position: relative;
+    }
 
-.artboard-canvas img.uploaded{
-  width:100%; height:auto; object-fit:contain;
-  position:relative; z-index:1; display:block;
-}
-.ab-folder-placeholder, .ab-pdf-placeholder{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  min-height:160px;
-  font-family:var(--mono);
-  font-size:13px;
-  color:var(--grey);
-  background:var(--paper-dim);
-}
-.ab-pdf-placeholder a{
-  color:var(--accent);
-  text-decoration:underline;
-}
-.ab-pdf-placeholder svg{
-  width:18px; height:18px;
-  flex-shrink:0;
-}
-.view-hint{
-  position:absolute; inset:0;
-  z-index:2;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  background:rgba(22,21,19,0);
-  color:transparent;
-  opacity:0;
-  transition:opacity 0.25s, background 0.25s;
-  pointer-events:none;
-}
-.artboard:hover .view-hint, .artboard:focus-visible .view-hint{
-  opacity:1;
-  background:rgba(22,21,19,0.45);
-  color:var(--paper);
-}
-.view-hint svg{ width:24px; height:24px; stroke:var(--paper); }
-.view-hint span{ font-family:var(--mono); font-size:11px; letter-spacing:0.04em; text-transform:uppercase; }
+    .burger-icon span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background: var(--ink);
+      transition: transform 0.3s, opacity 0.3s;
+    }
 
-.artboard-info{
-  padding:20px 22px 22px;
-  border-top:1px solid var(--grey-line);
-}
-.artboard-info .ab-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:10px;
-  margin-bottom:6px;
-}
-.artboard-info h3{
-  font-size:16px;
-  font-weight:600;
-  min-width:0;
-  word-break:break-word;
-}
-.artboard-info .ab-tag{
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--accent);
-  background:var(--accent-soft);
-  padding:4px 8px;
-  border-radius:2px;
-  white-space:nowrap;
-}
-.artboard-info p{
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.04em;
-  color:var(--grey);
-  line-height:1.5;
-}
+    .burger-icon span:nth-child(1) {
+      top: 0;
+    }
 
-/* ============ EXPERIENCE TIMELINE ============ */
-.timeline{
-  background:var(--paper-dim);
-  border-top:1px solid var(--grey-line);
-}
-.tl-list{
-  border-top:1px solid var(--grey-line);
-}
-.tl-item{
-  display:grid;
-  grid-template-columns:160px 1fr;
-  gap:32px;
-  padding:40px 0;
-  border-bottom:1px solid var(--grey-line);
-  position:relative;
-}
-@media(max-width:700px){
-  .tl-item{grid-template-columns:1fr; gap:12px;}
-}
-.tl-date{
-  font-family:var(--mono);
-  font-size:13px;
-  color:var(--grey);
-  padding-top:4px;
-}
-.tl-date .yr-big{
-  font-family:var(--display);
-  font-size:22px;
-  color:var(--ink);
-  font-weight:600;
-  display:block;
-  margin-bottom:4px;
-}
-.tl-body h3{
-  font-size:20px;
-  margin-bottom:6px;
-}
-.tl-body .org{
-  font-family:var(--mono);
-  font-size:12.5px;
-  color:var(--accent);
-  margin-bottom:14px;
-  display:block;
-}
-.tl-body p{
-  color:var(--ink-soft);
-  font-size:14.5px;
-  line-height:1.7;
-  max-width:600px;
-}
-.tl-dur{
-  position:absolute;
-  right:0; top:40px;
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--grey);
-  text-align:right;
-}
-@media(max-width:700px){ .tl-dur{position:static; margin-top:8px; text-align:left;} }
+    .burger-icon span:nth-child(2) {
+      top: 6px;
+    }
 
-/* ============ CONTACT / FOOTER ============ */
-.contact{
-  background:var(--ink);
-  color:var(--paper);
-  position:relative;
-  overflow:hidden;
-}
-#contactCanvas{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:0;
-  pointer-events:none;
-  display:block;
-}
-.contact > .wrap{
-  position:relative;
-  z-index:1;
-}
-.contact .eyebrow{ color:#9AA3F5; }
-.contact .eyebrow::before{ background:#9AA3F5; }
-.contact h2{
-  color:var(--paper);
-  font-size:clamp(36px, 6vw, 64px);
-  line-height:1.05;
-  max-width:780px;
-}
-.contact-grid{
-  display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:64px;
-  margin-top:56px;
-}
-@media(max-width:860px){ .contact-grid{grid-template-columns:1fr; gap:40px;} }
+    .burger-icon span:nth-child(3) {
+      top: 12px;
+    }
 
-.contact-links{
-  display:flex;
-  flex-direction:column;
-  gap:0;
-}
-.contact-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-  padding:22px 0;
-  border-bottom:1px solid rgba(250,249,248,0.15);
-  transition:padding-left 0.25s;
-}
-.contact-row:first-child{ border-top:1px solid rgba(250,249,248,0.15); }
-.contact-row:hover{ padding-left:10px; }
-.contact-row .c-label{
-  font-family:var(--mono);
-  font-size:12px;
-  color:#9D9892;
-}
-.contact-row .c-val{
-  font-size:17px;
-  font-weight:500;
-  word-break:break-word;
-}
-.contact-row .c-arrow{
-  color:#9AA3F5;
-  font-size:18px;
-  transition:transform 0.25s;
-  flex-shrink:0;
-}
-.contact-row:hover .c-arrow{ transform:translateX(4px); }
-@media(max-width:500px){
-  .contact-row{ padding:18px 0; }
-  .contact-row .c-val{ font-size:15px; }
-}
+    .nav-burger.open .burger-icon span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
 
-.contact-form{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
-.f-group{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-.f-group label{
-  font-family:var(--mono);
-  font-size:11px;
-  color:#9D9892;
-  text-transform:uppercase;
-  letter-spacing:0.05em;
-}
-.f-group input, .f-group textarea{
-  background:transparent;
-  border:none;
-  border-bottom:1px solid rgba(250,249,248,0.25);
-  color:var(--paper);
-  font-family:var(--body);
-  font-size:15px;
-  padding:10px 0;
-  resize:none;
-  transition:border-color 0.2s;
-}
-.f-group input:focus, .f-group textarea:focus{
-  outline:none;
-  border-color:#9AA3F5;
-}
-.f-group input::placeholder, .f-group textarea::placeholder{ color:#6B6660; }
+    .nav-burger.open .burger-icon span:nth-child(2) {
+      opacity: 0;
+    }
 
-.form-submit{
-  margin-top:8px;
-  align-self:flex-start;
-  font-family:var(--mono);
-  font-size:13px;
-  padding:14px 28px;
-  background:var(--paper);
-  color:var(--ink);
-  border-radius:2px;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  transition:background 0.2s, transform 0.2s;
-}
-.form-submit:hover{ background:#9AA3F5; color:var(--ink); transform:translateY(-2px); }
-.form-submit:disabled{ opacity:0.65; cursor:default; transform:none; }
+    .nav-burger.open .burger-icon span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
 
-.form-status{
-  margin-top:4px;
-  font-family:var(--mono);
-  font-size:12.5px;
-  line-height:1.5;
-  color:#9D9892;
-  min-height:0;
-  opacity:0;
-  transform:translateY(-4px);
-  transition:opacity 0.3s, transform 0.3s;
-}
-.form-status.show{ opacity:1; transform:translateY(0); }
-.form-status.success{ color:#8FD6A8; }
-.form-status.error{ color:#E59A9A; }
+    .mobile-menu {
+      position: fixed;
+      top: calc(var(--ruler-size) + 64px);
+      left: 0;
+      right: 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--grey-line);
+      z-index: 75;
+      padding: 8px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      transform: translateY(-12px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      max-height: calc(100vh - var(--ruler-size) - 64px);
+      overflow-y: auto;
+    }
 
-.footer-bottom{
-  margin-top:90px;
-  padding-top:28px;
-  border-top:1px solid rgba(250,249,248,0.15);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:16px;
-  font-family:var(--mono);
-  font-size:12px;
-  color:#9D9892;
-}
-@media(max-width:700px){
-  .footer-bottom{ margin-top:56px; flex-direction:column; align-items:flex-start; }
-}
-.footer-socials{
-  display:flex;
-  gap:20px;
-}
-.footer-socials a{ transition:color 0.2s; }
-.footer-socials a:hover{ color:var(--paper); }
+    @media(max-width:480px) {
+      .mobile-menu {
+        top: calc(var(--ruler-size) + 56px);
+        padding: 8px 18px 24px;
+        gap: 14px;
+      }
+    }
 
-/* back to top */
-.to-top{
-  position:fixed;
-  bottom:28px; right:28px;
-  width:46px;height:46px;
-  border-radius:50%;
-  background:var(--ink);
-  color:var(--paper);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:70;
-  opacity:0;
-  transform:translateY(10px);
-  pointer-events:none;
-  transition:opacity 0.3s, transform 0.3s, background 0.2s;
-}
-@media(max-width:700px){
-  .to-top{ width:42px; height:42px; bottom:18px; right:18px; }
-}
-.to-top.show{ opacity:1; transform:translateY(0); pointer-events:auto; }
-.to-top:hover{ background:var(--accent); }
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
 
-/* focus visibility */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:2px;
-}
+    .mobile-menu a {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 500;
+    }
 
-/* lightbox for uploaded images */
-.lightbox{
-  position:fixed; inset:0;
-  background:rgba(22,21,19,0.92);
-  z-index:200;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity 0.25s;
-  padding:24px;
-}
-.lightbox.open{ opacity:1; pointer-events:auto; }
+    @media(max-width:480px) {
+      .mobile-menu a {
+        font-size: 19px;
+      }
+    }
 
-.lightbox-card{
-  background:var(--paper);
-  max-width:920px;
-  width:100%;
-  max-height:88vh;
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  border:1px solid var(--grey-line);
-  transform:scale(0.96);
-  transition:transform 0.25s;
-}
-.lightbox.open .lightbox-card{ transform:scale(1); }
+    /* ============ LAYOUT HELPERS ============ */
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
 
-.lightbox-img-wrap{
-  width:100%;
-  max-height:60vh;
-  background:var(--paper-dim);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-.lightbox-img-wrap img{
-  width:100%;
-  max-height:60vh;
-  object-fit:contain;
-  display:block;
-}
+    @media(max-width:600px) {
+      .wrap {
+        padding: 0 20px;
+      }
+    }
 
-.lightbox-details{
-  padding:24px 28px 28px;
-  border-top:1px solid var(--grey-line);
-}
-.lightbox-tag{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--accent);
-  background:var(--accent-soft);
-  padding:5px 10px;
-  border-radius:2px;
-  display:inline-block;
-  margin-bottom:12px;
-}
-.lightbox-details h3{
-  font-size:22px;
-  margin-bottom:8px;
-}
-.lightbox-details p{
-  font-size:14.5px;
-  color:var(--grey);
-  line-height:1.6;
-  max-width:560px;
-}
+    section {
+      position: relative;
+      padding: 120px 0;
+    }
 
-.lightbox-close{
-  position:fixed; top:20px; right:24px;
-  color:var(--paper);
-  font-size:28px;
-  width:42px;height:42px;
-  display:flex;align-items:center;justify-content:center;
-  z-index:201;
-  border-radius:50%;
-  transition:background 0.2s;
-}
-.lightbox-close:hover{ background:rgba(250,249,248,0.12); }
+    @media(max-width:700px) {
+      section {
+        padding: 80px 0;
+      }
+    }
 
-@media(max-width:700px){
-  .lightbox{ padding:0; align-items:flex-end; }
-  .lightbox-card{
-    max-width:100%;
-    max-height:92vh;
-    border:none;
-  }
-  .lightbox-img-wrap{ max-height:42vh; }
-  .lightbox-img-wrap img{ max-height:42vh; }
-  .lightbox-details{ padding:20px 20px 28px; }
-  .lightbox-details h3{ font-size:19px; }
-  .lightbox-close{ top:auto; bottom:calc(92vh + 8px); right:16px; background:rgba(22,21,19,0.6); }
-}
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
 
-</style>
+    .eyebrow::before {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--display);
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      font-size: 42px;
+      line-height: 1.1;
+    }
+
+    .section-head .sub {
+      max-width: 320px;
+      color: var(--grey);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    @media(max-width:700px) {
+      .section-head h2 {
+        font-size: 32px;
+      }
+    }
+
+    /* reveal-on-scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s cubic-bezier(.2, .7, .2, 1), transform 0.7s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 160px;
+      padding-bottom: 80px;
+      position: relative;
+    }
+
+    @media(max-width:700px) {
+      .hero {
+        min-height: auto;
+        padding-top: 128px;
+        padding-bottom: 56px;
+      }
+    }
+
+    #heroCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      display: block;
+    }
+
+    .hero-frame {
+      position: relative;
+      z-index: 1;
+    }
+
+    .scroll-cue {
+      position: absolute;
+      left: 0;
+      bottom: -56px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    .scroll-cue svg {
+      width: 14px;
+      height: 14px;
+      animation: scroll-cue-bob 1.8s ease-in-out infinite;
+    }
+
+    @keyframes scroll-cue-bob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(4px);
+      }
+    }
+
+    @media(max-width:700px) {
+      .scroll-cue {
+        display: none;
+      }
+    }
+
+    .hero-tag-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--grey);
+    }
+
+    .hero-tag-row .pip {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4CAF6D;
+      box-shadow: 0 0 0 3px rgba(76, 175, 109, 0.18);
+      animation: pulse 2.4s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 3px rgba(76, 175, 109, 0.18);
+      }
+
+      50% {
+        box-shadow: 0 0 0 5px rgba(76, 175, 109, 0.1);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 8vw, 96px);
+      line-height: 0.98;
+      font-weight: 700;
+    }
+
+    .hero h1 .line {
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero h1 .line span {
+      display: inline-block;
+    }
+
+    .hero h1 .accent-word {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      margin-top: 32px;
+      max-width: 540px;
+      font-size: 18px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .hero-bottom-row {
+      margin-top: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 32px;
+      border-top: 1px solid var(--grey-line);
+      padding-top: 28px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 14px 26px;
+      border-radius: 2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease, background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--grey-line);
+      color: var(--ink);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .hero-socials {
+      display: flex;
+      gap: 8px;
+    }
+
+    .hero-socials a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--grey-line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      transition: border-color 0.2s, color 0.2s, transform 0.2s, background 0.2s;
+    }
+
+    .hero-socials a svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hero-socials a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+      transform: translateY(-2px);
+    }
+
+    .hero-meta-list {
+      display: flex;
+      gap: 40px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--grey);
+    }
+
+    .hero-meta-list .m-val {
+      display: block;
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    @media(max-width:700px) {
+      .hero-meta-list {
+        display: none;
+      }
+    }
+
+    /* ============ MARQUEE STRIP ============ */
+    .marquee-strip {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      overflow: hidden;
+      background: var(--ink);
+      padding: 22px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 32s linear infinite;
+      gap: 0;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .marquee-item {
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--paper);
+      padding: 0 28px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .marquee-item .sep {
+      color: var(--accent);
+    }
+
+    /* ============ ABOUT ============ */
+    .about {
+      background: var(--paper);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media(max-width:860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    .portrait-frame {
+      position: relative;
+      aspect-ratio: 4/5;
+      background: var(--paper-dim);
+      border: 1px solid var(--grey-line);
+      overflow: hidden;
+    }
+
+    .portrait-frame .crop {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      z-index: 3;
+    }
+
+    .portrait-frame .crop::before,
+    .portrait-frame .crop::after {
+      content: '';
+      position: absolute;
+      background: var(--ink);
+    }
+
+    .crop-tl {
+      top: 10px;
+      left: 10px;
+    }
+
+    .crop-tr {
+      top: 10px;
+      right: 10px;
+    }
+
+    .crop-bl {
+      bottom: 10px;
+      left: 10px;
+    }
+
+    .crop-br {
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .crop-tl::before {
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .crop-tl::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .crop-tr::before {
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .crop-tr::after {
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .crop-bl::before {
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .crop-bl::after {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .crop-br::before {
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .crop-br::after {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .portrait-frame img.uploaded {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .about-copy {
+      padding-top: 8px;
+    }
+
+    .about-copy .role-line {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .about-copy h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .about-copy p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+
+    .about-copy p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .lang-row {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .lang-pill {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 7px 14px;
+      border: 1px solid var(--grey-line);
+      border-radius: 20px;
+      color: var(--ink-soft);
+    }
+
+    .edu-block {
+      margin-top: 40px;
+      border-top: 1px solid var(--grey-line);
+      padding-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media(max-width:500px) {
+      .edu-block {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .edu-item .yr {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--grey);
+    }
+
+    .edu-item .deg {
+      font-weight: 600;
+      margin-top: 6px;
+      font-size: 15px;
+    }
+
+    .edu-item .inst {
+      color: var(--grey);
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    /* ============ SKILLS ============ */
+    .skills {
+      background: var(--paper-dim);
+      border-top: 1px solid var(--grey-line);
+      border-bottom: 1px solid var(--grey-line);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--grey-line);
+      border: 1px solid var(--grey-line);
+    }
+
+    @media(max-width:860px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:520px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-cell {
+      background: var(--paper);
+      padding: 36px 28px;
+      transition: background 0.3s;
+    }
+
+    @media(max-width:520px) {
+      .skill-cell {
+        padding: 28px 22px;
+      }
+    }
+
+    .skill-cell:hover {
+      background: var(--accent-soft);
+    }
+
+    .skill-cell .sk-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .skill-cell .sk-icon {
+      width: 26px;
+      height: 26px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.4;
+    }
+
+    .skill-cell .sk-index {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--grey);
+    }
+
+    .skill-cell h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .skill-cell p {
+      font-size: 13.5px;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    .tools-row {
+      margin-top: 56px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .tool-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 13px;
+      padding: 10px 18px 10px 14px;
+      background: var(--paper);
+      border: 1px solid var(--grey-line);
+    }
+
+    .tool-chip .bar {
+      width: 3px;
+      height: 14px;
+      background: var(--accent);
+    }
+
+    /* ============ PORTFOLIO ============ */
+    .portfolio {
+      background: var(--paper);
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 56px;
+    }
+
+    @media(max-width:700px) {
+      .filter-row {
+        margin-bottom: 36px;
+        gap: 8px;
+      }
+    }
+
+    /* Category Grid */
+    .cat-grid {
+      column-count: 3;
+      column-gap: 2px;
+      margin-bottom: 0;
+    }
+
+    @media(max-width:860px) {
+      .cat-grid {
+        column-count: 2;
+      }
+    }
+
+    @media(max-width:500px) {
+      .cat-grid {
+        column-count: 1;
+      }
+    }
+
+    .cat-card {
+      break-inside: avoid;
+      margin-bottom: 2px;
+      position: relative;
+      background: var(--ink);
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      min-height: 240px;
+      transition: transform 0.35s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .cat-card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    .cat-card:hover {
+      transform: scale(0.975);
+    }
+
+    .cat-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(22, 21, 19, 0.82) 0%, rgba(22, 21, 19, 0.1) 60%, transparent 100%);
+      z-index: 1;
+      transition: opacity 0.3s;
+    }
+
+    .cat-card:hover::before {
+      opacity: 0.7;
+    }
+
+    .cat-card-bg {
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 0.55;
+      transition: transform 0.6s cubic-bezier(.16, 1, .3, 1), opacity 0.3s;
+    }
+
+    .cat-card:hover .cat-card-bg {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+
+    .cat-card-body {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      z-index: 2;
+    }
+
+    .cat-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .cat-name {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.15;
+    }
+
+    .cat-count {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 8px;
+      display: block;
+    }
+
+    .cat-arrow {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.65);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .cat-card:hover .cat-arrow {
+      color: #fff;
+      transform: translate(3px, -3px);
+    }
+
+    /* Popup Modal */
+    .work-detail-modal {
+      position: fixed;
+      inset: 0;
+      background: var(--paper);
+      z-index: 150;
+      padding: 60px 40px;
+      overflow-y: auto;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .work-detail-modal.open {
+      display: block;
+      opacity: 1;
+    }
+
+    .work-detail-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .work-detail-close {
+      position: fixed;
+      top: 24px;
+      right: 32px;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 160;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .work-detail-close:hover {
+      transform: scale(1.1);
+      background: var(--accent);
+    }
+
+    .work-cat-title {
+      font-family: var(--display);
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    /* Artboard Grid */
+    .artboard-grid {
+      column-count: 3;
+      column-gap: 28px;
+    }
+
+    @media(max-width:900px) {
+      .artboard-grid {
+        column-count: 2;
+      }
+    }
+
+    @media(max-width:600px) {
+      .artboard-grid {
+        column-count: 1;
+      }
+    }
+
+    .artboard {
+      break-inside: avoid;
+      margin-bottom: 28px;
+      position: relative;
+      border: 1px solid var(--grey-line);
+      background: var(--paper);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .artboard:hover {
+      border-color: var(--ink);
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px -20px rgba(22, 21, 19, 0.25);
+    }
+
+    .artboard:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .artboard-canvas {
+      position: relative;
+      overflow: hidden;
+      background: var(--paper-dim);
+      min-height: 160px;
+    }
+
+    .artboard-canvas .crop {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .artboard:hover .artboard-canvas .crop {
+      opacity: 1;
+    }
+
+    .artboard-canvas .crop::before,
+    .artboard-canvas .crop::after {
+      content: '';
+      position: absolute;
+      background: var(--accent);
+    }
+
+    .artboard-canvas .crop-tl {
+      top: 8px;
+      left: 8px;
+    }
+
+    .artboard-canvas .crop-tr {
+      top: 8px;
+      right: 8px;
+    }
+
+    .artboard-canvas .crop-bl {
+      bottom: 8px;
+      left: 8px;
+    }
+
+    .artboard-canvas .crop-br {
+      bottom: 8px;
+      right: 8px;
+    }
+
+    .artboard-canvas .crop-tl::before {
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .artboard-canvas .crop-tl::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .artboard-canvas .crop-tr::before {
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .artboard-canvas .crop-tr::after {
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .artboard-canvas .crop-bl::before {
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .artboard-canvas .crop-bl::after {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .artboard-canvas .crop-br::before {
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    .artboard-canvas .crop-br::after {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+    }
+
+    .artboard-canvas img.uploaded {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      display: block;
+    }
+
+    .ab-folder-placeholder,
+    .ab-pdf-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 160px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--grey);
+      background: var(--paper-dim);
+    }
+
+    .ab-pdf-placeholder a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .ab-pdf-placeholder svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .view-hint {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(22, 21, 19, 0);
+      color: transparent;
+      opacity: 0;
+      transition: opacity 0.25s, background 0.25s;
+      pointer-events: none;
+    }
+
+    .artboard:hover .view-hint,
+    .artboard:focus-visible .view-hint {
+      opacity: 1;
+      background: rgba(22, 21, 19, 0.45);
+      color: var(--paper);
+    }
+
+    .view-hint svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--paper);
+    }
+
+    .view-hint span {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .artboard-info {
+      padding: 20px 22px 22px;
+      border-top: 1px solid var(--grey-line);
+    }
+
+    .artboard-info .ab-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .artboard-info h3 {
+      font-size: 16px;
+      font-weight: 600;
+      min-width: 0;
+      word-break: break-word;
+    }
+
+    .artboard-info .ab-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 8px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .artboard-info p {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--grey);
+      line-height: 1.5;
+    }
+
+    /* ============ EXPERIENCE TIMELINE ============ */
+    .timeline {
+      background: var(--paper-dim);
+      border-top: 1px solid var(--grey-line);
+    }
+
+    .tl-list {
+      border-top: 1px solid var(--grey-line);
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--grey-line);
+      position: relative;
+    }
+
+    @media(max-width:700px) {
+      .tl-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
+    .tl-date {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--grey);
+      padding-top: 4px;
+    }
+
+    .tl-date .yr-big {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--ink);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .tl-body h3 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .tl-body .org {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .tl-body p {
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .tl-dur {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--grey);
+      text-align: right;
+    }
+
+    @media(max-width:700px) {
+      .tl-dur {
+        position: static;
+        margin-top: 8px;
+        text-align: left;
+      }
+    }
+
+    /* ============ CONTACT / FOOTER ============ */
+    .contact {
+      background: var(--ink);
+      color: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contactCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      display: block;
+    }
+
+    .contact>.wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact .eyebrow {
+      color: #9AA3F5;
+    }
+
+    .contact .eyebrow::before {
+      background: #9AA3F5;
+    }
+
+    .contact h2 {
+      color: var(--paper);
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.05;
+      max-width: 780px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 64px;
+      margin-top: 56px;
+    }
+
+    @media(max-width:860px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(250, 249, 248, 0.15);
+      transition: padding-left 0.25s;
+    }
+
+    .contact-row:first-child {
+      border-top: 1px solid rgba(250, 249, 248, 0.15);
+    }
+
+    .contact-row:hover {
+      padding-left: 10px;
+    }
+
+    .contact-row .c-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #9D9892;
+    }
+
+    .contact-row .c-val {
+      font-size: 17px;
+      font-weight: 500;
+      word-break: break-word;
+    }
+
+    .contact-row .c-arrow {
+      color: #9AA3F5;
+      font-size: 18px;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+
+    .contact-row:hover .c-arrow {
+      transform: translateX(4px);
+    }
+
+    @media(max-width:500px) {
+      .contact-row {
+        padding: 18px 0;
+      }
+
+      .contact-row .c-val {
+        font-size: 15px;
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .f-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .f-group label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: #9D9892;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .f-group input,
+    .f-group textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(250, 249, 248, 0.25);
+      color: var(--paper);
+      font-family: var(--body);
+      font-size: 15px;
+      padding: 10px 0;
+      resize: none;
+      transition: border-color 0.2s;
+    }
+
+    .f-group input:focus,
+    .f-group textarea:focus {
+      outline: none;
+      border-color: #9AA3F5;
+    }
+
+    .f-group input::placeholder,
+    .f-group textarea::placeholder {
+      color: #6B6660;
+    }
+
+    .form-submit {
+      margin-top: 8px;
+      align-self: flex-start;
+      font-family: var(--mono);
+      font-size: 13px;
+      padding: 14px 28px;
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .form-submit:hover {
+      background: #9AA3F5;
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .form-submit:disabled {
+      opacity: 0.65;
+      cursor: default;
+      transform: none;
+    }
+
+    .form-status {
+      margin-top: 4px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #9D9892;
+      min-height: 0;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .form-status.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .form-status.success {
+      color: #8FD6A8;
+    }
+
+    .form-status.error {
+      color: #E59A9A;
+    }
+
+    .footer-bottom {
+      margin-top: 90px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(250, 249, 248, 0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #9D9892;
+    }
+
+    @media(max-width:700px) {
+      .footer-bottom {
+        margin-top: 56px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-socials a {
+      transition: color 0.2s;
+    }
+
+    .footer-socials a:hover {
+      color: var(--paper);
+    }
+
+    /* back to top */
+    .to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 70;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s, background 0.2s;
+    }
+
+    @media(max-width:700px) {
+      .to-top {
+        width: 42px;
+        height: 42px;
+        bottom: 18px;
+        right: 18px;
+      }
+    }
+
+    .to-top.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .to-top:hover {
+      background: var(--accent);
+    }
+
+    /* focus visibility */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* lightbox for uploaded images */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(22, 21, 19, 0.92);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+      padding: 24px;
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-card {
+      background: var(--paper);
+      max-width: 920px;
+      width: 100%;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--grey-line);
+      transform: scale(0.96);
+      transition: transform 0.25s;
+    }
+
+    .lightbox.open .lightbox-card {
+      transform: scale(1);
+    }
+
+    .lightbox-img-wrap {
+      width: 100%;
+      max-height: 60vh;
+      background: var(--paper-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .lightbox-img-wrap img {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .lightbox-details {
+      padding: 24px 28px 28px;
+      border-top: 1px solid var(--grey-line);
+    }
+
+    .lightbox-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 5px 10px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .lightbox-details h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .lightbox-details p {
+      font-size: 14.5px;
+      color: var(--grey);
+      line-height: 1.6;
+      max-width: 560px;
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      color: var(--paper);
+      font-size: 28px;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 201;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(250, 249, 248, 0.12);
+    }
+
+    @media(max-width:700px) {
+      .lightbox {
+        padding: 0;
+        align-items: flex-end;
+      }
+
+      .lightbox-card {
+        max-width: 100%;
+        max-height: 92vh;
+        border: none;
+      }
+
+      .lightbox-img-wrap {
+        max-height: 42vh;
+      }
+
+      .lightbox-img-wrap img {
+        max-height: 42vh;
+      }
+
+      .lightbox-details {
+        padding: 20px 20px 28px;
+      }
+
+      .lightbox-details h3 {
+        font-size: 19px;
+      }
+
+      .lightbox-close {
+        top: auto;
+        bottom: calc(92vh + 8px);
+        right: 16px;
+        background: rgba(22, 21, 19, 0.6);
+      }
+    }
+
+    /* ======= LAZY IMAGE SHIMMER ======= */
+    .img-lazy {
+      background: linear-gradient(90deg, var(--paper-dim) 25%, #e8e5dc 50%, var(--paper-dim) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      min-height: 140px;
+    }
+
+    .img-lazy.loaded {
+      background: none;
+      animation: none;
+      min-height: unset;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    .pdf-thumb-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      z-index: 2;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="corner-block"></div>
-<div class="ruler-h"><div class="ticks"></div></div>
-<div class="ruler-v"><div class="ticks"></div></div>
+  <div class="corner-block"></div>
+  <div class="ruler-h">
+    <div class="ticks"></div>
+  </div>
+  <div class="ruler-v">
+    <div class="ticks"></div>
+  </div>
 
-<div class="page-shell">
+  <div class="page-shell">
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <a href="#top" class="nav-mark"><span class="dot"></span>Charles Binu</a>
-    <div class="nav-links">
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <a href="#top" class="nav-mark"><span class="dot"></span>Charles Binu</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="nav-cta">Hire me →</a>
+      <button class="nav-burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="mobileMenu"><span class="burger-icon"><span></span><span></span><span></span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </div>
-    <a href="#contact" class="nav-cta">Hire me →</a>
-    <button class="nav-burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"><span class="burger-icon"><span></span><span></span><span></span></span></button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#work">Work</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </div>
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <canvas id="heroCanvas"></canvas>
-    <div class="wrap hero-frame">
-      <div class="hero-tag-row">
-        <span class="pip"></span>
-        Available for freelance &amp; full-time roles · Kottayam, Kerala
-      </div>
-      <h1>
-        <span class="line"><span>Design that</span></span>
-        <span class="line"><span>says it <em class="accent-word">clearly.</em></span></span>
-      </h1>
-      <p class="hero-sub">
-        Charles Binu — a graphic designer working across branding, packaging, UI, and social advertising. Visual Media graduate from Amrita Vishwa Vidyapeetham, building a practice on clarity over decoration.
-      </p>
-
-      <div class="hero-bottom-row">
-        <div class="hero-cta-group">
-          <a href="#work" class="btn btn-primary">View the work →</a>
-          <a href="#contact" class="btn btn-outline">Get in touch</a>
-          <div class="hero-socials">
-            <a href="https://www.linkedin.com/in/charles-bt-a80b62292/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <!-- LinkedIn official mark -->
-              <svg viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/charles_exists/" target="_blank" rel="noopener" aria-label="Instagram">
-              <!-- Instagram official mark -->
-              <svg viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-            </a>
-            <a href="https://www.behance.net/charlesthottil" target="_blank" rel="noopener" aria-label="Behance">
-              <!-- Behance official mark -->
-              <svg viewBox="0 0 576 512" fill="currentColor"><path d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 53.4 7.9 53.4 40.2 0 30.1-19.7 42.6-48.4 42.6h-78.1V135.9zm83.1 233.7H77.9V272h84.9c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.8 47zm358.5-240.7H376V94h143.5v34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-29.7 120.1-88.1H509c-6.7 23.8-34.3 35.5-55.7 35.5-41.3 0-63-24.2-63-65.3h185.1c.3-4.2.6-8.7.6-13.4zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8H390.4z"/></svg>
-            </a>
-          </div>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas id="heroCanvas"></canvas>
+      <div class="wrap hero-frame">
+        <div class="hero-tag-row">
+          <span class="pip"></span>
+          Available for freelance &amp; full-time roles · Kottayam, Kerala
         </div>
-        <div class="hero-meta-list">
-          <div><span>Based in</span><span class="m-val">Kerala, IN</span></div>
-          <div><span>Focus</span><span class="m-val">Branding · UI · Ads</span></div>
-          <div><span>Status</span><span class="m-val">Open to work</span></div>
-        </div>
-      </div>
-      <a href="#about" class="scroll-cue" aria-label="Scroll to learn more">
-        Scroll
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
-      </a>
-    </div>
-  </section>
+        <h1>
+          <span class="line"><span>Design that</span></span>
+          <span class="line"><span>says it <em class="accent-word">clearly.</em></span></span>
+        </h1>
+        <p class="hero-sub">
+          Charles Binu — a graphic designer working across branding, packaging, UI, and social advertising. Visual Media
+          graduate from Amrita Vishwa Vidyapeetham, building a practice on clarity over decoration.
+        </p>
 
-  <!-- MARQUEE -->
-  <div class="marquee-strip">
-    <div class="marquee-track" id="marqueeTrack">
-      <!-- set 1 -->
-      <div class="marquee-item">Branding<span class="sep">/</span></div>
-      <div class="marquee-item">Package Design<span class="sep">/</span></div>
-      <div class="marquee-item">UI Design<span class="sep">/</span></div>
-      <div class="marquee-item">Social Ads<span class="sep">/</span></div>
-      <div class="marquee-item">Photo Manipulation<span class="sep">/</span></div>
-      <div class="marquee-item">Logo Design<span class="sep">/</span></div>
-      <div class="marquee-item">Print Advertisement<span class="sep">/</span></div>
-      <div class="marquee-item">Photography<span class="sep">/</span></div>
-      <!-- set 2 (duplicate for seamless loop) -->
-      <div class="marquee-item">Branding<span class="sep">/</span></div>
-      <div class="marquee-item">Package Design<span class="sep">/</span></div>
-      <div class="marquee-item">UI Design<span class="sep">/</span></div>
-      <div class="marquee-item">Social Ads<span class="sep">/</span></div>
-      <div class="marquee-item">Photo Manipulation<span class="sep">/</span></div>
-      <div class="marquee-item">Logo Design<span class="sep">/</span></div>
-      <div class="marquee-item">Print Advertisement<span class="sep">/</span></div>
-      <div class="marquee-item">Photography<span class="sep">/</span></div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="about-grid">
-        <div class="reveal">
-          <div class="portrait-frame">
-            <div class="crop crop-tl"></div>
-            <div class="crop crop-tr"></div>
-            <div class="crop crop-bl"></div>
-            <div class="crop crop-br"></div>
-            <img src="assets/portrait.jpg" alt="Charles Binu portrait" class="uploaded" id="portraitImg" loading="lazy" decoding="async">
-          </div>
-        </div>
-
-        <div class="about-copy reveal">
-          <span class="role-line">// About</span>
-          <h2>A designer who thinks in grids, not guesses.</h2>
-          <p>I'm a creative and detail-oriented graphic designer with a Bachelor's degree in Visual Media from Amrita Vishwa Vidyapeetham, Mysuru. My work centres on branding, UI design, and social media advertising — built to communicate first, decorate second.</p>
-          <p>I've spent the last few years moving between agency floors and edit suites: package design for retail clients, motion edits for e-learning platforms, and static ad campaigns that had to earn attention in a single scroll. Every project starts the same way — understand what the client needs to say, then find the most honest way to say it.</p>
-
-          <div class="lang-row">
-            <span class="lang-pill">English</span>
-            <span class="lang-pill">Tamil</span>
-            <span class="lang-pill">Malayalam</span>
-            <span class="lang-pill">French</span>
-          </div>
-
-          <div class="edu-block">
-            <div class="edu-item">
-              <span class="yr">2023 — 2026</span>
-              <div class="deg">B.Sc. Visual Media</div>
-              <div class="inst">Amrita Vishwa Vidyapeetham, Mysuru</div>
-            </div>
-            <div class="edu-item">
-              <span class="yr">2021 — 2022</span>
-              <div class="deg">Higher Secondary Education</div>
-              <div class="inst">Kristu Jyoti H.S.S, Changanacherry</div>
+        <div class="hero-bottom-row">
+          <div class="hero-cta-group">
+            <a href="#work" class="btn btn-primary">View the work →</a>
+            <a href="#contact" class="btn btn-outline">Get in touch</a>
+            <div class="hero-socials">
+              <a href="https://www.linkedin.com/in/charles-bt-a80b62292/" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <!-- LinkedIn official mark -->
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <path
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/charles_exists/" target="_blank" rel="noopener" aria-label="Instagram">
+                <!-- Instagram official mark -->
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg>
+              </a>
+              <a href="https://www.behance.net/charlesthottil" target="_blank" rel="noopener" aria-label="Behance">
+                <!-- Behance official mark -->
+                <svg viewBox="0 0 576 512" fill="currentColor">
+                  <path
+                    d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 53.4 7.9 53.4 40.2 0 30.1-19.7 42.6-48.4 42.6h-78.1V135.9zm83.1 233.7H77.9V272h84.9c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.8 47zm358.5-240.7H376V94h143.5v34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-29.7 120.1-88.1H509c-6.7 23.8-34.3 35.5-55.7 35.5-41.3 0-63-24.2-63-65.3h185.1c.3-4.2.6-8.7.6-13.4zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8H390.4z" />
+                </svg>
+              </a>
             </div>
           </div>
+          <div class="hero-meta-list">
+            <div><span>Based in</span><span class="m-val">Kerala, IN</span></div>
+            <div><span>Focus</span><span class="m-val">Branding · UI · Ads</span></div>
+            <div><span>Status</span><span class="m-val">Open to work</span></div>
+          </div>
         </div>
+        <a href="#about" class="scroll-cue" aria-label="Scroll to learn more">
+          Scroll
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 4v16M5 13l7 7 7-7" />
+          </svg>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section class="skills" id="skills">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>What I bring to<br>a project.</h2>
-        <p class="sub">Five years of visual training distilled into five practical skills — each one shipped in client work, not just a classroom brief.</p>
+    <!-- MARQUEE -->
+    <div class="marquee-strip">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- set 1 -->
+        <div class="marquee-item">Branding<span class="sep">/</span></div>
+        <div class="marquee-item">Package Design<span class="sep">/</span></div>
+        <div class="marquee-item">UI Design<span class="sep">/</span></div>
+        <div class="marquee-item">Social Ads<span class="sep">/</span></div>
+        <div class="marquee-item">Photo Manipulation<span class="sep">/</span></div>
+        <div class="marquee-item">Logo Design<span class="sep">/</span></div>
+        <div class="marquee-item">Print Advertisement<span class="sep">/</span></div>
+        <div class="marquee-item">Photography<span class="sep">/</span></div>
+        <!-- set 2 (duplicate for seamless loop) -->
+        <div class="marquee-item">Branding<span class="sep">/</span></div>
+        <div class="marquee-item">Package Design<span class="sep">/</span></div>
+        <div class="marquee-item">UI Design<span class="sep">/</span></div>
+        <div class="marquee-item">Social Ads<span class="sep">/</span></div>
+        <div class="marquee-item">Photo Manipulation<span class="sep">/</span></div>
+        <div class="marquee-item">Logo Design<span class="sep">/</span></div>
+        <div class="marquee-item">Print Advertisement<span class="sep">/</span></div>
+        <div class="marquee-item">Photography<span class="sep">/</span></div>
       </div>
     </div>
-    <div class="wrap">
-      <div class="skills-grid reveal">
-        <div class="skill-cell">
-          <div class="sk-top">
-            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg>
-            <span class="sk-index">01</span>
-          </div>
-          <h3>Branding</h3>
-          <p>Identity systems built to hold up across packaging, print, and screen — not just a logo file.</p>
-        </div>
-        <div class="skill-cell">
-          <div class="sk-top">
-            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 7.5 12 3 3 7.5 12 12l9-4.5z"/><path d="M3 7.5v9L12 21l9-4.5v-9"/><path d="M12 12v9"/></svg>
-            <span class="sk-index">02</span>
-          </div>
-          <h3>Package Design</h3>
-          <p>Retail-ready structural and surface design, refined through real agency briefs.</p>
-        </div>
-        <div class="skill-cell">
-          <div class="sk-top">
-            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 9h18"/><path d="M9 9v12"/></svg>
-            <span class="sk-index">03</span>
-          </div>
-          <h3>UI Design</h3>
-          <p>Interfaces that prioritise clarity and hierarchy over trend-chasing visual noise.</p>
-        </div>
-        <div class="skill-cell">
-          <div class="sk-top">
-            <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10v4a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16.5 8.5a4 4 0 0 1 0 7"/><path d="M19.5 6a8 8 0 0 1 0 12"/></svg>
-            <span class="sk-index">04</span>
-          </div>
-          <h3>Social &amp; Static Ads</h3>
-          <p>Scroll-stopping creative for paid and organic feeds, sized and paced for every platform.</p>
-        </div>
-      </div>
-      <div class="tools-row reveal">
-        <div class="tool-chip"><span class="bar"></span>Adobe Photoshop</div>
-        <div class="tool-chip"><span class="bar"></span>Adobe Illustrator</div>
-        <div class="tool-chip"><span class="bar"></span>Adobe InDesign</div>
-        <div class="tool-chip"><span class="bar"></span>Canva</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PORTFOLIO -->
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="reveal">
+            <div class="portrait-frame">
+              <div class="crop crop-tl"></div>
+              <div class="crop crop-tr"></div>
+              <div class="crop crop-bl"></div>
+              <div class="crop crop-br"></div>
+              <img src="assets/portrait.jpg" alt="Charles Binu portrait" class="uploaded" id="portraitImg"
+                loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="about-copy reveal">
+            <span class="role-line">// About</span>
+            <h2>A designer who thinks in grids, not guesses.</h2>
+            <p>I'm a creative and detail-oriented graphic designer with a Bachelor's degree in Visual Media from Amrita
+              Vishwa Vidyapeetham, Mysuru. My work centres on branding, UI design, and social media advertising — built
+              to communicate first, decorate second.</p>
+            <p>I've spent the last few years moving between agency floors and edit suites: package design for retail
+              clients, motion edits for e-learning platforms, and static ad campaigns that had to earn attention in a
+              single scroll. Every project starts the same way — understand what the client needs to say, then find the
+              most honest way to say it.</p>
+
+            <div class="lang-row">
+              <span class="lang-pill">English</span>
+              <span class="lang-pill">Tamil</span>
+              <span class="lang-pill">Malayalam</span>
+              <span class="lang-pill">French</span>
+            </div>
+
+            <div class="edu-block">
+              <div class="edu-item">
+                <span class="yr">2023 — 2026</span>
+                <div class="deg">B.Sc. Visual Media</div>
+                <div class="inst">Amrita Vishwa Vidyapeetham, Mysuru</div>
+              </div>
+              <div class="edu-item">
+                <span class="yr">2021 — 2022</span>
+                <div class="deg">Higher Secondary Education</div>
+                <div class="inst">Kristu Jyoti H.S.S, Changanacherry</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>What I bring to<br>a project.</h2>
+          <p class="sub">Five years of visual training distilled into five practical skills — each one shipped in client
+            work, not just a classroom brief.</p>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="skills-grid reveal">
+          <div class="skill-cell">
+            <div class="sk-top">
+              <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                <path d="M2 12l10 5 10-5" />
+                <path d="M2 17l10 5 10-5" />
+              </svg>
+              <span class="sk-index">01</span>
+            </div>
+            <h3>Branding</h3>
+            <p>Identity systems built to hold up across packaging, print, and screen — not just a logo file.</p>
+          </div>
+          <div class="skill-cell">
+            <div class="sk-top">
+              <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M21 7.5 12 3 3 7.5 12 12l9-4.5z" />
+                <path d="M3 7.5v9L12 21l9-4.5v-9" />
+                <path d="M12 12v9" />
+              </svg>
+              <span class="sk-index">02</span>
+            </div>
+            <h3>Package Design</h3>
+            <p>Retail-ready structural and surface design, refined through real agency briefs.</p>
+          </div>
+          <div class="skill-cell">
+            <div class="sk-top">
+              <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="1.5" />
+                <path d="M3 9h18" />
+                <path d="M9 9v12" />
+              </svg>
+              <span class="sk-index">03</span>
+            </div>
+            <h3>UI Design</h3>
+            <p>Interfaces that prioritise clarity and hierarchy over trend-chasing visual noise.</p>
+          </div>
+          <div class="skill-cell">
+            <div class="sk-top">
+              <svg class="sk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M3 10v4a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z" />
+                <path d="M16.5 8.5a4 4 0 0 1 0 7" />
+                <path d="M19.5 6a8 8 0 0 1 0 12" />
+              </svg>
+              <span class="sk-index">04</span>
+            </div>
+            <h3>Social &amp; Static Ads</h3>
+            <p>Scroll-stopping creative for paid and organic feeds, sized and paced for every platform.</p>
+          </div>
+        </div>
+        <div class="tools-row reveal">
+          <div class="tool-chip"><span class="bar"></span>Adobe Photoshop</div>
+          <div class="tool-chip"><span class="bar"></span>Adobe Illustrator</div>
+          <div class="tool-chip"><span class="bar"></span>Adobe InDesign</div>
+          <div class="tool-chip"><span class="bar"></span>Canva</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
     <section class="portfolio" id="work">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Selected<br>work.</h2>
-        <p class="sub">A working archive across branding, UI, and advertising. Choose a category below.</p>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Selected<br>work.</h2>
+          <p class="sub">A working archive across branding, UI, and advertising. Choose a category below.</p>
+        </div>
+
+        <!-- CATEGORY VIEW -->
+        <div class="cat-grid reveal" id="catGrid"></div>
       </div>
+    </section>
 
-      <!-- CATEGORY VIEW -->
-      <div class="cat-grid reveal" id="catGrid"></div>
+    <!-- POPUP MODAL FOR CATEGORY IMAGES -->
+    <div class="work-detail-modal" id="workDetail">
+      <button class="work-detail-close" id="workBack" aria-label="Close">×</button>
+      <div class="work-detail-content">
+        <div class="work-cat-title" id="workCatTitle"></div>
+        <div class="artboard-grid" id="artboardGrid"></div>
+      </div>
     </div>
-  </section>
 
-  <!-- POPUP MODAL FOR CATEGORY IMAGES -->
-  <div class="work-detail-modal" id="workDetail">
-    <button class="work-detail-close" id="workBack" aria-label="Close">×</button>
-    <div class="work-detail-content">
-      <div class="work-cat-title" id="workCatTitle"></div>
-      <div class="artboard-grid" id="artboardGrid"></div>
+    <!-- EXPERIENCE -->
+    <section class="timeline" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <h2>Where I've<br>worked.</h2>
+          <p class="sub">Two internships, two very different disciplines — both teaching me how a creative idea survives
+            contact with a real deadline.</p>
+        </div>
+
+        <div class="tl-list reveal">
+          <div class="tl-item">
+            <div class="tl-date"><span class="yr-big">2026</span>April – May</div>
+            <div class="tl-body">
+              <h3>Graphic Designer — Internship</h3>
+              <span class="org">Wachsen Advertising Digital Marketing Agency, Kottayam</span>
+              <p>Worked under the creative department on package design, brand identity assets, and social media poster
+                production for active client campaigns.</p>
+            </div>
+            <div class="tl-dur">1 month</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date"><span class="yr-big">2024</span>May</div>
+            <div class="tl-body">
+              <h3>Video Editing — Internship</h3>
+              <span class="org">Amrita Consultancy Centre for Innovative Multimedia Solutions, Mysuru</span>
+              <p>Developed e-learning video content for the NIMI Blended Learning Project, handling cuts, pacing, and
+                visual clarity for instructional material.</p>
+            </div>
+            <div class="tl-dur">16 days</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <canvas id="contactCanvas"></canvas>
+      <div class="wrap">
+        <span class="eyebrow">// Get in touch</span>
+        <h2>Have a project in mind? Let's put it on the grid.</h2>
+
+        <div class="contact-grid">
+          <div class="contact-links reveal">
+            <a href="mailto:charlesthottil@gmail.com" class="contact-row">
+              <div><span class="c-label">EMAIL</span>
+                <div class="c-val">charlesthottil@gmail.com</div>
+              </div>
+              <span class="c-arrow">↗</span>
+            </a>
+            <a href="#" class="contact-row">
+              <div><span class="c-label">LOCATION</span>
+                <div class="c-val">Kottayam, Kerala, India</div>
+              </div>
+              <span class="c-arrow">↗</span>
+            </a>
+            <a href="https://mysoreamrita-my.sharepoint.com/:f:/g/personal/my_ah_u3vmc23007_my_students_amrita_edu/IgCBSsWGHQEsSb_DmYC6kWdIAS158TuASsBDMwc0cSlaCHg?e=cpNziE"
+              target="_blank" rel="noopener" class="contact-row">
+              <div><span class="c-label">PORTFOLIO ARCHIVE</span>
+                <div class="c-val">Full work drive →</div>
+              </div>
+              <span class="c-arrow">↗</span>
+            </a>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/charlesthottil@gmail.com"
+            method="POST">
+            <input type="hidden" name="_subject" value="New project inquiry — portfolio site">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="f-group">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="f-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" placeholder="you@email.com" required>
+            </div>
+            <div class="f-group">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" rows="3" placeholder="Tell me about the project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send message →</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Charles Binu. All rights reserved.</span>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/charles-bt-a80b62292/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/charles_exists/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.behance.net/charlesthottil" target="_blank" rel="noopener">Behance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <div class="lightbox-card">
+      <div class="lightbox-img-wrap">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" id="lightboxImg">
+      </div>
+      <div class="lightbox-details">
+        <span class="lightbox-tag" id="lightboxTag"></span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
-  <section class="timeline" id="experience">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Where I've<br>worked.</h2>
-        <p class="sub">Two internships, two very different disciplines — both teaching me how a creative idea survives contact with a real deadline.</p>
-      </div>
+  <script>
+    /* ===== Hero headline letter reveal ===== */
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.hero h1 .line span').forEach((el, i) => {
+        el.style.transform = 'translateY(110%)';
+        el.style.opacity = '0';
+        el.style.transition = `transform 0.85s cubic-bezier(.16,1,.3,1) ${0.15 + i * 0.12}s, opacity 0.6s ease ${0.15 + i * 0.12}s`;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          el.style.transform = 'translateY(0)';
+          el.style.opacity = '1';
+        }));
+      });
+    });
 
-      <div class="tl-list reveal">
-        <div class="tl-item">
-          <div class="tl-date"><span class="yr-big">2025</span>April – May</div>
-          <div class="tl-body">
-            <h3>Graphic Designer — Internship</h3>
-            <span class="org">Wachsen Advertising Digital Marketing Agency, Kottayam</span>
-            <p>Worked under the creative department on package design, brand identity assets, and social media poster production for active client campaigns.</p>
-          </div>
-          <div class="tl-dur">1 month</div>
-        </div>
+    /* ===== Nav scroll state ===== */
+    const nav = document.getElementById('nav');
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) { nav.classList.add('scrolled'); toTop.classList.add('show'); }
+      else { nav.classList.remove('scrolled'); toTop.classList.remove('show'); }
+    });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        <div class="tl-item">
-          <div class="tl-date"><span class="yr-big">2024</span>May</div>
-          <div class="tl-body">
-            <h3>Video Editing — Internship</h3>
-            <span class="org">Amrita Consultancy Centre for Innovative Multimedia Solutions, Mysuru</span>
-            <p>Developed e-learning video content for the NIMI Blended Learning Project, handling cuts, pacing, and visual clarity for instructional material.</p>
-          </div>
-          <div class="tl-dur">16 days</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <canvas id="contactCanvas"></canvas>
-    <div class="wrap">
-      <span class="eyebrow">// Get in touch</span>
-      <h2>Have a project in mind? Let's put it on the grid.</h2>
-
-      <div class="contact-grid">
-        <div class="contact-links reveal">
-          <a href="mailto:charlesthottil@gmail.com" class="contact-row">
-            <div><span class="c-label">EMAIL</span><div class="c-val">charlesthottil@gmail.com</div></div>
-            <span class="c-arrow">↗</span>
-          </a>
-          <a href="#" class="contact-row">
-            <div><span class="c-label">LOCATION</span><div class="c-val">Kottayam, Kerala, India</div></div>
-            <span class="c-arrow">↗</span>
-          </a>
-          <a href="https://1drv.ms/f/c/9f11d13b7acae1fb/IgBZc3nAO9dQQL67QAD9dmneAf-8mmzoyrWDzcbwIDH_aaY?e=1vY07T" target="_blank" rel="noopener" class="contact-row">
-            <div><span class="c-label">PORTFOLIO ARCHIVE</span><div class="c-val">Full work drive →</div></div>
-            <span class="c-arrow">↗</span>
-          </a>
-        </div>
-
-        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/charlesthottil@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New project inquiry — portfolio site">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="f-group">
-            <label for="f-name">Name</label>
-            <input type="text" id="f-name" name="name" placeholder="Your name" required>
-          </div>
-          <div class="f-group">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" placeholder="you@email.com" required>
-          </div>
-          <div class="f-group">
-            <label for="f-msg">Message</label>
-            <textarea id="f-msg" name="message" rows="3" placeholder="Tell me about the project..." required></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send message →</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Charles Binu. All rights reserved.</span>
-        <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/charles-bt-a80b62292/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.instagram.com/charles_exists/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.behance.net/charlesthottil" target="_blank" rel="noopener">Behance</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
-  <div class="lightbox-card">
-    <div class="lightbox-img-wrap">
-      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" id="lightboxImg">
-    </div>
-    <div class="lightbox-details">
-      <span class="lightbox-tag" id="lightboxTag"></span>
-      <h3 id="lightboxTitle"></h3>
-      <p id="lightboxDesc"></p>
-    </div>
-  </div>
-</div>
-
-<script>
-/* ===== Hero headline letter reveal ===== */
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.hero h1 .line span').forEach((el, i) => {
-    el.style.transform = 'translateY(110%)';
-    el.style.opacity = '0';
-    el.style.transition = `transform 0.85s cubic-bezier(.16,1,.3,1) ${0.15 + i*0.12}s, opacity 0.6s ease ${0.15 + i*0.12}s`;
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      el.style.transform = 'translateY(0)';
-      el.style.opacity = '1';
-    }));
-  });
-});
-
-/* ===== Nav scroll state ===== */
-const nav = document.getElementById('nav');
-const toTop = document.getElementById('toTop');
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 40){ nav.classList.add('scrolled'); toTop.classList.add('show'); }
-  else { nav.classList.remove('scrolled'); toTop.classList.remove('show'); }
-});
-toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-/* ===== Mobile menu ===== */
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-burger.setAttribute('aria-expanded', 'false');
-burger.addEventListener('click', () => {
-  const isOpen = burger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-  burger.setAttribute('aria-expanded', String(isOpen));
-});
-mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  burger.classList.remove('open');
-  mobileMenu.classList.remove('open');
-  burger.setAttribute('aria-expanded', 'false');
-}));
-document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape' && mobileMenu.classList.contains('open')){
-    burger.classList.remove('open');
-    mobileMenu.classList.remove('open');
+    /* ===== Mobile menu ===== */
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
     burger.setAttribute('aria-expanded', 'false');
-  }
-});
+    burger.addEventListener('click', () => {
+      const isOpen = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
 
-/* ===== Reveal on scroll ===== */
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('in');
-      io.unobserve(entry.target);
+    /* ===== Reveal on scroll ===== */
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    /* ===== Portfolio data + render ===== */
+    const portfolioItems = [
+      { "cat": "branding", "tag": "Branding", "title": "Visiting Card Back", "img": "Portfolio Works/Branding Work/visiting card/1/bck.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Visiting Card Front", "img": "Portfolio Works/Branding Work/visiting card/1/frnt.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 01", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 1.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 02", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 2.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 03", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 3.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 04", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 4.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 05", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 5.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 06", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 6.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 07", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 7.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 08", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 8.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 09", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 9.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Gasania Social Media Poster 10", "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 10.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Letterhead", "img": "Portfolio Works/Branding Work/letterhead/Letterhead designed.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Letterhead Mockup", "img": "Portfolio Works/Branding Work/letterhead/letterhead mockup.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Logo", "img": "Portfolio Works/Branding Work/logo.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Package Design Mockup", "img": "Portfolio Works/Branding Work/package/package design mockup.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Price Tag Mockup", "img": "Portfolio Works/Branding Work/price tag/price tage mockup.png" },
+      { "cat": "branding", "tag": "Branding", "title": "Signboard Mockup", "img": "Portfolio Works/Branding Work/signboard/WhatsApp Image 2026-04-18 at 6.49.45 PM (1).jpeg" },
+      { "cat": "branding", "tag": "Branding", "title": "Instagram UI Design", "img": "Portfolio Works/Branding Work/UI Design/UI Designing of intsagram Page.jpg" },
+      { "cat": "branding", "tag": "Branding", "title": "Visiting Card Mockup", "img": "Portfolio Works/Branding Work/visiting card/ChatGPT Image May 7, 2026, 12_03_52 PM.png" },
+      { "cat": "newsletter", "tag": "Newsletter", "title": "Email Newsletter 01", "img": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 1.jpg" },
+      { "cat": "newsletter", "tag": "Newsletter", "title": "Email Newsletter 02", "img": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 2.jpg" },
+      { "cat": "logo", "tag": "Logo Works", "title": "Gasania Couture", "img": "Portfolio Works/Logo Works/Gasania Couture.png" },
+      { "cat": "logo", "tag": "Logo Works", "title": "Jhanvi Logo", "img": "Portfolio Works/Logo Works/Jhanvi logo 1.png" },
+      { "cat": "logo", "tag": "Logo Works", "title": "Logoooo", "img": "Portfolio Works/Logo Works/Logoooo.png" },
+      { "cat": "logo", "tag": "Logo Works", "title": "Moogliux", "img": "Portfolio Works/Logo Works/moogliux.png" },
+      { "cat": "package", "tag": "Packaging", "title": "Daewoo Package Design", "img": "Portfolio Works/Package Designing/DAEWOO - Brand Package Design.png" },
+      { "cat": "package", "tag": "Packaging", "title": "Gasania Couture Package Mockup", "img": "Portfolio Works/Package Designing/Gasania Couture - Package Design Mockup.png" },
+      { "cat": "package", "tag": "Packaging", "title": "Luxe.co Box Mockup", "img": "Portfolio Works/Package Designing/Luxe.co - Box Design Mockup.png" },
+      { "cat": "package", "tag": "Packaging", "title": "Luxe.co Cup Sticker Mockup", "img": "Portfolio Works/Package Designing/Luxe.co - Cup Sticker Design Mockup.png" },
+      { "cat": "edit", "tag": "Photo Editing", "title": "Edit 01", "img": "Portfolio Works/Photo Editing/1.jpg" },
+      { "cat": "edit", "tag": "Photo Editing", "title": "Edit 02", "img": "Portfolio Works/Photo Editing/2.jpg" },
+      { "cat": "edit", "tag": "Photo Editing", "title": "Edit 03", "img": "Portfolio Works/Photo Editing/3.jpeg" },
+      { "cat": "edit", "tag": "Photo Editing", "title": "Edit 04", "img": "Portfolio Works/Photo Editing/4.jpeg" },
+      { "cat": "edit", "tag": "Photo Editing", "title": "Edit 05", "img": "Portfolio Works/Photo Editing/6.jpg" },
+      { "cat": "edit", "tag": "Photo Editing", "title": "Edit 06", "img": "Portfolio Works/Photo Editing/7.png" },
+      { "cat": "edit", "tag": "Photo Editing", "title": "Edit 07", "img": "Portfolio Works/Photo Editing/8.JPG" },
+      { "cat": "manip", "tag": "Photo Manipulation", "title": "Manipulation 01", "img": "Portfolio Works/Photo Manipulation/2.jpeg" },
+      { "cat": "manip", "tag": "Photo Manipulation", "title": "BMW M3", "img": "Portfolio Works/Photo Manipulation/BMW M3.png" },
+      { "cat": "photo", "tag": "Photography", "title": "Animal", "img": "Portfolio Works/Photography/Animal.JPG" },
+      { "cat": "photo", "tag": "Photography", "title": "Fauna", "img": "Portfolio Works/Photography/Fauna.JPG" },
+      { "cat": "photo", "tag": "Photography", "title": "Flower", "img": "Portfolio Works/Photography/Flower.JPG" },
+      { "cat": "photo", "tag": "Photography", "title": "Food", "img": "Portfolio Works/Photography/food.JPG" },
+      { "cat": "photo", "tag": "Photography", "title": "Landscape", "img": "Portfolio Works/Photography/Landscape.jpg" },
+      { "cat": "photo", "tag": "Photography", "title": "Portrait 01", "img": "Portfolio Works/Photography/Portrait.jpg" },
+      { "cat": "photo", "tag": "Photography", "title": "Product Photography", "img": "Portfolio Works/Photography/product image.jpg" },
+      { "cat": "photo", "tag": "Photography", "title": "Portrait 02", "img": "Portfolio Works/Photography/Protrait 2.JPG" },
+      { "cat": "photo", "tag": "Photography", "title": "Portrait Backlight", "img": "Portfolio Works/Photography/Protrait Back light.JPG" },
+      { "cat": "photo", "tag": "Photography", "title": "Street", "img": "Portfolio Works/Photography/Street.jpeg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 01", "img": "Portfolio Works/Print Advertisement/1.jpg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 02", "img": "Portfolio Works/Print Advertisement/10.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 03", "img": "Portfolio Works/Print Advertisement/11.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 04", "img": "Portfolio Works/Print Advertisement/12.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 05", "img": "Portfolio Works/Print Advertisement/2.jpeg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 06", "img": "Portfolio Works/Print Advertisement/3.jpeg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 07", "img": "Portfolio Works/Print Advertisement/3.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 08", "img": "Portfolio Works/Print Advertisement/4.jpeg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 09", "img": "Portfolio Works/Print Advertisement/5.jpeg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 10", "img": "Portfolio Works/Print Advertisement/5.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 11", "img": "Portfolio Works/Print Advertisement/6.jpeg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 12", "img": "Portfolio Works/Print Advertisement/7.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 13", "img": "Portfolio Works/Print Advertisement/8.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Ad 14", "img": "Portfolio Works/Print Advertisement/9.png" },
+      { "cat": "print", "tag": "Print Ads", "title": "Al-Surairat Poster 01", "img": "Portfolio Works/Print Advertisement/Al - Surairat Poster 1.jpg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Al-Surairat Poster 02", "img": "Portfolio Works/Print Advertisement/Al - Surairat Poster 2.jpg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Bifold Back", "img": "Portfolio Works/Print Advertisement/bifold/bck.jpg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Bifold Front", "img": "Portfolio Works/Print Advertisement/bifold/frnt.jpg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Newspaper Tabloid", "img": "Portfolio Works/Print Advertisement/Newspaper Tabloid_thumb.png", "pdf": "Portfolio Works/Print Advertisement/Newspaper Tabloid.pdf" },
+      { "cat": "print", "tag": "Print Ads", "title": "Trifold Back", "img": "Portfolio Works/Print Advertisement/trifold/back.jpg" },
+      { "cat": "print", "tag": "Print Ads", "title": "Trifold Front", "img": "Portfolio Works/Print Advertisement/trifold/frnt.jpg" },
+      { "cat": "social", "tag": "Social Ads", "title": "Wachsen 01", "img": "Portfolio Works/Social Media Advertisement/@wachsen 1.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Wachsen 02", "img": "Portfolio Works/Social Media Advertisement/@wachsen 2.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Wachsen 03", "img": "Portfolio Works/Social Media Advertisement/@wachsen 3.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Wachsen 04", "img": "Portfolio Works/Social Media Advertisement/@wachsen 4.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Wachsen 05", "img": "Portfolio Works/Social Media Advertisement/@wachsen 5.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Wachsen 06", "img": "Portfolio Works/Social Media Advertisement/@wachsen 6.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Gasania Couture Social 01", "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 1.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Gasania Couture Social 02", "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 2.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Gasania Couture Social 03", "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 3.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Gasania Couture Social 04", "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 4.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "HighRange Ad", "img": "Portfolio Works/Social Media Advertisement/HighRange Social Media ad.png" },
+      { "cat": "social", "tag": "Social Ads", "title": "Vikings Tattoo 02", "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo 2.jpg" },
+      { "cat": "social", "tag": "Social Ads", "title": "Vikings Tattoo Poster 01", "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo poster 1.png" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Curren Watch Website", "img": "Portfolio Works/UI Designing/Curren Watch Website.jpg" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Food Delivery App", "img": "Portfolio Works/UI Designing/Food delivery app.jpg" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Gasania Instagram UI", "img": "Portfolio Works/UI Designing/gasania Intsagram  UI interface.png" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Login Page", "img": "Portfolio Works/UI Designing/Login Page design.jpg" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Registration Form 01", "img": "Portfolio Works/UI Designing/Registration Form.png" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Registration Form 02", "img": "Portfolio Works/UI Designing/Registration Form 2.jpg" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Website Design", "img": "Portfolio Works/UI Designing/website design.jpg" }
+    ];
+
+    const categories = [
+      {
+        "key": "branding",
+        "label": "Branding",
+        "cover": "Portfolio Works/Branding Work/letterhead/Letterhead designed.png"
+      },
+      {
+        "key": "newsletter",
+        "label": "Newsletter",
+        "cover": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 1.jpg"
+      },
+      {
+        "key": "logo",
+        "label": "Logo Works",
+        "cover": "Portfolio Works/Logo Works/Gasania Couture.png"
+      },
+      {
+        "key": "package",
+        "label": "Packaging",
+        "cover": "Portfolio Works/Package Designing/DAEWOO - Brand Package Design.png"
+      },
+      {
+        "key": "edit",
+        "label": "Photo Editing",
+        "cover": "Portfolio Works/Photo Editing/1.jpg"
+      },
+      {
+        "key": "manip",
+        "label": "Photo Manipulation",
+        "cover": "Portfolio Works/Photo Manipulation/2.jpeg"
+      },
+      {
+        "key": "photo",
+        "label": "Photography",
+        "cover": "Portfolio Works/Photography/Animal.JPG"
+      },
+      {
+        "key": "print",
+        "label": "Print Ads",
+        "cover": "Portfolio Works/Print Advertisement/1.jpg"
+      },
+      {
+        "key": "social",
+        "label": "Social Ads",
+        "cover": "Portfolio Works/Social Media Advertisement/@wachsen 1.png"
+      },
+      {
+        "key": "ui",
+        "label": "UI Designing",
+        "cover": "Portfolio Works/UI Designing/Curren Watch Website.jpg"
+      }
+    ];
+
+    /* ===== Render category cards ===== */
+    const catGrid = document.getElementById('catGrid');
+    const workDetail = document.getElementById('workDetail');
+    const workBack = document.getElementById('workBack');
+    const workCatTitle = document.getElementById('workCatTitle');
+    const artboardGrid = document.getElementById('artboardGrid');
+
+    /* ===== Display helpers ===== */
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     }
-  });
-}, { threshold: 0.12 });
-revealEls.forEach(el => io.observe(el));
+    function isPdf(path) { return /\.pdf$/i.test(path); }
+    function titleCaseWords(s) {
+      return s.replace(/[-_]+/g, ' ').trim().replace(/\s+/g, ' ')
+        .replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase());
+    }
+    function getNamedSubfolder(imgPath) {
+      const parts = imgPath.split('/');
+      const inner = parts.slice(2, -1).filter(p => !/^\d+$/.test(p));
+      return inner.length ? inner[inner.length - 1] : null;
+    }
+    // Many filenames are just numbers or "frnt"/"bck" — turn those into something
+    // readable (e.g. "Bifold — Front") using the folder they came from, instead
+    // of showing a bare "3" or "frnt" as the title / alt text.
+    function humanizeTitle(item, posInCategory) {
+      const raw = item.title.trim();
+      const lower = raw.toLowerCase();
+      const sideMap = { bck: 'Back', back: 'Back', frnt: 'Front', front: 'Front' };
+      const isGenericNumber = /^\d+$/.test(raw);
+      const isSide = sideMap.hasOwnProperty(lower);
+      if (!isGenericNumber && !isSide) return raw;
+      const sub = getNamedSubfolder(item.img);
+      if (isSide) return sub ? `${titleCaseWords(sub)} — ${sideMap[lower]}` : `${item.tag} — ${sideMap[lower]}`;
+      return sub ? `${titleCaseWords(sub)} ${String(posInCategory).padStart(2, '0')}` : `${item.tag} ${String(posInCategory).padStart(2, '0')}`;
+    }
 
-/* ===== Portfolio data + render ===== */
-const portfolioItems = [
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "Letterhead designed",
-    "desc": "Letterhead designed",
-    "img": "Portfolio Works/Branding Work/letterhead/Letterhead designed.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "letterhead mockup",
-    "desc": "letterhead mockup",
-    "img": "Portfolio Works/Branding Work/letterhead/letterhead mockup.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "logo",
-    "desc": "logo",
-    "img": "Portfolio Works/Branding Work/logo.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "package design mockup",
-    "desc": "package design mockup",
-    "img": "Portfolio Works/Branding Work/package/package design mockup.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "price tage mockup",
-    "desc": "price tage mockup",
-    "img": "Portfolio Works/Branding Work/price tag/price tage mockup.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "WhatsApp Image 2026-04-18 at 6.49.45 PM (1)",
-    "desc": "WhatsApp Image 2026-04-18 at 6.49.45 PM (1)",
-    "img": "Portfolio Works/Branding Work/signboard/WhatsApp Image 2026-04-18 at 6.49.45 PM (1).jpeg"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 1",
-    "desc": "gasania social media poster 1",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 1.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 10",
-    "desc": "gasania social media poster 10",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 10.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 2",
-    "desc": "gasania social media poster 2",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 2.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 3",
-    "desc": "gasania social media poster 3",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 3.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 4",
-    "desc": "gasania social media poster 4",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 4.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 5",
-    "desc": "gasania social media poster 5",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 5.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 6",
-    "desc": "gasania social media poster 6",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 6.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 7",
-    "desc": "gasania social media poster 7",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 7.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 8",
-    "desc": "gasania social media poster 8",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 8.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "gasania social media poster 9",
-    "desc": "gasania social media poster 9",
-    "img": "Portfolio Works/Branding Work/Social Media posters & Print Media Poster/gasania social media poster 9.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "UI Designing of intsagram Page",
-    "desc": "UI Designing of intsagram Page",
-    "img": "Portfolio Works/Branding Work/UI Design/UI Designing of intsagram Page.jpg"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "bck",
-    "desc": "bck",
-    "img": "Portfolio Works/Branding Work/visiting card/1/bck.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "frnt",
-    "desc": "frnt",
-    "img": "Portfolio Works/Branding Work/visiting card/1/frnt.png"
-  },
-  {
-    "cat": "branding",
-    "tag": "Branding",
-    "title": "ChatGPT Image May 7, 2026, 12_03_52 PM",
-    "desc": "ChatGPT Image May 7, 2026, 12_03_52 PM",
-    "img": "Portfolio Works/Branding Work/visiting card/ChatGPT Image May 7, 2026, 12_03_52 PM.png"
-  },
-  {
-    "cat": "newsletter",
-    "tag": "Newsletter",
-    "title": "Email Newsletter Design 1",
-    "desc": "Email Newsletter Design 1",
-    "img": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 1.jpg"
-  },
-  {
-    "cat": "newsletter",
-    "tag": "Newsletter",
-    "title": "Email Newsletter Design 2",
-    "desc": "Email Newsletter Design 2",
-    "img": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 2.jpg"
-  },
-  {
-    "cat": "logo",
-    "tag": "Logo Works",
-    "title": "Gasania Couture",
-    "desc": "Gasania Couture",
-    "img": "Portfolio Works/Logo Works/Gasania Couture.png"
-  },
-  {
-    "cat": "logo",
-    "tag": "Logo Works",
-    "title": "Jhanvi logo 1",
-    "desc": "Jhanvi logo 1",
-    "img": "Portfolio Works/Logo Works/Jhanvi logo 1.png"
-  },
-  {
-    "cat": "logo",
-    "tag": "Logo Works",
-    "title": "Logoooo",
-    "desc": "Logoooo",
-    "img": "Portfolio Works/Logo Works/Logoooo.png"
-  },
-  {
-    "cat": "logo",
-    "tag": "Logo Works",
-    "title": "moogliux",
-    "desc": "moogliux",
-    "img": "Portfolio Works/Logo Works/moogliux.png"
-  },
-  {
-    "cat": "package",
-    "tag": "Packaging",
-    "title": "DAEWOO - Brand Package Design",
-    "desc": "DAEWOO - Brand Package Design",
-    "img": "Portfolio Works/Package Designing/DAEWOO - Brand Package Design.png"
-  },
-  {
-    "cat": "package",
-    "tag": "Packaging",
-    "title": "Gasania Couture - Package Design Mockup",
-    "desc": "Gasania Couture - Package Design Mockup",
-    "img": "Portfolio Works/Package Designing/Gasania Couture - Package Design Mockup.png"
-  },
-  {
-    "cat": "package",
-    "tag": "Packaging",
-    "title": "Luxe.co - Box Design Mockup",
-    "desc": "Luxe.co - Box Design Mockup",
-    "img": "Portfolio Works/Package Designing/Luxe.co - Box Design Mockup.png"
-  },
-  {
-    "cat": "package",
-    "tag": "Packaging",
-    "title": "Luxe.co - Cup Sticker Design Mockup",
-    "desc": "Luxe.co - Cup Sticker Design Mockup",
-    "img": "Portfolio Works/Package Designing/Luxe.co - Cup Sticker Design Mockup.png"
-  },
-  {
-    "cat": "edit",
-    "tag": "Photo Editing",
-    "title": "1",
-    "desc": "1",
-    "img": "Portfolio Works/Photo Editing/1.jpg"
-  },
-  {
-    "cat": "edit",
-    "tag": "Photo Editing",
-    "title": "2",
-    "desc": "2",
-    "img": "Portfolio Works/Photo Editing/2.jpg"
-  },
-  {
-    "cat": "edit",
-    "tag": "Photo Editing",
-    "title": "3",
-    "desc": "3",
-    "img": "Portfolio Works/Photo Editing/3.jpeg"
-  },
-  {
-    "cat": "edit",
-    "tag": "Photo Editing",
-    "title": "4",
-    "desc": "4",
-    "img": "Portfolio Works/Photo Editing/4.jpeg"
-  },
-  {
-    "cat": "edit",
-    "tag": "Photo Editing",
-    "title": "6",
-    "desc": "6",
-    "img": "Portfolio Works/Photo Editing/6.jpg"
-  },
-  {
-    "cat": "edit",
-    "tag": "Photo Editing",
-    "title": "7",
-    "desc": "7",
-    "img": "Portfolio Works/Photo Editing/7.png"
-  },
-  {
-    "cat": "edit",
-    "tag": "Photo Editing",
-    "title": "8",
-    "desc": "8",
-    "img": "Portfolio Works/Photo Editing/8.JPG"
-  },
-  {
-    "cat": "manip",
-    "tag": "Photo Manipulation",
-    "title": "2",
-    "desc": "2",
-    "img": "Portfolio Works/Photo Manipulation/2.jpeg"
-  },
-  {
-    "cat": "manip",
-    "tag": "Photo Manipulation",
-    "title": "BMW M3",
-    "desc": "BMW M3",
-    "img": "Portfolio Works/Photo Manipulation/BMW M3.png"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Animal",
-    "desc": "Animal",
-    "img": "Portfolio Works/Photography/Animal.JPG"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Fauna",
-    "desc": "Fauna",
-    "img": "Portfolio Works/Photography/Fauna.JPG"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Flower",
-    "desc": "Flower",
-    "img": "Portfolio Works/Photography/Flower.JPG"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "food",
-    "desc": "food",
-    "img": "Portfolio Works/Photography/food.JPG"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Landscape",
-    "desc": "Landscape",
-    "img": "Portfolio Works/Photography/Landscape.jpg"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Portrait",
-    "desc": "Portrait",
-    "img": "Portfolio Works/Photography/Portrait.jpg"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "product image",
-    "desc": "product image",
-    "img": "Portfolio Works/Photography/product image.jpg"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Protrait 2",
-    "desc": "Protrait 2",
-    "img": "Portfolio Works/Photography/Protrait 2.JPG"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Protrait Back light",
-    "desc": "Protrait Back light",
-    "img": "Portfolio Works/Photography/Protrait Back light.JPG"
-  },
-  {
-    "cat": "photo",
-    "tag": "Photography",
-    "title": "Street",
-    "desc": "Street",
-    "img": "Portfolio Works/Photography/Street.jpeg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "1",
-    "desc": "1",
-    "img": "Portfolio Works/Print Advertisement/1.jpg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "10",
-    "desc": "10",
-    "img": "Portfolio Works/Print Advertisement/10.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "11",
-    "desc": "11",
-    "img": "Portfolio Works/Print Advertisement/11.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "12",
-    "desc": "12",
-    "img": "Portfolio Works/Print Advertisement/12.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "2",
-    "desc": "2",
-    "img": "Portfolio Works/Print Advertisement/2.jpeg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "3",
-    "desc": "3",
-    "img": "Portfolio Works/Print Advertisement/3.jpeg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "3",
-    "desc": "3",
-    "img": "Portfolio Works/Print Advertisement/3.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "4",
-    "desc": "4",
-    "img": "Portfolio Works/Print Advertisement/4.jpeg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "5",
-    "desc": "5",
-    "img": "Portfolio Works/Print Advertisement/5.jpeg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "5",
-    "desc": "5",
-    "img": "Portfolio Works/Print Advertisement/5.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "6",
-    "desc": "6",
-    "img": "Portfolio Works/Print Advertisement/6.jpeg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "7",
-    "desc": "7",
-    "img": "Portfolio Works/Print Advertisement/7.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "8",
-    "desc": "8",
-    "img": "Portfolio Works/Print Advertisement/8.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "9",
-    "desc": "9",
-    "img": "Portfolio Works/Print Advertisement/9.png"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "Al - Surairat Poster 1",
-    "desc": "Al - Surairat Poster 1",
-    "img": "Portfolio Works/Print Advertisement/Al - Surairat Poster 1.jpg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "Al - Surairat Poster 2",
-    "desc": "Al - Surairat Poster 2",
-    "img": "Portfolio Works/Print Advertisement/Al - Surairat Poster 2.jpg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "bck",
-    "desc": "bck",
-    "img": "Portfolio Works/Print Advertisement/bifold/bck.jpg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "frnt",
-    "desc": "frnt",
-    "img": "Portfolio Works/Print Advertisement/bifold/frnt.jpg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "Newspaper Tabloid",
-    "desc": "Newspaper Tabloid",
-    "img": "Portfolio Works/Print Advertisement/Newspaper Tabloid.pdf"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "back",
-    "desc": "back",
-    "img": "Portfolio Works/Print Advertisement/trifold/back.jpg"
-  },
-  {
-    "cat": "print",
-    "tag": "Print Ads",
-    "title": "frnt",
-    "desc": "frnt",
-    "img": "Portfolio Works/Print Advertisement/trifold/frnt.jpg"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "@wachsen 1",
-    "desc": "@wachsen 1",
-    "img": "Portfolio Works/Social Media Advertisement/@wachsen 1.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "@wachsen 2",
-    "desc": "@wachsen 2",
-    "img": "Portfolio Works/Social Media Advertisement/@wachsen 2.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "@wachsen 3",
-    "desc": "@wachsen 3",
-    "img": "Portfolio Works/Social Media Advertisement/@wachsen 3.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "@wachsen 4",
-    "desc": "@wachsen 4",
-    "img": "Portfolio Works/Social Media Advertisement/@wachsen 4.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "@wachsen 5",
-    "desc": "@wachsen 5",
-    "img": "Portfolio Works/Social Media Advertisement/@wachsen 5.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "@wachsen 6",
-    "desc": "@wachsen 6",
-    "img": "Portfolio Works/Social Media Advertisement/@wachsen 6.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "Gasania Couture 1",
-    "desc": "Gasania Couture 1",
-    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 1.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "Gasania Couture 2",
-    "desc": "Gasania Couture 2",
-    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 2.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "Gasania Couture 3",
-    "desc": "Gasania Couture 3",
-    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 3.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "Gasania Couture 4",
-    "desc": "Gasania Couture 4",
-    "img": "Portfolio Works/Social Media Advertisement/Gasania Couture 4.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "HighRange Social Media ad",
-    "desc": "HighRange Social Media ad",
-    "img": "Portfolio Works/Social Media Advertisement/HighRange Social Media ad.png"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "Vikings Tattoo 2",
-    "desc": "Vikings Tattoo 2",
-    "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo 2.jpg"
-  },
-  {
-    "cat": "social",
-    "tag": "Social Ads",
-    "title": "Vikings Tattoo poster 1",
-    "desc": "Vikings Tattoo poster 1",
-    "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo poster 1.png"
-  },
-  {
-    "cat": "ui",
-    "tag": "UI Designing",
-    "title": "Curren Watch Website",
-    "desc": "Curren Watch Website",
-    "img": "Portfolio Works/UI Designing/Curren Watch Website.jpg"
-  },
-  {
-    "cat": "ui",
-    "tag": "UI Designing",
-    "title": "Food delivery app",
-    "desc": "Food delivery app",
-    "img": "Portfolio Works/UI Designing/Food delivery app.jpg"
-  },
-  {
-    "cat": "ui",
-    "tag": "UI Designing",
-    "title": "gasania Intsagram  UI interface",
-    "desc": "gasania Intsagram  UI interface",
-    "img": "Portfolio Works/UI Designing/gasania Intsagram  UI interface.png"
-  },
-  {
-    "cat": "ui",
-    "tag": "UI Designing",
-    "title": "Login Page design",
-    "desc": "Login Page design",
-    "img": "Portfolio Works/UI Designing/Login Page design.jpg"
-  },
-  {
-    "cat": "ui",
-    "tag": "UI Designing",
-    "title": "Registration Form 2",
-    "desc": "Registration Form 2",
-    "img": "Portfolio Works/UI Designing/Registration Form 2.jpg"
-  },
-  {
-    "cat": "ui",
-    "tag": "UI Designing",
-    "title": "Registration Form",
-    "desc": "Registration Form",
-    "img": "Portfolio Works/UI Designing/Registration Form.png"
-  },
-  {
-    "cat": "ui",
-    "tag": "UI Designing",
-    "title": "website design",
-    "desc": "website design",
-    "img": "Portfolio Works/UI Designing/website design.jpg"
-  }
-];
-
-const categories = [
-  {
-    "key": "branding",
-    "label": "Branding",
-    "cover": "Portfolio Works/Branding Work/letterhead/Letterhead designed.png"
-  },
-  {
-    "key": "newsletter",
-    "label": "Newsletter",
-    "cover": "Portfolio Works/Email Newsletter Design/Email Newsletter Design 1.jpg"
-  },
-  {
-    "key": "logo",
-    "label": "Logo Works",
-    "cover": "Portfolio Works/Logo Works/Gasania Couture.png"
-  },
-  {
-    "key": "package",
-    "label": "Packaging",
-    "cover": "Portfolio Works/Package Designing/DAEWOO - Brand Package Design.png"
-  },
-  {
-    "key": "edit",
-    "label": "Photo Editing",
-    "cover": "Portfolio Works/Photo Editing/1.jpg"
-  },
-  {
-    "key": "manip",
-    "label": "Photo Manipulation",
-    "cover": "Portfolio Works/Photo Manipulation/2.jpeg"
-  },
-  {
-    "key": "photo",
-    "label": "Photography",
-    "cover": "Portfolio Works/Photography/Animal.JPG"
-  },
-  {
-    "key": "print",
-    "label": "Print Ads",
-    "cover": "Portfolio Works/Print Advertisement/1.jpg"
-  },
-  {
-    "key": "social",
-    "label": "Social Ads",
-    "cover": "Portfolio Works/Social Media Advertisement/@wachsen 1.png"
-  },
-  {
-    "key": "ui",
-    "label": "UI Designing",
-    "cover": "Portfolio Works/UI Designing/Curren Watch Website.jpg"
-  }
-];
-
-/* ===== Render category cards ===== */
-const catGrid = document.getElementById('catGrid');
-const workDetail = document.getElementById('workDetail');
-const workBack = document.getElementById('workBack');
-const workCatTitle = document.getElementById('workCatTitle');
-const artboardGrid = document.getElementById('artboardGrid');
-
-/* ===== Display helpers ===== */
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-function isPdf(path) { return /\.pdf$/i.test(path); }
-function titleCaseWords(s) {
-  return s.replace(/[-_]+/g, ' ').trim().replace(/\s+/g, ' ')
-    .replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase());
-}
-function getNamedSubfolder(imgPath) {
-  const parts = imgPath.split('/');
-  const inner = parts.slice(2, -1).filter(p => !/^\d+$/.test(p));
-  return inner.length ? inner[inner.length - 1] : null;
-}
-// Many filenames are just numbers or "frnt"/"bck" — turn those into something
-// readable (e.g. "Bifold — Front") using the folder they came from, instead
-// of showing a bare "3" or "frnt" as the title / alt text.
-function humanizeTitle(item, posInCategory) {
-  const raw = item.title.trim();
-  const lower = raw.toLowerCase();
-  const sideMap = { bck: 'Back', back: 'Back', frnt: 'Front', front: 'Front' };
-  const isGenericNumber = /^\d+$/.test(raw);
-  const isSide = sideMap.hasOwnProperty(lower);
-  if (!isGenericNumber && !isSide) return raw;
-  const sub = getNamedSubfolder(item.img);
-  if (isSide) return sub ? `${titleCaseWords(sub)} — ${sideMap[lower]}` : `${item.tag} — ${sideMap[lower]}`;
-  return sub ? `${titleCaseWords(sub)} ${String(posInCategory).padStart(2, '0')}` : `${item.tag} ${String(posInCategory).padStart(2, '0')}`;
-}
-
-function renderCategoryCards() {
-  catGrid.innerHTML = categories.map((cat, i) => {
-    const count = portfolioItems.filter(p => p.cat === cat.key).length;
-    return `
+    function renderCategoryCards() {
+      catGrid.innerHTML = categories.map((cat, i) => {
+        const count = portfolioItems.filter(p => p.cat === cat.key).length;
+        return `
     <div class="cat-card" data-cat="${cat.key}" tabindex="0" role="button" aria-label="View ${escapeHtml(cat.label)} category, ${count} ${count === 1 ? 'piece' : 'pieces'}">
       <img class="cat-card-bg" src="assets/${cat.cover}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
       <span class="cat-arrow">↗</span>
@@ -2466,46 +2740,48 @@ function renderCategoryCards() {
       </div>
     </div>
   `;
-  }).join('');
+      }).join('');
 
-  catGrid.querySelectorAll('.cat-card').forEach(card => {
-    const go = () => openCategory(card.dataset.cat, card);
-    card.addEventListener('click', go);
-    card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
-  });
-}
+      catGrid.querySelectorAll('.cat-card').forEach(card => {
+        const go = () => openCategory(card.dataset.cat, card);
+        card.addEventListener('click', go);
+        card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+      });
+    }
 
-let modalReturnFocus = null;
+    let modalReturnFocus = null;
 
-function openCategory(catKey, triggerEl) {
-  const cat = categories.find(c => c.key === catKey);
-  const items = portfolioItems.filter(p => p.cat === catKey);
-  modalReturnFocus = triggerEl || null;
+    function openCategory(catKey, triggerEl) {
+      const cat = categories.find(c => c.key === catKey);
+      const items = portfolioItems.filter(p => p.cat === catKey);
+      modalReturnFocus = triggerEl || null;
 
-  artboardGrid.innerHTML = items.map((item, i) => {
-    const label = humanizeTitle(item, i + 1);
-    const folder = item.img.endsWith('/');
-    const pdf = isPdf(item.img);
-    let mediaHtml;
-    if (folder) {
-      mediaHtml = '<div class="ab-folder-placeholder"><span>↗ Folder</span></div>';
-    } else if (pdf) {
-      mediaHtml = `<div class="ab-pdf-placeholder">
+      artboardGrid.innerHTML = items.map((item, i) => {
+        const label = humanizeTitle(item, i + 1);
+        const folder = item.img.endsWith('/');
+        const pdf = isPdf(item.img);
+        const hasPdfLink = !!item.pdf; // thumbnail image that opens a PDF
+        let mediaHtml;
+        if (folder) {
+          mediaHtml = '<div class="ab-folder-placeholder"><span>↗ Folder</span></div>';
+        } else if (pdf) {
+          mediaHtml = `<div class="ab-pdf-placeholder">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
         <a href="assets/${item.img}" target="_blank" rel="noopener">Open PDF</a>
       </div>`;
-    } else {
-      mediaHtml = `<img src="assets/${item.img}" alt="${escapeHtml(cat.label)} — ${escapeHtml(label)}" class="uploaded ab-img" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
-    }
-    return `
-    <div class="artboard" data-index="${portfolioItems.indexOf(item)}" ${pdf || folder ? '' : `tabindex="0" role="button" aria-label="View ${escapeHtml(label)}"`}>
+        } else {
+          mediaHtml = `<img data-src="assets/${escapeHtml(item.img)}" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="${escapeHtml(cat.label)} — ${escapeHtml(label)}" class="uploaded ab-img img-lazy" decoding="async" onerror="this.classList.remove('img-lazy');this.style.opacity='0.3'">${hasPdfLink ? '<span class="pdf-thumb-badge">PDF</span>' : ''}`;
+        }
+        const isClickable = !pdf && !folder;
+        return `
+    <div class="artboard" data-index="${portfolioItems.indexOf(item)}" data-pdf-link="${hasPdfLink ? encodeURIComponent('assets/' + item.pdf) : ''}" ${isClickable ? `tabindex="0" role="button" aria-label="View ${escapeHtml(label)}"` : ''}>
       <div class="artboard-canvas">
         <div class="crop crop-tl"></div><div class="crop crop-tr"></div>
         <div class="crop crop-bl"></div><div class="crop crop-br"></div>
         ${mediaHtml}
-        ${!pdf && !folder ? `<div class="view-hint">
+        ${isClickable ? `<div class="view-hint">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
-          <span>View</span>
+          <span>${hasPdfLink ? 'Open PDF' : 'View'}</span>
         </div>` : ''}
       </div>
       <div class="artboard-info">
@@ -2517,293 +2793,314 @@ function openCategory(catKey, triggerEl) {
       </div>
     </div>
   `;
-  }).join('');
+      }).join('');
 
-  // attach lightbox clicks (PDFs and folder placeholders open via their own link, not the lightbox)
-  artboardGrid.querySelectorAll('.artboard[role="button"]').forEach(card => {
-    const idx = parseInt(card.dataset.index, 10);
-    const item = portfolioItems[idx];
-    const itemLabel = humanizeTitle(item, idx + 1);
-    const open = () => openLightbox(item, 'assets/' + item.img, itemLabel, card);
-    card.addEventListener('click', open);
-    card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
-  });
-
-  workCatTitle.textContent = cat.label;
-
-  // OPEN POPUP MODAL
-  workDetail.classList.add('open');
-  document.body.style.overflow = 'hidden'; // prevent background scrolling
-  workBack.focus();
-}
-
-// CLOSE POPUP MODAL
-function closeWorkDetail(){
-  workDetail.classList.remove('open');
-  document.body.style.overflow = '';
-  if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') modalReturnFocus.focus();
-}
-workBack.addEventListener('click', closeWorkDetail);
-
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxTag = document.getElementById('lightboxTag');
-const lightboxTitle = document.getElementById('lightboxTitle');
-const lightboxDesc = document.getElementById('lightboxDesc');
-const lightboxClose = document.getElementById('lightboxClose');
-
-let lightboxReturnFocus = null;
-
-function openLightbox(item, src, label, triggerEl){
-  if(!src) return;
-  const displayLabel = label || item.title;
-  lightboxReturnFocus = triggerEl || null;
-  lightboxImg.src = src;
-  lightboxImg.alt = `${item.tag} — ${displayLabel}`;
-  lightboxTag.textContent = item.tag;
-  lightboxTitle.textContent = displayLabel;
-  lightboxDesc.textContent = (item.desc && item.desc !== item.title) ? item.desc : `From the ${item.tag} collection.`;
-  lightbox.classList.add('open');
-  lightboxClose.focus();
-}
-
-function closeLightbox(){
-  lightbox.classList.remove('open');
-  setTimeout(()=>{ lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='; }, 250);
-  if (lightboxReturnFocus && typeof lightboxReturnFocus.focus === 'function') lightboxReturnFocus.focus();
-}
-
-lightboxClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => { if(e.target === lightbox || e.target.classList.contains('lightbox-card')) closeLightbox(); });
-document.addEventListener('keydown', (e) => {
-  if(e.key !== 'Escape') return;
-  if(lightbox.classList.contains('open')) closeLightbox();
-  else if(workDetail.classList.contains('open')) closeWorkDetail();
-});
-
-renderCategoryCards();
-
-/* ===== Canvas background animations ===== */
-(function(){
-  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  ['contactCanvas', 'heroCanvas'].forEach(id => {
-    const canvas = document.getElementById(id);
-    if(!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let W, H, nodes, lines, rafId = null, running = false;
-
-    function resize(){
-      const rect = canvas.parentElement.getBoundingClientRect();
-      W = canvas.width  = rect.width;
-      H = canvas.height = rect.height;
-    }
-
-    function initNodes(){
-      nodes = [];
-      // capped so very large/ultra-wide screens don't blow up the O(n²) connection check below
-      const count = Math.min(90, Math.floor((W * H) / 14000));
-      for(let i=0;i<count;i++){
-        nodes.push({
-          x: Math.random()*W,
-          y: Math.random()*H,
-          vx: (Math.random()-0.5)*0.35,
-          vy: (Math.random()-0.5)*0.35,
-          r: Math.random()*1.8+0.6,
-          pulse: Math.random()*Math.PI*2
+      // IntersectionObserver: swap data-src → src for lazy images
+      const lazyImgs = artboardGrid.querySelectorAll('img.img-lazy[data-src]');
+      const imgObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.onload = () => img.classList.add('loaded');
+          obs.unobserve(img);
         });
-      }
-      lines = [];
-      const cols = 8, rows = 5;
-      for(let c=1;c<cols;c++){
-        lines.push({x1:W*c/cols, y1:0, x2:W*c/cols, y2:H, speed:(Math.random()-0.5)*0.2, offset:Math.random()*H});
-      }
-      for(let r=1;r<rows;r++){
-        lines.push({x1:0, y1:H*r/rows, x2:W, y2:H*r/rows, speed:(Math.random()-0.5)*0.15, offset:Math.random()*W, horiz:true});
-      }
+      }, { rootMargin: '200px 0px' });
+      lazyImgs.forEach(img => imgObserver.observe(img));
+
+      // attach lightbox clicks (PDFs and folder placeholders open via their own link, not the lightbox)
+      artboardGrid.querySelectorAll('.artboard[role="button"]').forEach(card => {
+        const idx = parseInt(card.dataset.index, 10);
+        const item = portfolioItems[idx];
+        const itemLabel = humanizeTitle(item, idx + 1);
+        const pdfLink = card.dataset.pdfLink ? decodeURIComponent(card.dataset.pdfLink) : null;
+        const open = () => {
+          if (pdfLink) {
+            window.open(pdfLink, '_blank', 'noopener');
+          } else {
+            openLightbox(item, 'assets/' + item.img, itemLabel, card);
+          }
+        };
+        card.addEventListener('click', open);
+        card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+
+      workCatTitle.textContent = cat.label;
+
+      // OPEN POPUP MODAL
+      workDetail.classList.add('open');
+      document.body.style.overflow = 'hidden'; // prevent background scrolling
+      workBack.focus();
     }
 
-    const CONN_DIST = 130;
-    const ACCENT = '154,163,245';
-    const DARK_ACCENT = '61,79,224'; // var(--accent)
+    // CLOSE POPUP MODAL
+    function closeWorkDetail() {
+      workDetail.classList.remove('open');
+      document.body.style.overflow = '';
+      if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') modalReturnFocus.focus();
+    }
+    workBack.addEventListener('click', closeWorkDetail);
 
-    function draw(t){
-      ctx.clearRect(0,0,W,H);
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTag = document.getElementById('lightboxTag');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+    const lightboxClose = document.getElementById('lightboxClose');
 
-      ctx.save();
-      lines.forEach(l=>{
-        ctx.beginPath();
-        ctx.strokeStyle = id === 'heroCanvas' ? 'rgba(22,21,19,0.05)' : 'rgba(255,255,255,0.04)';
-        ctx.lineWidth = 0.8;
-        if(l.horiz){
-          const shift = ((l.offset + t*l.speed*0.03)%W);
-          ctx.moveTo(shift, l.y1); ctx.lineTo(W+shift, l.y1);
-        } else {
-          const shift = ((l.offset + t*l.speed*0.03)%H);
-          ctx.moveTo(l.x1, shift); ctx.lineTo(l.x1, H+shift);
+    let lightboxReturnFocus = null;
+
+    function openLightbox(item, src, label, triggerEl) {
+      if (!src) return;
+      const displayLabel = label || item.title;
+      lightboxReturnFocus = triggerEl || null;
+      lightboxImg.src = src;
+      lightboxImg.alt = `${item.tag} — ${displayLabel}`;
+      lightboxTag.textContent = item.tag;
+      lightboxTitle.textContent = displayLabel;
+      lightboxDesc.textContent = (item.desc && item.desc !== item.title) ? item.desc : `From the ${item.tag} collection.`;
+      lightbox.classList.add('open');
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      setTimeout(() => { lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='; }, 250);
+      if (lightboxReturnFocus && typeof lightboxReturnFocus.focus === 'function') lightboxReturnFocus.focus();
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox || e.target.classList.contains('lightbox-card')) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      if (lightbox.classList.contains('open')) closeLightbox();
+      else if (workDetail.classList.contains('open')) closeWorkDetail();
+    });
+
+    renderCategoryCards();
+
+    /* ===== Canvas background animations ===== */
+    (function () {
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      ['contactCanvas', 'heroCanvas'].forEach(id => {
+        const canvas = document.getElementById(id);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let W, H, nodes, lines, rafId = null, running = false;
+
+        function resize() {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          W = canvas.width = rect.width;
+          H = canvas.height = rect.height;
         }
-        ctx.stroke();
-      });
-      ctx.restore();
 
-      for(let i=0;i<nodes.length;i++){
-        for(let j=i+1;j<nodes.length;j++){
-          const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
-          const dist=Math.sqrt(dx*dx+dy*dy);
-          if(dist<CONN_DIST){
-            const alpha=(1-dist/CONN_DIST)*0.22;
-            ctx.beginPath();
-            ctx.strokeStyle=`rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${alpha})`;
-            ctx.lineWidth=0.8;
-            ctx.moveTo(nodes[i].x,nodes[i].y);
-            ctx.lineTo(nodes[j].x,nodes[j].y);
-            ctx.stroke();
+        function initNodes() {
+          nodes = [];
+          // capped so very large/ultra-wide screens don't blow up the O(n²) connection check below
+          const count = Math.min(90, Math.floor((W * H) / 14000));
+          for (let i = 0; i < count; i++) {
+            nodes.push({
+              x: Math.random() * W,
+              y: Math.random() * H,
+              vx: (Math.random() - 0.5) * 0.35,
+              vy: (Math.random() - 0.5) * 0.35,
+              r: Math.random() * 1.8 + 0.6,
+              pulse: Math.random() * Math.PI * 2
+            });
+          }
+          lines = [];
+          const cols = 8, rows = 5;
+          for (let c = 1; c < cols; c++) {
+            lines.push({ x1: W * c / cols, y1: 0, x2: W * c / cols, y2: H, speed: (Math.random() - 0.5) * 0.2, offset: Math.random() * H });
+          }
+          for (let r = 1; r < rows; r++) {
+            lines.push({ x1: 0, y1: H * r / rows, x2: W, y2: H * r / rows, speed: (Math.random() - 0.5) * 0.15, offset: Math.random() * W, horiz: true });
           }
         }
-      }
 
-      nodes.forEach(n=>{
-        n.pulse += 0.018;
-        const glow = 0.5 + 0.5*Math.sin(n.pulse);
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r + glow*0.8, 0, Math.PI*2);
-        ctx.fillStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.5 + glow*0.4})`;
-        ctx.fill();
+        const CONN_DIST = 130;
+        const ACCENT = '154,163,245';
+        const DARK_ACCENT = '61,79,224'; // var(--accent)
 
-        n.x += n.vx; n.y += n.vy;
-        if(n.x<0||n.x>W) n.vx*=-1;
-        if(n.y<0||n.y>H) n.vy*=-1;
-      });
+        function draw(t) {
+          ctx.clearRect(0, 0, W, H);
 
-      [
-        {cx:W*0.88, cy:H*0.18, rr:60},
-        {cx:W*0.05, cy:H*0.82, rr:40},
-        {cx:W*0.5,  cy:H*0.95, rr:28}
-      ].forEach(({cx,cy,rr},i)=>{
-        const pulse = 0.5+0.5*Math.sin(t*0.0008 + i*2.1);
-        ctx.beginPath();
-        ctx.arc(cx, cy, rr+pulse*8, 0, Math.PI*2);
-        ctx.strokeStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.07+pulse*0.06})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.arc(cx, cy, (rr+pulse*8)*0.55, 0, Math.PI*2);
-        ctx.strokeStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.04})`;
-        ctx.stroke();
-      });
-    }
+          ctx.save();
+          lines.forEach(l => {
+            ctx.beginPath();
+            ctx.strokeStyle = id === 'heroCanvas' ? 'rgba(22,21,19,0.05)' : 'rgba(255,255,255,0.04)';
+            ctx.lineWidth = 0.8;
+            if (l.horiz) {
+              const shift = ((l.offset + t * l.speed * 0.03) % W);
+              ctx.moveTo(shift, l.y1); ctx.lineTo(W + shift, l.y1);
+            } else {
+              const shift = ((l.offset + t * l.speed * 0.03) % H);
+              ctx.moveTo(l.x1, shift); ctx.lineTo(l.x1, H + shift);
+            }
+            ctx.stroke();
+          });
+          ctx.restore();
 
-    function loop(t){
-      draw(t);
-      if(running) rafId = requestAnimationFrame(loop);
-    }
-    function start(){
-      if(running || reduceMotion) return;
-      running = true;
-      rafId = requestAnimationFrame(loop);
-    }
-    function stop(){
-      running = false;
-      if(rafId) cancelAnimationFrame(rafId);
-      rafId = null;
-    }
+          for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+              const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < CONN_DIST) {
+                const alpha = (1 - dist / CONN_DIST) * 0.22;
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${alpha})`;
+                ctx.lineWidth = 0.8;
+                ctx.moveTo(nodes[i].x, nodes[i].y);
+                ctx.lineTo(nodes[j].x, nodes[j].y);
+                ctx.stroke();
+              }
+            }
+          }
 
-    resize();
-    initNodes();
-    draw(0); // static first frame — also the final state if motion is reduced
+          nodes.forEach(n => {
+            n.pulse += 0.018;
+            const glow = 0.5 + 0.5 * Math.sin(n.pulse);
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, n.r + glow * 0.8, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.5 + glow * 0.4})`;
+            ctx.fill();
 
-    let resizeTimer = null;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => { resize(); initNodes(); draw(0); }, 150);
-    });
+            n.x += n.vx; n.y += n.vy;
+            if (n.x < 0 || n.x > W) n.vx *= -1;
+            if (n.y < 0 || n.y > H) n.vy *= -1;
+          });
 
-    if(!reduceMotion){
-      // Only spend CPU/battery animating this canvas while it's actually visible
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { entry.isIntersecting ? start() : stop(); });
-      }, { threshold: 0 });
-      io.observe(canvas);
+          [
+            { cx: W * 0.88, cy: H * 0.18, rr: 60 },
+            { cx: W * 0.05, cy: H * 0.82, rr: 40 },
+            { cx: W * 0.5, cy: H * 0.95, rr: 28 }
+          ].forEach(({ cx, cy, rr }, i) => {
+            const pulse = 0.5 + 0.5 * Math.sin(t * 0.0008 + i * 2.1);
+            ctx.beginPath();
+            ctx.arc(cx, cy, rr + pulse * 8, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.07 + pulse * 0.06})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(cx, cy, (rr + pulse * 8) * 0.55, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(${id === 'heroCanvas' ? DARK_ACCENT : ACCENT},${0.04})`;
+            ctx.stroke();
+          });
+        }
 
-      document.addEventListener('visibilitychange', () => {
-        if(document.hidden) stop();
-        else {
-          const r = canvas.getBoundingClientRect();
-          if(r.bottom > 0 && r.top < window.innerHeight) start();
+        function loop(t) {
+          draw(t);
+          if (running) rafId = requestAnimationFrame(loop);
+        }
+        function start() {
+          if (running || reduceMotion) return;
+          running = true;
+          rafId = requestAnimationFrame(loop);
+        }
+        function stop() {
+          running = false;
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+
+        resize();
+        initNodes();
+        draw(0); // static first frame — also the final state if motion is reduced
+
+        let resizeTimer = null;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => { resize(); initNodes(); draw(0); }, 150);
+        });
+
+        if (!reduceMotion) {
+          // Only spend CPU/battery animating this canvas while it's actually visible
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { entry.isIntersecting ? start() : stop(); });
+          }, { threshold: 0 });
+          io.observe(canvas);
+
+          document.addEventListener('visibilitychange', () => {
+            if (document.hidden) stop();
+            else {
+              const r = canvas.getBoundingClientRect();
+              if (r.bottom > 0 && r.top < window.innerHeight) start();
+            }
+          });
         }
       });
-    }
-  });
-})();
+    })();
 
 
-/* ===== Contact form → Formsubmit ===== */
-const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
+    /* ===== Contact form → Formsubmit ===== */
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
 
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.form-submit');
-  const original = btn.textContent;
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('.form-submit');
+      const original = btn.textContent;
 
-  const nameVal = form.querySelector('#f-name').value.trim();
-  const emailVal = form.querySelector('#f-email').value.trim();
-  const msgVal = form.querySelector('#f-msg').value.trim();
-  const honeyVal = form.querySelector('[name="_honey"]')?.value.trim();
-  const actionUrl = form.getAttribute('action');
+      const nameVal = form.querySelector('#f-name').value.trim();
+      const emailVal = form.querySelector('#f-email').value.trim();
+      const msgVal = form.querySelector('#f-msg').value.trim();
+      const honeyVal = form.querySelector('[name="_honey"]')?.value.trim();
+      const actionUrl = form.getAttribute('action');
 
-  // Honeypot: real visitors never fill this hidden field — bots usually do.
-  // Pretend it worked so the bot doesn't try again, without actually sending anything.
-  if (honeyVal) {
-    btn.textContent = 'Message sent ✓';
-    formStatus.textContent = "Thanks — I'll get back to you soon.";
-    formStatus.className = 'form-status success show';
-    contactForm.reset();
-    setTimeout(() => { btn.textContent = original; }, 3200);
-    return;
-  }
+      // Honeypot: real visitors never fill this hidden field — bots usually do.
+      // Pretend it worked so the bot doesn't try again, without actually sending anything.
+      if (honeyVal) {
+        btn.textContent = 'Message sent ✓';
+        formStatus.textContent = "Thanks — I'll get back to you soon.";
+        formStatus.className = 'form-status success show';
+        contactForm.reset();
+        setTimeout(() => { btn.textContent = original; }, 3200);
+        return;
+      }
 
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
 
-  try {
-    const res = await fetch(actionUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        name: nameVal,
-        email: emailVal,
-        message: msgVal,
-        _subject: `New project inquiry from ${nameVal}`,
-        _captcha: 'false'
-      })
+      try {
+        const res = await fetch(actionUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: nameVal,
+            email: emailVal,
+            message: msgVal,
+            _subject: `New project inquiry from ${nameVal}`,
+            _captcha: 'false'
+          })
+        });
+
+        if (!res.ok) throw new Error('Request failed');
+
+        btn.textContent = 'Message sent ✓';
+        formStatus.textContent = "Thanks — I'll get back to you soon.";
+        formStatus.className = 'form-status success show';
+        contactForm.reset();
+      } catch (err) {
+        btn.textContent = original;
+        btn.disabled = false;
+        formStatus.textContent = `Something went wrong — please email me directly instead.`;
+        formStatus.className = 'form-status error show';
+        return;
+      }
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = original;
+      }, 3200);
     });
 
-    if(!res.ok) throw new Error('Request failed');
-
-    btn.textContent = 'Message sent ✓';
-    formStatus.textContent = "Thanks — I'll get back to you soon.";
-    formStatus.className = 'form-status success show';
-    contactForm.reset();
-  } catch(err){
-    btn.textContent = original;
-    btn.disabled = false;
-    formStatus.textContent = `Something went wrong — please email me directly instead.`;
-    formStatus.className = 'form-status error show';
-    return;
-  }
-
-  setTimeout(() => {
-    btn.disabled = false;
-    btn.textContent = original;
-  }, 3200);
-});
-
-</script>
+  </script>
 
 </body>
+
 </html>
