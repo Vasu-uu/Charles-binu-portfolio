@@ -2102,10 +2102,135 @@
       pointer-events: none;
       z-index: 2;
     }
+
+    /* ============ CUSTOM CURSOR ============ */
+    @media (pointer: fine) {
+      * { cursor: none !important; }
+
+      .cur-dot {
+        position: fixed;
+        top: 0; left: 0;
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.2s, height 0.2s, background 0.2s, opacity 0.3s;
+        will-change: transform;
+      }
+
+      .cur-ring {
+        position: fixed;
+        top: 0; left: 0;
+        width: 36px;
+        height: 36px;
+        border: 1.5px solid var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9998;
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.35s cubic-bezier(.16,1,.3,1),
+          height 0.35s cubic-bezier(.16,1,.3,1),
+          border-color 0.25s,
+          border-radius 0.35s cubic-bezier(.16,1,.3,1),
+          background 0.25s,
+          opacity 0.3s;
+        will-change: transform;
+        opacity: 0.7;
+      }
+
+      /* Crosshair tick marks on the ring */
+      .cur-ring::before,
+      .cur-ring::after {
+        content: '';
+        position: absolute;
+        background: var(--accent);
+        transition: background 0.25s;
+      }
+      /* horizontal tick */
+      .cur-ring::before {
+        top: 50%;
+        left: -6px;
+        width: calc(100% + 12px);
+        height: 1px;
+        margin-top: -0.5px;
+        opacity: 0.3;
+      }
+      /* vertical tick */
+      .cur-ring::after {
+        left: 50%;
+        top: -6px;
+        height: calc(100% + 12px);
+        width: 1px;
+        margin-left: -0.5px;
+        opacity: 0.3;
+      }
+
+      /* Hover over interactive elements */
+      body.cur-hover .cur-dot {
+        width: 10px;
+        height: 10px;
+        background: var(--accent);
+      }
+      body.cur-hover .cur-ring {
+        width: 52px;
+        height: 52px;
+        border-color: var(--accent);
+        opacity: 1;
+      }
+
+      /* Clicking state */
+      body.cur-click .cur-dot {
+        width: 4px;
+        height: 4px;
+      }
+      body.cur-click .cur-ring {
+        width: 22px;
+        height: 22px;
+        opacity: 1;
+      }
+
+      /* Text cursor state */
+      body.cur-text .cur-ring {
+        width: 3px;
+        height: 32px;
+        border-radius: 1px;
+        border-color: var(--ink);
+        opacity: 0.6;
+      }
+      body.cur-text .cur-dot {
+        opacity: 0;
+      }
+
+      /* Dark section (contact) — invert ring colour */
+      body.cur-dark .cur-ring {
+        border-color: rgba(250,249,248,0.7);
+      }
+      body.cur-dark .cur-dot {
+        background: #9AA3F5;
+      }
+      body.cur-dark .cur-ring::before,
+      body.cur-dark .cur-ring::after {
+        background: rgba(250,249,248,0.5);
+      }
+
+      /* Hide until mouse moves */
+      .cur-dot.hidden,
+      .cur-ring.hidden {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- Custom cursor elements -->
+  <div class="cur-dot hidden" id="curDot" aria-hidden="true"></div>
+  <div class="cur-ring hidden" id="curRing" aria-hidden="true"></div>
 
   <div class="corner-block"></div>
   <div class="ruler-h">
@@ -2628,13 +2753,13 @@
       { "cat": "social", "tag": "Social Ads", "title": "HighRange Ad", "img": "Portfolio Works/Social Media Advertisement/HighRange Social Media ad.png" },
       { "cat": "social", "tag": "Social Ads", "title": "Vikings Tattoo 02", "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo 2.jpg" },
       { "cat": "social", "tag": "Social Ads", "title": "Vikings Tattoo Poster 01", "img": "Portfolio Works/Social Media Advertisement/Vikings Tattoo poster 1.png" },
-      { "cat": "ui", "tag": "UI Designing", "title": "Curren Watch Website", "img": "Portfolio Works/UI Designing/Curren Watch Website.jpg" },
+      { "cat": "ui", "tag": "UI Designing", "title": "Website Design", "img": "Portfolio Works/UI Designing/website design.jpg" },
       { "cat": "ui", "tag": "UI Designing", "title": "Food Delivery App", "img": "Portfolio Works/UI Designing/Food delivery app.jpg" },
       { "cat": "ui", "tag": "UI Designing", "title": "Gasania Instagram UI", "img": "Portfolio Works/UI Designing/gasania Intsagram  UI interface.png" },
       { "cat": "ui", "tag": "UI Designing", "title": "Login Page", "img": "Portfolio Works/UI Designing/Login Page design.jpg" },
       { "cat": "ui", "tag": "UI Designing", "title": "Registration Form 01", "img": "Portfolio Works/UI Designing/Registration Form.png" },
       { "cat": "ui", "tag": "UI Designing", "title": "Registration Form 02", "img": "Portfolio Works/UI Designing/Registration Form 2.jpg" },
-      { "cat": "ui", "tag": "UI Designing", "title": "Website Design", "img": "Portfolio Works/UI Designing/website design.jpg" }
+      { "cat": "ui", "tag": "UI Designing", "title": "Curren Watch Website", "img": "Portfolio Works/UI Designing/Curren Watch Website.jpg" }
     ];
 
     const categories = [
@@ -2686,7 +2811,7 @@
       {
         "key": "ui",
         "label": "UI Designing",
-        "cover": "Portfolio Works/UI Designing/Curren Watch Website.jpg"
+        "cover": "Portfolio Works/UI Designing/website design.jpg"
       }
     ];
 
@@ -3098,6 +3223,78 @@
         btn.textContent = original;
       }, 3200);
     });
+
+    /* ===== Custom cursor (fine-pointer / non-touch only) ===== */
+    (function () {
+      if (!window.matchMedia('(pointer: fine)').matches) return;
+
+      const dot  = document.getElementById('curDot');
+      const ring = document.getElementById('curRing');
+      if (!dot || !ring) return;
+
+      let mx = -200, my = -200;  // raw mouse position
+      let rx = -200, ry = -200;  // ring lerp position
+      let rafId = null;
+      let hidden = true;
+
+      const LERP = 0.12; // ring follow speed (0 = no follow, 1 = instant)
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      function tick() {
+        rx = lerp(rx, mx, LERP);
+        ry = lerp(ry, my, LERP);
+
+        dot.style.transform  = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
+        ring.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
+
+        rafId = requestAnimationFrame(tick);
+      }
+
+      window.addEventListener('mousemove', (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+
+        if (hidden) {
+          rx = mx; ry = my; // snap ring on first move
+          dot.classList.remove('hidden');
+          ring.classList.remove('hidden');
+          hidden = false;
+          if (!rafId) rafId = requestAnimationFrame(tick);
+        }
+
+        // Dark-section detection
+        const el = document.elementFromPoint(mx, my);
+        const inDark = el && el.closest('.contact, .marquee-strip');
+        document.body.classList.toggle('cur-dark', !!inDark);
+      }, { passive: true });
+
+      window.addEventListener('mouseleave', () => {
+        dot.classList.add('hidden');
+        ring.classList.add('hidden');
+        hidden = true;
+      });
+
+      // Interactive element hover
+      const interactiveSelectors = 'a, button, [role="button"], input, textarea, select, label, .cat-card, .artboard, .tool-chip, .skill-cell';
+      const textSelectors = 'input, textarea';
+
+      document.addEventListener('mouseover', (e) => {
+        const target = e.target.closest(interactiveSelectors);
+        const isText = e.target.closest(textSelectors);
+        document.body.classList.toggle('cur-hover', !!target && !isText);
+        document.body.classList.toggle('cur-text', !!isText);
+      }, { passive: true });
+
+      document.addEventListener('mouseout', (e) => {
+        if (!e.relatedTarget || !e.relatedTarget.closest(interactiveSelectors)) {
+          document.body.classList.remove('cur-hover', 'cur-text');
+        }
+      }, { passive: true });
+
+      document.addEventListener('mousedown', () => document.body.classList.add('cur-click'),    { passive: true });
+      document.addEventListener('mouseup',   () => document.body.classList.remove('cur-click'), { passive: true });
+    })();
 
   </script>
 
